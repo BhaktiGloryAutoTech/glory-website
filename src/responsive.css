@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1400px) {
+  .get-in-touch-background {
+    background-position: left -78px center;
+  }
+}
+@media only screen and (max-width: 1190px) {
+  .get-in-touch-background {
+    background-position: left -140px center;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .get-in-touch-background {
+    background-position: left -210px center;
+  }
+}

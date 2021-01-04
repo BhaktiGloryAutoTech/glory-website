@@ -5,16 +5,22 @@ import {
   FormsModule as ngFormsModule,
   ReactiveFormsModule,
 } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppRoutingModule } from "../app-routing.module";
+import { NgwWowModule } from "ngx-wow";
+import { ToastrModule } from "ngx-toastr";
+import { AppModule } from "../app.module";
+import { RouterModule } from "@angular/router";
+import { ContactService } from "./services/contact.service";
 //import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
-import { ExportService } from "./services/export.service";
 //import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [],
-  imports: [],
+  imports: [FormsModule, ngFormsModule, ReactiveFormsModule],
 
-  exports: [],
-  providers: [],
+  exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
+  providers: [ContactService],
   entryComponents: [],
 })
 export class SharedModule {}

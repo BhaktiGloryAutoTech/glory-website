@@ -1114,7 +1114,7 @@ span:hover {
 
 /* ====================== [ End Text Animation & Images ] ====================== */
 /* ====================== [ Start Cursor Style ] ====================== */
-body {
+/* body {
   cursor: none;
 }
 
@@ -1170,7 +1170,7 @@ body {
 
 .cursor-outer.cursor-hover {
   opacity: 0;
-}
+} */
 
 /* ====================== [ End Cursor Style ] ====================== */
 /* ====================== [ Start progress-wrap ] ====================== */

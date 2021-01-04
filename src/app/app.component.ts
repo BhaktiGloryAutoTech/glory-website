@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 //import { NgwWowService } from "ngx-wow";
+import * as AOS from "aos";
 
 @Component({
   selector: "app-root",
@@ -11,4 +12,7 @@ export class AppComponent {
   //   this.wowServices.init();
   // }
   title = "test-application";
+  ngOnInit() {
+    AOS.init();
+  }
 }
