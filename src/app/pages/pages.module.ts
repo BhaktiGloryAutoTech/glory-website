@@ -1,25 +1,48 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { PagesRoutingModule } from './pages-routing.module';
-import { PagesComponent } from './pages.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
-
-import { ServicesComponent } from './services/services.component';
-import { CareerComponent } from './career/career.component';
-import { NeedTeamComponent } from './need-team/need-team.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { WorkComponent } from './work/work.component';
-
+import { PagesRoutingModule } from "./pages-routing.module";
+import { PagesComponent } from "./pages.component";
+import { HomeComponent } from "./home/home.component";
+import { ContactComponent } from "./contact/contact.component";
+import { AboutComponent } from "./about/about.component";
+import { WorkComponent } from "./work/work.component";
+import { ServicesComponent } from "./services/services.component";
+import { CareerComponent } from "./career/career.component";
+import { NeedTeamComponent } from "./need-team/need-team.component";
+import { FooterComponent } from "./footer/footer.component";
+import { HeaderComponent } from "./header/header.component";
+import { AppModule } from "../app.module";
+import { SharedModule } from "../@theme/shared.module";
+import {
+  FormsModule,
+  FormsModule as ngFormsModule,
+  ReactiveFormsModule,
+} from "@angular/forms";
+import { ContactService } from "../@theme/services/contact.service";
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, ContactComponent, AboutComponent, ServicesComponent, CareerComponent, NeedTeamComponent, FooterComponent, HeaderComponent, WorkComponent],
+  declarations: [
+    PagesComponent,
+    HomeComponent,
+    ContactComponent,
+    AboutComponent,
+    WorkComponent,
+    ServicesComponent,
+    CareerComponent,
+    NeedTeamComponent,
+    FooterComponent,
+    HeaderComponent,
+  ],
   imports: [
     CommonModule,
-    PagesRoutingModule
-  ]
+    PagesRoutingModule,
+    SharedModule,
+    FormsModule,
+    ngFormsModule,
+    ReactiveFormsModule,
+  ],
+  exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
+  providers: [ContactService],
 })
-export class PagesModule { }
+export class PagesModule {}

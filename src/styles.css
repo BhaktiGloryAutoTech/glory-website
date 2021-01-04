@@ -5,16 +5,22 @@
     width: 230%;
 }
 
+.contact-bg {
+    background: url("./assets/img/slid/1.jpg") no-repeat;
+}
+
 .get-in-touch-head {
-    padding-top: 4%;
+    padding-top: 50px;
     font-family: "Salsa";
-    float: right;
+    width: 100%;
+    text-align: center;
 }
 
 .get-in-touch-content {
+    width: 100%;
     padding-top: 0.4%;
     font-size: 1.35rem;
-    float: right;
+    text-align: center;
 }
 
 .hr-style {
@@ -26,9 +32,49 @@
 }
 
 .get-in-touch-background {
-    background-image: url("assets/img/business-bg.png");
+    background: url("assets/img/business-bg.png") no-repeat;
+    background-size: cover;
 }
 
-.content {
-    justify-content: right;
+.content p {
+    max-width: 600px;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.h2-text-heading {
+    margin-block-end: revert;
+    margin-left: -8%;
+}
+
+
+/* @media (max-width: 1348px) {
+  .get-in-touch-background {
+    background-image: none;
+  }
+  .get-in-touch-content {
+    text-align: center;
+    padding-top: 0.4%;
+    font-size: 1.35rem;
+    float: right;
+  }
+  .small-view {
+    text-align: center;
+  }
+} */
+
+.cont-info {
+    padding-left: 80px;
+}
+
+.slide-1 {
+    background: url("assets/img/slid/freelancer.jpg") no-repeat;
+}
+
+.slide-2 {
+    background: url("assets/img/slid/freelancer.jpg") no-repeat;
+}
+
+.slide-3 {
+    background: url("assets/img/slid/1.jpg") no-repeat;
 }
