@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+
+.logo-img-width {
+  width: 230%;
+}
+.get-in-touch-head {
+  padding-top: 4%;
+  font-family: "Salsa";
+  float: right;
+}
+.get-in-touch-content {
+  padding-top: 0.4%;
+  font-size: 1.35rem;
+  float: right;
+}
+.hr-style {
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 0rem;
+  margin-top: 4rem !important;
+  border-color: #ccccb3 !important;
+}
+.get-in-touch-background {
+  background-image: url("assets/img/business-bg.png");
+}
+.content {
+  justify-content: right;
+}

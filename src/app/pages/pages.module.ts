@@ -10,10 +10,12 @@ import { WorkComponent } from './work/work.component';
 import { ServicesComponent } from './services/services.component';
 import { CareerComponent } from './career/career.component';
 import { NeedTeamComponent } from './need-team/need-team.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, ContactComponent, AboutComponent, WorkComponent, ServicesComponent, CareerComponent, NeedTeamComponent],
+  declarations: [PagesComponent, HomeComponent, ContactComponent, AboutComponent, WorkComponent, ServicesComponent, CareerComponent, NeedTeamComponent, FooterComponent, HeaderComponent],
   imports: [
     CommonModule,
     PagesRoutingModule
