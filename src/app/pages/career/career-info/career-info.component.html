@@ -1,0 +1,47 @@
+<div class="main-container">
+    <div *ngFor="let info of vacancyInfo">
+        <div>
+            <h2>{{info.VacancyName}}</h2>
+        </div>
+        <div>
+            <div>
+                <h4>Who can Apply</h4>
+            </div>
+            <div>
+                {{info.WhoCanApply}}
+            </div>
+        </div>
+        <div>
+            <div>
+                <h4>Skills required</h4>
+            </div>
+            <div>
+                {{info.Skill}}
+            </div>
+        </div>
+        <div>
+            <div>
+                <h4>Job Responsibility</h4>
+            </div>
+            <div>
+                {{info.JobResponsibility}}
+            </div>
+        </div>
+        <div>
+            <div>
+                <h4>No of opening.</h4>
+            </div>
+            <div>
+                {{info.NoOfOpening}}
+            </div>
+        </div>
+        <div>
+            <div>
+                <h4>Perks</h4>
+            </div>
+            <div>
+                {{info.Pearks}}
+            </div>
+        </div>
+    </div>
+</div>

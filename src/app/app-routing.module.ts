@@ -6,8 +6,17 @@ const routes: Routes = [
     path: "pages",
     loadChildren: () =>
       import("./pages/pages.module").then((m) => m.PagesModule),
+    //     children:[
+    //       {
+    //   path: "career",
+    //   loadChildren: () =>
+    //     import("./pages/career/career.module").then((m) => m.CareerModule),
+    // },
+
+    //     ]
   },
   { path: "", redirectTo: "pages", pathMatch: "full" },
+
   { path: "**", redirectTo: "pages" },
 ];
 

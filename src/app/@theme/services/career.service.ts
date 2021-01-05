@@ -5,7 +5,7 @@ import { CommonService } from "./common.service";
 @Injectable({
   providedIn: "root",
 })
-export class ContactService {
+export class CareerService {
   constructor(
     private _http: HttpClient,
     private commonService: CommonService
@@ -16,7 +16,12 @@ export class ContactService {
     return Observable.throw(err.message);
   }
 
-  getInTouch(data: any) {
-    return this._http.post(this.commonService.envurl() + "getInTouch", data);
+  getJobTitle() {
+    return this._http.get(this.commonService.envurl() + "getVacancyList");
   }
+  
+  getVacancyListById(id:any){
+    return this._http.post(this.commonService.envurl()+"getVacancyById/",id);
+  }
+  
 }

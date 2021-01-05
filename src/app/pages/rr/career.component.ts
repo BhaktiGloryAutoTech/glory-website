@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router, RouterModule } from "@angular/router";
 import { CareerService } from "src/app/@theme/services/career.service";
 
 @Component({
@@ -18,6 +18,7 @@ export class CareerComponent implements OnInit {
     this.careerService.getJobTitle().subscribe(
       (data: any) => {
         this.vacancyTitle = data["data"];
+        console.log(this.vacancyTitle);
       },
       (error) => {}
     );
