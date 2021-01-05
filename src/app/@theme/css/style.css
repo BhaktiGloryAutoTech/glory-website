@@ -1,4 +1,3 @@
-style.css(inner)
 /*-----------------------------------------------------------------------------------
 
     Theme Name: Avo
@@ -1719,7 +1718,7 @@ span:hover {
 .navbar .navbar-nav .nav-link {
     font-size: 14px;
     font-weight: 500;
-    color: #fff;
+    color: #000;
     padding: 15px 7px;
     margin: 10px 15px;
 }
@@ -3980,14 +3979,43 @@ span:hover {
 }
 
 .services .step-item h6 {
+    margin-bottom: 30px;
+}
+
+.img-about-services img {
+    overflow: hidden;
+    max-width: 33%;
+}
+
+.btn-6:hover span .img-link-text .img-about-services img,
+.btn-6:hover span .img-link-text .services-about-title h6 {
+    filter: invert(38%) sepia(88%) saturate(4059%) hue-rotate(177deg) brightness(90%) contrast(98%);
+}
+
+.img-about-services {
+    margin-bottom: 25px;
+}
+
+.about-title-main h4 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
 .services .item {
     text-align: center;
-    padding: 60px;
+    padding: 26px 0;
     position: relative;
-    background: #efefef;
+    background: #fff;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.05);
+}
+
+.img-link-text .services-about-title h6 {
+    color: #878787
 }
 
 .services .item .icon {
@@ -4033,7 +4061,7 @@ span:hover {
 }
 
 .min-area .content ul li {
-    margin-top: 25px;
+    margin-top: 0;
     padding-left: 25px;
     position: relative;
 }
@@ -4066,16 +4094,17 @@ span:hover {
 .min-area .content ul.feat li h6 {
     font-weight: 500;
     margin-bottom: 5px;
+    font-size: 20px;
 }
 
 .min-area .content ul.feat li h6 span {
-    color: #75dab4;
+    color: rgb(8 173 195);
     width: 30px;
     height: 30px;
     line-height: 30px;
     text-align: center;
     font-size: 13px;
-    border: 1px solid #75dab4;
+    border: 1px solid rgb(8 173 195);
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -6636,7 +6665,7 @@ span:hover {
     }
     .min-area .content,
     .min-area .img {
-        padding: 120px 0;
+        padding: 50px 0;
     }
     .services .rtwo>div:nth-of-type(2),
     .services .rone>div:nth-of-type(2) {
@@ -7030,6 +7059,115 @@ textarea {
 
 .career-form-group {
     margin-bottom: 0.5px !important;
+}
+
+a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+p {
+    font-family: sans-serif !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.about-text {
+    text-align: justify;
+    font-weight: 500;
+    font-family: system-ui !important;
+}
+
+.about-titles {
+    font-size: 28px !important;
+}
+
+.dis-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* about us page services */
+
+.b .btn-6::before {
+    left: 50%;
+    top: 0;
+    transition-duration: 0.4s;
+}
+
+.b .btn-6::after {
+    left: 50%;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+
+.b .btn-6 span::before {
+    left: 0;
+    top: 50%;
+    transition-duration: 0.4s;
+}
+
+.b .btn-6 span::after {
+    right: 0;
+    top: 50%;
+    transition-duration: 0.4s;
+}
+
+.b span::before,
+.b span::after {
+    content: "";
+    width: 4px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #08adc3;
+}
+
+.b button::before,
+.b button::after {
+    content: "";
+    width: 0;
+    height: 4px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #08adc3;
+}
+
+.b span {
+    display: block;
+}
+
+@media (max-width: 1500px) and (min-width: 1200px) {
+    .b span {
+        display: block;
+    }
+}
+
+
+/* on hover */
+
+.b .btn-6:hover::before,
+.b .btn-6:hover::after {
+    left: 0;
+}
+
+.b button:hover::before,
+.b button:hover::after {
+    width: 100%;
+}
+
+.b .btn-6:hover span::before,
+.b .btn-6:hover span::after {
+    top: 0;
+}
+
+.b button:hover span::before,
+.b button:hover span::after {
+    height: 100%;
 }
 
 @media (max-width: 767px) {
