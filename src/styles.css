@@ -1,24 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 .logo-img-width {
   width: 230%;
 }
+
 .contact-bg {
   background: url("./assets/img/slid/1.jpg") no-repeat;
 }
+
 .get-in-touch-head {
   padding-top: 50px;
   font-family: "Salsa";
   width: 100%;
   text-align: center;
 }
+
 .get-in-touch-content {
   width: 100%;
   padding-top: 0.4%;
   font-size: 1.35rem;
   text-align: center;
 }
+
 .hr-style {
   width: 50%;
   margin-left: 25%;
@@ -26,19 +30,23 @@
   margin-top: 4rem !important;
   border-color: #ccccb3 !important;
 }
+
 .get-in-touch-background {
   background: url("assets/img/business-bg.png") no-repeat;
   background-size: cover;
 }
+
 .content p {
   max-width: 600px;
   font-size: 25px;
   line-height: 35px;
 }
+
 .h2-text-heading {
   margin-block-end: revert;
   margin-left: -8%;
 }
+
 /* @media (max-width: 1348px) {
   .get-in-touch-background {
     background-image: none;

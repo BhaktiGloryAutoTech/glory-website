@@ -9,6 +9,7 @@ import { PagesComponent } from "./pages.component";
 import { ServicesComponent } from "./services/services.component";
 import { WorkComponent } from "./work/work.component";
 
+
 const routes: Routes = [
   { path: "", component: HomeComponent },
   {

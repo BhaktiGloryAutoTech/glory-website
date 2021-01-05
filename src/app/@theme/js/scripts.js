@@ -9,7 +9,7 @@
 
 -----------------------------------------------------------------------------------*/
 
-$(function () {
+$(function() {
 
     "use strict";
 
@@ -18,7 +18,7 @@ $(function () {
 
     var wind = $(window);
 
-    wind.on("scroll", function () {
+    wind.on("scroll", function() {
 
         var bodyScroll = wind.scrollTop(),
             navbar = $(".navbar"),
@@ -36,11 +36,11 @@ $(function () {
         }
     });
 
-    $('.navbar .search .icon').on('click', function () {
+    $('.navbar .search .icon').on('click', function() {
         $(".navbar .search .search-form").fadeIn();
     });
 
-    $('.navbar .search .search-form .close').on('click', function () {
+    $('.navbar .search .search-form .close').on('click', function() {
         $(".navbar .search .search-form").fadeOut();
     });
 
@@ -49,7 +49,7 @@ $(function () {
         window.scrollTo(0, 0);
     }
 
-    wind.on("scroll", function () {
+    wind.on("scroll", function() {
 
         var bodyScroll = wind.scrollTop(),
             navbar = $(".topnav");
@@ -68,7 +68,7 @@ $(function () {
         navDark = $(".topnav.dark"),
         logoChan = $(".topnav.dark .logo img");
 
-    $('.topnav .menu-icon').on('click', function () {
+    $('.topnav .menu-icon').on('click', function() {
         open = !open;
 
         $('.hamenu').toggleClass("open");
@@ -97,21 +97,21 @@ $(function () {
         }
     });
 
-    $('.hamenu .menu-links .main-menu > li').on('mouseenter', function () {
+    $('.hamenu .menu-links .main-menu > li').on('mouseenter', function() {
         $(this).css("opacity", "1").siblings().css("opacity", ".5");
     });
 
-    $('.hamenu .menu-links .main-menu > li').on('mouseleave', function () {
+    $('.hamenu .menu-links .main-menu > li').on('mouseleave', function() {
         $(".hamenu .menu-links .main-menu > li").css("opacity", "1");
     });
 
 
-    $('.main-menu > li .dmenu').on('click', function () {
+    $('.main-menu > li .dmenu').on('click', function() {
         $(".main-menu").addClass("gosub");
         $(this).parent().parent().find(".sub-menu").addClass("sub-open");
     });
 
-    $('.main-menu .sub-menu li .sub-link.back').on('click', function () {
+    $('.main-menu .sub-menu li .sub-link.back').on('click', function() {
         $(".main-menu").removeClass("gosub");
         $(".main-menu .sub-menu").removeClass("sub-open");
     });
@@ -128,7 +128,7 @@ $(function () {
         loop: true,
 
         on: {
-            init: function () {
+            init: function() {
                 var swiper = this;
                 for (var i = 0; i < swiper.slides.length; i++) {
                     $(swiper.slides[i])
@@ -138,7 +138,7 @@ $(function () {
                         });
                 }
             },
-            resize: function () {
+            resize: function() {
                 this.update();
             }
         },
@@ -166,7 +166,7 @@ $(function () {
         loop: true,
 
         on: {
-            init: function () {
+            init: function() {
                 var swiper = this;
                 for (var i = 0; i < swiper.slides.length; i++) {
                     $(swiper.slides[i])
@@ -176,7 +176,7 @@ $(function () {
                         });
                 }
             },
-            resize: function () {
+            resize: function() {
                 this.update();
             }
         },
@@ -306,7 +306,7 @@ $(function () {
     /* ===============================  Var Background image  =============================== */
 
     var pageSection = $(".bg-img, section");
-    pageSection.each(function (indx) {
+    pageSection.each(function(indx) {
 
         if ($(this).attr("data-background")) {
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
@@ -316,6 +316,15 @@ $(function () {
 
     /* ===============================  slick Carousel  =============================== */
 
+    $('.testimonials .slic-item').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '.testimonials .prev',
+        nextArrow: '.testimonials .next',
+        dots: true,
+        autoplay: true
+    });
     $('.testimonials .slic-item').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -342,8 +351,7 @@ $(function () {
         nextArrow: '.team .next',
         dots: false,
         autoplay: true,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 4
@@ -363,7 +371,44 @@ $(function () {
             }
         ]
     });
+    $('.carousel').slick({
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        centerMode: true,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                // centerMode: true,
 
+            }
+
+        }, {
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+                infinite: true,
+
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            }
+        }]
+    });
 
     $('.blog-curs .blg-swipe').slick({
         slidesToShow: 2,
@@ -373,8 +418,7 @@ $(function () {
         nextArrow: '.blog-curs .next',
         dots: false,
         autoplay: true,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2
@@ -402,8 +446,7 @@ $(function () {
         arrows: false,
         dots: false,
         autoplay: true,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 4
@@ -452,7 +495,7 @@ $(function () {
     var c4 = $('.skills-circle .skill');
     var myVal = $(this).attr('data-value');
 
-    $(".skills-circle .skill").each(function () {
+    $(".skills-circle .skill").each(function() {
 
         c4.circleProgress({
             startAngle: -Math.PI / 2 * 1,
@@ -464,8 +507,8 @@ $(function () {
 
     });
 
-    wind.on('scroll', function () {
-        $(".skill-progress .progres").each(function () {
+    wind.on('scroll', function() {
+        $(".skill-progress .progres").each(function() {
             var bottom_of_object =
                 $(this).offset().top + $(this).outerHeight();
             var bottom_of_window =
@@ -490,36 +533,39 @@ $(function () {
 
     /* ===============================  tooltip  =============================== */
 
-    $('[data-tooltip-tit]').hover(function () {
+    $('[data-tooltip-tit]').hover(function() {
         $('<div class="div-tooltip-tit"></div>').text($(this).attr('data-tooltip-tit')).appendTo('body').fadeIn('slow');
-    }, function () {
+    }, function() {
         $('.div-tooltip-tit').remove();
-    }).mousemove(function (e) {
+    }).mousemove(function(e) {
         $('.div-tooltip-tit').css({ top: e.pageY + 10, left: e.pageX + 20 })
     });
-    $('[data-tooltip-sub]').hover(function () {
+    $('[data-tooltip-sub]').hover(function() {
         $('<div class="div-tooltip-sub"></div>').text($(this).attr('data-tooltip-sub')).appendTo('body').fadeIn('slow');
-    }, function () {
+    }, function() {
         $('.div-tooltip-sub').remove();
-    }).mousemove(function (e) {
+    }).mousemove(function(e) {
         $('.div-tooltip-sub').css({ top: e.pageY + 60, left: e.pageX + 20 })
     });
 
 });
 
 
-    /* ===============================  Wow Animation  =============================== */
+/* ===============================  Wow Animation  =============================== */
 
-   wow = new WOW({
-       animateClass: 'animated',
-       offset: 100
-    });
-    wow.init();
+// wow = new WOW({
+//     animateClass: 'animated',
+//     offset: 100
+// });
+// wow.init();
+
+
 
 
 // === window When Loading === //
 
-$(window).on("load", function () {
+
+$(window).on("load", function() {
 
 
     /* ===============================  SPLITTING TEXT  =============================== */
@@ -551,12 +597,12 @@ $(window).on("load", function () {
 
     var $gallery = $('.gallery').isotope();
 
-    $('.filtering').on('click', 'span', function () {
+    $('.filtering').on('click', 'span', function() {
         var filterValue = $(this).attr('data-filter');
         $gallery.isotope({ filter: filterValue });
     });
 
-    $('.filtering').on('click', 'span', function () {
+    $('.filtering').on('click', 'span', function() {
         $(this).addClass('active').siblings().removeClass('active');
     });
 
@@ -565,7 +611,7 @@ $(window).on("load", function () {
 
     $('#contact-form').validator();
 
-    $('#contact-form').on('submit', function (e) {
+    $('#contact-form').on('submit', function(e) {
         if (!e.isDefaultPrevented()) {
             var url = "https://www.innovationplans.com/idesign/avo2/avo-light/contact.php";
 
@@ -573,7 +619,7 @@ $(window).on("load", function () {
                 type: "POST",
                 url: url,
                 data: $(this).serialize(),
-                success: function (data) {
+                success: function(data) {
                     var messageAlert = 'alert-' + data.type;
                     var messageText = data.message;
 
@@ -598,11 +644,11 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('#navi').outerHeight();
-$(window).on("scroll", function (event) {
+$(window).on("scroll", function(event) {
     didScroll = true;
 });
 
-setInterval(function () {
+setInterval(function() {
     if (didScroll) {
         hasScrolled();
         didScroll = false;
@@ -638,15 +684,15 @@ paceOptions = {
     eventLag: false
 };
 
- Pace.on('done', function () {
-     $('#preloader').addClass("isdone");
-     $('.loading-text').addClass("isdone");
- });
+// Pace.on('done', function() {
+//     $('#preloader').addClass("isdone");
+//     $('.loading-text').addClass("isdone");
+// });
 
 
 /* ===============================  Scroll back to top  =============================== */
 
-$(document).ready(function () {
+$(document).ready(function() {
     "use strict";
 
     var progressPath = document.querySelector('.progress-wrap path');
@@ -656,7 +702,7 @@ $(document).ready(function () {
     progressPath.style.strokeDashoffset = pathLength;
     progressPath.getBoundingClientRect();
     progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function () {
+    var updateProgress = function() {
         var scroll = $(window).scrollTop();
         var height = $(document).height() - $(window).height();
         var progress = pathLength - (scroll * pathLength / height);
@@ -666,14 +712,14 @@ $(document).ready(function () {
     $(window).scroll(updateProgress);
     var offset = 150;
     var duration = 550;
-    jQuery(window).on('scroll', function () {
+    jQuery(window).on('scroll', function() {
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.progress-wrap').addClass('active-progress');
         } else {
             jQuery('.progress-wrap').removeClass('active-progress');
         }
     });
-    jQuery('.progress-wrap').on('click', function (event) {
+    jQuery('.progress-wrap').on('click', function(event) {
         event.preventDefault();
         jQuery('html, body').animate({ scrollTop: 0 }, duration);
         return false;
@@ -688,29 +734,29 @@ $(document).ready(function () {
 
 /* ===============================  Mouse effect  =============================== */
 
-function mousecursor() {
-    if ($("body")) {
-        const e = document.querySelector(".cursor-inner"),
-            t = document.querySelector(".cursor-outer");
-        let n, i = 0,
-            o = !1;
-        window.onmousemove = function (s) {
-            o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-        }, $("body").on("mouseenter", "a, .cursor-pointer", function () {
-            e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
-        }), $("body").on("mouseleave", "a, .cursor-pointer", function () {
-            $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-        }), e.style.visibility = "visible", t.style.visibility = "visible"
-    }
-};
+// function mousecursor() {
+//     if ($("body")) {
+//         const e = document.querySelector(".cursor-inner"),
+//             t = document.querySelector(".cursor-outer");
+//         let n, i = 0,
+//             o = !1;
+//         window.onmousemove = function(s) {
+//             o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
+//         }, $("body").on("mouseenter", "a, .cursor-pointer", function() {
+//             e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
+//         }), $("body").on("mouseleave", "a, .cursor-pointer", function() {
+//             $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+//         }), e.style.visibility = "visible", t.style.visibility = "visible"
+//     }
+// };
 
-$(function () {
-    mousecursor();
-});
+// $(function() {
+//     mousecursor();
+// });
 
- /* ===============================  fixed-slider  =============================== */
+/* ===============================  fixed-slider  =============================== */
 
-$(function () {
+$(function() {
 
     "use strict";
 
@@ -722,7 +768,7 @@ $(function () {
 
 });
 
-$(window).scroll(function () {
+$(window).scroll(function() {
 
     /* ===============================  fade slideshow  =============================== */
 
@@ -739,7 +785,7 @@ $(window).scroll(function () {
 /* ===============================  Swiper showcases with data  =============================== */
 
 
-$('[data-carousel="swiper"]').each(function () {
+$('[data-carousel="swiper"]').each(function() {
 
     var containe = $(this).find('[data-swiper="container"]').attr('id');
     var pagination = $(this).find('[data-swiper="pagination"]').attr('id');
