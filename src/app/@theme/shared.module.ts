@@ -15,6 +15,7 @@ import { ContactService } from "./services/contact.service";
 import { CareerService } from "./services/career.service";
 import { CommonService } from "./services/common.service";
 import { HomeService } from "./services/home.service";
+import { ServiceService } from "./services/service.service";
 //import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 //import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
@@ -23,7 +24,13 @@ import { HomeService } from "./services/home.service";
   imports: [FormsModule, ngFormsModule, ReactiveFormsModule],
 
   exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
-  providers: [ContactService, CareerService, CommonService, HomeService],
+  providers: [
+    ContactService,
+    CareerService,
+    CommonService,
+    HomeService,
+    ServiceService,
+  ],
   entryComponents: [],
 })
 export class SharedModule {}
