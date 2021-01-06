@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
+import { error } from "console";
 import { ToastrService } from "ngx-toastr";
 import { CareerService } from "src/app/@theme/services/career.service";
 
@@ -9,11 +11,15 @@ import { CareerService } from "src/app/@theme/services/career.service";
   styleUrls: ["./career-info.component.css"],
 })
 export class CareerInfoComponent implements OnInit {
+  careerForm: FormGroup | any;
   vacancyInfo: any = [];
   id: any;
   VacancyId: any = {
     Vacancyid: null,
   };
+  fileToUpload: File | any = null;
+  applyNowFlag: boolean = false;
+  value64: string | any;
   constructor(
     private careerService: CareerService,
     private route: Router,
@@ -22,6 +28,7 @@ export class CareerInfoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getData();
     this.getIdFromUrl();
   }
   getIdFromUrl() {
@@ -35,6 +42,51 @@ export class CareerInfoComponent implements OnInit {
         console.log(this.vacancyInfo);
       },
       (error) => {}
+    );
+  }
+
+  getData() {
+    this.careerForm = new FormGroup({
+      FirstName: new FormControl(null, Validators.required),
+      LastName: new FormControl(null, Validators.required),
+      ContactNo: new FormControl(null, Validators.required),
+      Email: new FormControl(null, Validators.required),
+      DOB: new FormControl(null),
+      Gender: new FormControl(null),
+      Experience: new FormControl(null),
+      Message: new FormControl(null),
+      Vaccancyid: new FormControl(null),
+      Resume: new FormControl(null),
+    });
+  }
+
+  chekApplyNow() {
+    this.applyNowFlag = true;
+  }
+
+  handleFileInput(event: any) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.value64 = reader.result;
+    };
+  }
+
+  addCareerApplication() {
+    this.careerForm.patchValue({
+      Vaccancyid: this.id,
+      Resume: this.value64,
+    });
+
+    this.careerService.hireApplication(this.careerForm.value).subscribe(
+      (data) => {
+        this.toastr.success("We will get back to you soon");
+        this.applyNowFlag = false;
+      },
+      (error) => {
+        this.toastr.error("Something went wrong. try again later.");
+      }
     );
   }
 }
