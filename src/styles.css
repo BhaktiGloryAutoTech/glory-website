@@ -183,3 +183,12 @@ p.small {
     align-items: center;
     justify-content: center;
 }
+
+.clientName {
+    color: black !important;
+}
+
+.service-main {
+    margin-top: -20px;
+    /* justify-content: center;*/
+}
