@@ -392,56 +392,21 @@
                                     <h4 class="wow fadeInLeft" data-wow-delay=".5s">What Client's Say?</h4>
                                 </div>
                                 <div class="slic-item wow fadeInUp" data-wow-delay=".5s">
-                                    <div class="item">
-                                        <p>Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit
-                                            class
-                                            aptent taciti sociosqu ad litora.</p>
-                                        <div class="info">
-                                            <div class="img">
-                                                <div class="img-box">
-                                                    <img src="assets/img/clients/1.jpg" alt="">
+                                    <div *ngFor="let client of clientData">
+                                        <div class="item">
+                                            <p>{{client.ClientMessage}}</p>
+                                            <div class="info">
+                                                <div class="img">
+                                                    <div class="img-box">
+                                                        <img src="{{'data:image/jpg;base64,' + client.ClientLogo}}"
+                                                            alt="">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="cont">
-                                                <div class="author">
-                                                    <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                    <span class="author-details">Co-founder, Colabrio</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <p>Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit
-                                            class
-                                            aptent taciti sociosqu ad litora.</p>
-                                        <div class="info">
-                                            <div class="img">
-                                                <div class="img-box">
-                                                    <img src="assets/img/clients/2.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="cont">
-                                                <div class="author">
-                                                    <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                    <span class="author-details">Co-founder, Colabrio</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <p>Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit
-                                            class
-                                            aptent taciti sociosqu ad litora.</p>
-                                        <div class="info">
-                                            <div class="img">
-                                                <div class="img-box">
-                                                    <img src="assets/img/clients/3.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="cont">
-                                                <div class="author">
-                                                    <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                    <span class="author-details">Co-founder, Colabrio</span>
+                                                <div class="cont">
+                                                    <div class="author">
+                                                        <h6 class="author-name custom-font">{{client.ClientName}}</h6>
+                                                        <span class="author-details">Co-founder, Colabrio</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -511,69 +476,11 @@
                     <div class="col-lg-8">
                         <div>
                             <div class="row bord">
-                                <div class="col-md-3 col-6 brands">
-                                    <div class="item wow fadeIn" data-wow-delay=".3s">
+                                <div class="col-md-3 col-6 brands" *ngFor="let client of clientData">
+                                    <div class="item wow fadeIn" data-aos="fadeIn" data-wow-delay=".3s">
                                         <div class="img">
-                                            <img src="img/clients/brands/1.png" alt="">
-                                            <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-6 brands">
-                                    <div class="item wow fadeIn" data-wow-delay=".6s">
-                                        <div class="img">
-                                            <img src="img/clients/brands/2.png" alt="">
-                                            <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-6 brands">
-                                    <div class="item wow fadeIn" data-wow-delay=".8s">
-                                        <div class="img">
-                                            <img src="img/clients/brands/3.png" alt="">
-                                            <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-6 brands">
-                                    <div class="item wow fadeIn" data-wow-delay=".3s">
-                                        <div class="img">
-                                            <img src="img/clients/brands/4.png" alt="">
-                                            <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 col-6 brands">
-                                    <div class="item wow fadeIn" data-wow-delay=".4s">
-                                        <div class="img">
-                                            <img src="img/clients/brands/5.png" alt="">
-                                            <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-6 brands">
-                                    <div class="item wow fadeIn" data-wow-delay=".7s">
-                                        <div class="img">
-                                            <img src="img/clients/brands/6.png" alt="">
-                                            <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-6 brands">
-                                    <div class="item wow fadeIn" data-wow-delay=".5s">
-                                        <div class="img">
-                                            <img src="img/clients/brands/7.png" alt="">
-                                            <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-6 brands">
-                                    <div class="item wow fadeIn" data-wow-delay=".3s">
-                                        <div class="img">
-                                            <img src="img/clients/brands/8.png" alt="">
-                                            <a href="#0" class="link" data-splitting>www.avo.com</a>
+                                            <img src="{{'data:image/jpg;base64,' + client.ClientLogo}}" alt="">
+                                            <a class="link clientName" data-splitting>{{client.ClientName}}</a>
                                         </div>
                                     </div>
                                 </div>

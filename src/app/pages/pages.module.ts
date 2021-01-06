@@ -22,6 +22,7 @@ import {
 import { ContactService } from "../@theme/services/contact.service";
 import { CareerService } from "../@theme/services/career.service";
 import { CareerModule } from "./career/career.module";
+import { HomeService } from "../@theme/services/home.service";
 
 @NgModule({
   declarations: [
@@ -46,6 +47,6 @@ import { CareerModule } from "./career/career.module";
     CareerModule,
   ],
   exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
-  providers: [ContactService, CareerService],
+  providers: [ContactService, CareerService, HomeService],
 })
 export class PagesModule {}
