@@ -103,7 +103,7 @@
                                 <div class="form md-mb50">
                                     <form [formGroup]="careerForm">
 
-                                        <div class="messages">Career</div>
+                                        <div class="messages">Application</div>
 
                                         <div class="controls career-form-group">
                                             <div class="row">
@@ -112,11 +112,19 @@
                                                         <input type="text" name="name" placeholder="First Name"
                                                             formControlName="FirstName" required="required">
                                                     </div>
+                                                    <div class="text-danger"
+                                                        *ngIf="careerForm.get('FirstName').invalid&&(formSubmitted||careerForm.get('FirstName').touched)">
+                                                        Firstname is Require.
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
                                                         <input type="text" name="name" placeholder="Last Name"
                                                             formControlName="LastName" required="required">
+                                                    </div>
+                                                    <div class="text-danger"
+                                                        *ngIf="careerForm.get('LastName').invalid&&(formSubmitted||careerForm.get('LastName').touched)">
+                                                        Lastname is Require.
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4">
@@ -124,11 +132,19 @@
                                                         <input type="email" name="email" placeholder="Email Address"
                                                             formControlName="Email" required="required">
                                                     </div>
+                                                    <div class="text-danger"
+                                                        *ngIf="careerForm.get('Email').invalid&&(formSubmitted||careerForm.get('Email').touched)">
+                                                        Email is Require.
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
-                                                        <input type="text" name="number" placeholder="Phone Number"
+                                                        <input type="tel" name="number" placeholder="Phone Number"
                                                             formControlName="ContactNo" required="required">
+                                                    </div>
+                                                    <div class="text-danger"
+                                                        *ngIf="careerForm.get('ContactNo').invalid&&(formSubmitted||careerForm.get('ContactNo').touched)">
+                                                        Contact No is Require.
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4">
@@ -137,7 +153,6 @@
                                                             formControlName="DOB" required="required">
                                                     </div>
                                                 </div>
-
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
                                                         <select name="cars" id="cars" formControlName="Gender">
@@ -150,7 +165,7 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <input type="numbers" name="experience" placeholder="Experience"
+                                                        <input type="number" name="experience" placeholder="Experience"
                                                             formControlName="Experience" required="required">
                                                     </div>
                                                 </div>

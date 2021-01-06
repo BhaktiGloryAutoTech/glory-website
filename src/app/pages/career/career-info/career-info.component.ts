@@ -20,6 +20,7 @@ export class CareerInfoComponent implements OnInit {
   fileToUpload: File | any = null;
   applyNowFlag: boolean = false;
   value64: string | any;
+  formSubmitted: boolean = false;
   constructor(
     private careerService: CareerService,
     private route: Router,
@@ -62,6 +63,7 @@ export class CareerInfoComponent implements OnInit {
 
   chekApplyNow() {
     this.applyNowFlag = true;
+    this.careerForm.reset();
   }
 
   handleFileInput(event: any) {
@@ -74,19 +76,24 @@ export class CareerInfoComponent implements OnInit {
   }
 
   addCareerApplication() {
-    this.careerForm.patchValue({
-      Vaccancyid: this.id,
-      Resume: this.value64,
-    });
+    this.formSubmitted = true;
+    if (this.careerForm.valid) {
+      this.careerForm.patchValue({
+        Vaccancyid: this.id,
+        Resume: this.value64,
+      });
 
-    this.careerService.hireApplication(this.careerForm.value).subscribe(
-      (data) => {
-        this.toastr.success("We will get back to you soon");
-        this.applyNowFlag = false;
-      },
-      (error) => {
-        this.toastr.error("Something went wrong. try again later.");
-      }
-    );
+      this.careerService.hireApplication(this.careerForm.value).subscribe(
+        (data) => {
+          this.toastr.success("We will get back to you soon");
+          this.applyNowFlag = false;
+        },
+        (error) => {
+          this.toastr.error("Something went wrong. try again later.");
+        }
+      );
+    } else {
+      return;
+    }
   }
 }
