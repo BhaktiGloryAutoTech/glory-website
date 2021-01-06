@@ -19,9 +19,15 @@ export class CareerService {
   getJobTitle() {
     return this._http.get(this.commonService.envurl() + "getVacancyList");
   }
-  
-  getVacancyListById(id:any){
-    return this._http.post(this.commonService.envurl()+"getVacancyById/",id);
+
+  getVacancyListById(id: any) {
+    return this._http.post(this.commonService.envurl() + "getVacancyById/", id);
   }
-  
+
+  hireApplication(data: any) {
+    return this._http.post(
+      this.commonService.envurl() + "hireapplication",
+      data
+    );
+  }
 }
