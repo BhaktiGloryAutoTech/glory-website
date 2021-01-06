@@ -1,0 +1,20 @@
+.owl-carousel .item {
+    height: 10rem;
+    background: #4DC7A0;
+    padding: 1rem;
+}
+
+.btns {
+    display: table;
+    margin: 30px auto;
+}
+
+.customNextBtn,
+.customPreviousBtn {
+    float: right;
+    background: #2d9070;
+    color: #fff;
+    padding: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
