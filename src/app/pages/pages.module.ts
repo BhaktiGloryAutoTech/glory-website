@@ -8,7 +8,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { AboutComponent } from "./about/about.component";
 import { WorkComponent } from "./work/work.component";
 import { ServicesComponent } from "./services/services.component";
-import { CareerComponent } from "./career/career.component";
+import { CareerComponent } from "./rr/career.component";
 import { NeedTeamComponent } from "./need-team/need-team.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HeaderComponent } from "./header/header.component";
@@ -20,6 +20,8 @@ import {
   ReactiveFormsModule,
 } from "@angular/forms";
 import { ContactService } from "../@theme/services/contact.service";
+import { CareerService } from "../@theme/services/career.service";
+import { CareerModule } from "./career/career.module";
 
 @NgModule({
   declarations: [
@@ -41,8 +43,9 @@ import { ContactService } from "../@theme/services/contact.service";
     FormsModule,
     ngFormsModule,
     ReactiveFormsModule,
+    CareerModule,
   ],
   exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
-  providers: [ContactService],
+  providers: [ContactService, CareerService],
 })
 export class PagesModule {}
