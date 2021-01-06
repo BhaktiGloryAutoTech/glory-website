@@ -157,7 +157,7 @@ p.small {
   transition: all 0.3s ease-out;
   color: #ffffff;
 }
-.container {
+.card-container {
   width: 100%;
   height: 100%;
   display: flex;

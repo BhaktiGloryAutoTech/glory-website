@@ -19,7 +19,7 @@
 
     <!-- ==================== End Slider ==================== -->
     <!-- (click)="redirectInfo(t.Vacancyid)" -->
-    <div class="container">
+    <div class="card-container">
         <div *ngFor="let t of vacancyTitle" class="text-center pt-5">
             <a class="card1" [routerLink]="['/pages/career/careerInfo',t.Vacancyid]">
                 <h3>{{t.VacancyName}}</h3>
