@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-12">
-                <div class="main-container career-info-container text-center pt-2 pb-5">
+                <div class="main-container career-info-container text-center pt-2">
                     <div *ngFor="let info of vacancyInfo">
                         <div class="career-title pb-4">
                             <h2>{{info.VacancyName}}</h2>
@@ -22,14 +22,9 @@
                                     <h4>About Glory Autotech</h4>
                                 </div>
                                 <div>
-                                    <p>When business, people and technology collide true innovation happen. We help you
-                                        build a team that can deliver your business needs. We don’t just complete task
-                                        but care about the end result and the future of our client’s
-                                        project. We integrate continuous skill development into our workflow to stay up
-                                        on the latest technology, industry trends.We will help you to build right
-                                        product for your business and startUps with agile methodology.We
-                                        create custom software to help businesses thrive in the digital age. We will
-                                        lead your business from good to great.</p>
+                                    <p>When business, people and technology collide true innovation happen. We help you build a team that can deliver your business needs. We don’t just complete task but care about the end result and the future of our client’s
+                                        project. We integrate continuous skill development into our workflow to stay up on the latest technology, industry trends.We will help you to build right product for your business and startUps with agile methodology.We
+                                        create custom software to help businesses thrive in the digital age. We will lead your business from good to great.</p>
                                 </div>
                             </div>
                             <div class="career-main-detail pt-3">
@@ -74,8 +69,7 @@
                                 </div>
                             </div>
                             <div class="text-center pb-5">
-                                <button type=" submit " (click)="chekApplyNow()"
-                                    class="btn-curve btn-color btn-apply"><span>Apply
+                                <button type=" submit " (click)="chekApplyNow()" class="btn-curve btn-color btn-apply"><span>Apply
                                         Now</span></button>
                             </div>
                         </div>
@@ -88,98 +82,99 @@
     </div>
 
     <!-- ==================== Start main-content ==================== -->
-    <div *ngIf="applyNowFlag">
+    <div *ngIf="applyNowFlag" class=" career-info-container">
         <div class="main-content">
 
             <!-- ==================== Start Contact ==================== -->
 
-            <section class="contact section-padding">
+            <section class="contact section-padding detail-career">
                 <div class="container">
                     <div class="row">
 
 
                         <div class="col-lg-12 col-12">
-                            <div class="detail-career">
-                                <div class="form md-mb50">
-                                    <form [formGroup]="careerForm">
 
-                                        <div class="messages">Career</div>
+                            <div class="form md-mb50">
+                                <form [formGroup]="careerForm">
 
-                                        <div class="controls career-form-group">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <input type="text" name="name" placeholder="First Name"
-                                                            formControlName="FirstName" required="required">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <input type="text" name="name" placeholder="Last Name"
-                                                            formControlName="LastName" required="required">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <input type="email" name="email" placeholder="Email Address"
-                                                            formControlName="Email" required="required">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <input type="text" name="number" placeholder="Phone Number"
-                                                            formControlName="ContactNo" required="required">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <input type="date" name="birthdate" placeholder="D.O.B"
-                                                            formControlName="DOB" required="required">
-                                                    </div>
-                                                </div>
+                                    <div class="form-messages text-center mb-4 pb-3">Application</div>
 
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <select name="cars" id="cars" formControlName="Gender">
+                                    <div class="controls career-form-group">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <input type="text" name="name" placeholder="First Name" formControlName="FirstName" required="required">
+                                                </div>
+                                                <div class="text-danger" *ngIf="careerForm.get('FirstName').invalid&&(formSubmitted||careerForm.get('FirstName').touched)">
+                                                    Firstname is Require.
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <input type="text" name="name" placeholder="Last Name" formControlName="LastName" required="required">
+                                                </div>
+                                                <div class="text-danger" *ngIf="careerForm.get('LastName').invalid&&(formSubmitted||careerForm.get('LastName').touched)">
+                                                    Lastname is Require.
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <input type="email" name="email" placeholder="Email Address" formControlName="Email" required="required">
+                                                </div>
+                                                <div class="text-danger" *ngIf="careerForm.get('Email').invalid&&(formSubmitted||careerForm.get('Email').touched)">
+                                                    Email is Require.
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <input type="tel" name="number" placeholder="Phone Number" formControlName="ContactNo" required="required">
+                                                </div>
+                                                <div class="text-danger" *ngIf="careerForm.get('ContactNo').invalid&&(formSubmitted||careerForm.get('ContactNo').touched)">
+                                                    Contact No is Require.
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <input type="date" name="birthdate" placeholder="D.O.B" formControlName="DOB" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <select name="cars" id="cars" formControlName="Gender">
                                                             <option value="option">Select an option</option>
                                                             <option value="male">Male</option>
                                                             <option value="female">Female</option>
                                                             <option value="other">Other</option>
                                                         </select>
-                                                    </div>
                                                 </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <input type="numbers" name="experience" placeholder="Experience"
-                                                            formControlName="Experience" required="required">
-                                                    </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <input type="number" name="experience" placeholder="Experience" formControlName="Experience" required="required">
                                                 </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <input type="file" name="uploadresume" class="up-res"
-                                                            placeholder="Upload Resume"
-                                                            (change)="handleFileInput($event)" required="required">
-                                                    </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <input type="file" name="uploadresume" class="up-res" placeholder="Upload Resume" (change)="handleFileInput($event)" required="required">
                                                 </div>
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <textarea name="message" placeholder="Message" rows="4"
-                                                            formControlName="Message" required="required"></textarea>
-                                                    </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <textarea name="message" placeholder="Message" rows="4" formControlName="Message" required="required"></textarea>
                                                 </div>
+                                            </div>
 
-                                                <div class="col-sm-12">
-                                                    <div class="text-left btn-mobile">
-                                                        <button type="button" (click)="addCareerApplication()"
-                                                            class="btn-curve btn-color"><span>Submit</span>
+                                            <div class="col-sm-12">
+                                                <div class="text-center btn-mobile pb-5 pt-4">
+                                                    <button type="button" (click)="addCareerApplication()" class="btn-curve btn-color"><span>Submit</span>
                                                         </button>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
+
                         </div>
                     </div>
                 </div>

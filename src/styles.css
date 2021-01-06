@@ -39,7 +39,11 @@
 .content p {
   max-width: 600px;
   font-size: 25px;
-  line-height: 35px;
+  line-height: 27px;
+}
+
+.btn-new-design {
+  color: #000 !important;
 }
 
 .h2-text-heading {
@@ -160,6 +164,7 @@ p.small {
 
 .card1 h3 {
   color: #08adc3;
+  font-size: 20px;
 }
 
 .card1:hover h3 {

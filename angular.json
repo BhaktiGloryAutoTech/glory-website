@@ -28,11 +28,11 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css",
-                            "src/app/@theme/css/style.css",
+                            "src/app/@theme/css/plugins/bootstrap.min.css",
+                            "src/owl.css",
+                            "src/owl-theme.css",
                             "src/app/@theme/css/plugins.css",
                             "src/app/@theme/css/plugins/animate.css",
-                            "src/app/@theme/css/plugins/bootstrap.min.css",
                             "src/app/@theme/css/plugins/fontawesome-all.min.css",
                             "src/app/@theme/css/plugins/ionicons.min.css",
                             "src/app/@theme/css/plugins/justifiedGallery.min.css",
@@ -41,16 +41,23 @@
                             "src/app/@theme/css/plugins/slick.css",
                             "src/app/@theme/css/plugins/swiper.min.css",
                             "src/app/@theme/css/plugins/YouTubePopUp.css",
+                            "src/app/@theme/css/style.css",
+                            "src/styles.css",
                             "node_modules/ngx-toastr/toastr.css",
                             "src/responsive.css",
-                            "node_modules/aos/dist/aos.css"
+                            "node_modules/aos/dist/aos.css",
+                            "src/owl-style.css"
+
                         ],
                         "scripts": [
                             "src/app/@theme/js/jquery-3.0.0.min.js",
                             "src/app/@theme/js/jquery-migrate-3.0.0.min.js",
+                            "src/owl.js",
+                            "src/owl-new.js",
                             "src/app/@theme/js/scripts.js",
                             "src/app/@theme/js/plugins.js",
                             "src/app/@theme/js/map.js"
+
                         ]
                     },
                     "configurations": {
@@ -109,11 +116,11 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css",
-                            "src/app/@theme/css/style.css",
+                            "src/app/@theme/css/plugins/bootstrap.min.css",
+                            "src/owl.css",
+                            "src/owl-theme.css",
                             "src/app/@theme/css/plugins.css",
                             "src/app/@theme/css/plugins/animate.css",
-                            "src/app/@theme/css/plugins/bootstrap.min.css",
                             "src/app/@theme/css/plugins/fontawesome-all.min.css",
                             "src/app/@theme/css/plugins/ionicons.min.css",
                             "src/app/@theme/css/plugins/justifiedGallery.min.css",
@@ -121,14 +128,24 @@
                             "src/app/@theme/css/plugins/slick-theme.css",
                             "src/app/@theme/css/plugins/slick.css",
                             "src/app/@theme/css/plugins/swiper.min.css",
-                            "src/app/@theme/css/plugins/YouTubePopUp.css"
+                            "src/app/@theme/css/plugins/YouTubePopUp.css",
+                            "src/app/@theme/css/style.css",
+                            "src/styles.css",
+                            "node_modules/ngx-toastr/toastr.css",
+                            "src/responsive.css",
+                            "node_modules/aos/dist/aos.css",
+                            "src/owl-style.css"
+
                         ],
                         "scripts": [
                             "src/app/@theme/js/jquery-3.0.0.min.js",
                             "src/app/@theme/js/jquery-migrate-3.0.0.min.js",
+                            "src/owl.js",
+                            "src/owl-new.js",
                             "src/app/@theme/js/scripts.js",
                             "src/app/@theme/js/plugins.js",
                             "src/app/@theme/js/map.js"
+
                         ]
                     }
                 },
