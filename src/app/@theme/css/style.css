@@ -4317,7 +4317,7 @@ span:hover {
 }
 
 .portfolio .gallery .items {
-    padding: 0 50px;
+    padding: 0 33px;
     margin: 50px 0;
 }
 
@@ -7168,6 +7168,91 @@ a:hover {
 .b button:hover span::before,
 .b button:hover span::after {
     height: 100%;
+}
+
+
+/* career detail page */
+
+.detail-career {
+    border: 1px solid #EEE;
+    border-radius: 6px;
+    padding: 24px 24px 0;
+}
+
+.career-info-container {
+    max-width: 940px;
+    margin: 48px auto;
+}
+
+.career-info-detail-title h4 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.career-info-detail-title h4 {
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.career-main-detail p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* padding-bottom: 8px; */
+    color: #484848;
+    font-family: inherit !important;
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+.btn-apply {
+    padding: 9px 20px !important;
+}
+
+.career-main-detail:not(:first-child) {
+    border-top: 1px solid #EEE;
+}
+
+.badge-career-info span {
+    background: #F8F8F8;
+    color: #666;
+    padding: 6px 12px;
+    border-radius: 14px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    line-height: 16px;
+    font-size: 15px;
+    font-family: inherit;
+    text-transform: capitalize;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: capitalize;
+}
+
+.dis-flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-name-company-info h5 {
+    color: #8A8A8A;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    line-height: 1.43;
+    font-size: 14px;
+}
+
+.glory-logo {
+    width: 37px;
 }
 
 @media (max-width: 767px) {
