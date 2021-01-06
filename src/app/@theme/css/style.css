@@ -764,7 +764,7 @@ span:hover {
 }
 
 .pt-5 {
-    padding-top: 5px !important;
+    padding-top: 5px;
 }
 
 .pt-10 {
@@ -853,7 +853,7 @@ span:hover {
 }
 
 .pb-5 {
-    padding-bottom: 5px !important;
+    padding-bottom: 5px;
 }
 
 .pb-10 {
@@ -7309,6 +7309,12 @@ h6 {
     cursor: pointer;
     box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.form-messages {
+    font-size: 27px;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
 }
 
 @media (max-width: 767px) {

@@ -166,6 +166,7 @@ p.small {
 
 .card1 h3 {
     color: #08adc3;
+    font-size: 20px;
 }
 
 .card1:hover h3 {
