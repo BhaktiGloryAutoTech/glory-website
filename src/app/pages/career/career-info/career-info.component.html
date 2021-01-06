@@ -1,51 +1,82 @@
-<div class="main-container">
-    <div *ngFor="let info of vacancyInfo">
-        <div>
-            <h2>{{info.VacancyName}}</h2>
+<div class="career-main-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <div class="main-container career-info-container text-center pt-2 pb-5">
+                    <div *ngFor="let info of vacancyInfo">
+                        <div class="career-title pb-4">
+                            <h2>{{info.VacancyName}}</h2>
+                        </div>
+                        <div class="detail-career text-left">
+                            <div class=" career-main-detail dis-flex-space pb-3">
+                                <div class="career-info-detail-title main-name-company-info">
+                                    <h4>{{info.VacancyName}}</h4>
+                                    <h5>Glory Autotech</h5>
+                                </div>
+                                <div class="glory-logo">
+                                    <img src="../../../../assets/img/icon-career.png" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class=" career-main-detail pt-3">
+                                <div class="career-info-detail-title ">
+                                    <h4>About Glory Autotech</h4>
+                                </div>
+                                <div>
+                                    <p>When business, people and technology collide true innovation happen. We help you build a team that can deliver your business needs. We don’t just complete task but care about the end result and the future of our client’s
+                                        project. We integrate continuous skill development into our workflow to stay up on the latest technology, industry trends.We will help you to build right product for your business and startUps with agile methodology.We
+                                        create custom software to help businesses thrive in the digital age. We will lead your business from good to great.</p>
+                                </div>
+                            </div>
+                            <div class="career-main-detail pt-3">
+                                <div class="career-info-detail-title ">
+                                    <h4>Who can Apply</h4>
+                                </div>
+                                <div>
+                                    <p> {{info.WhoCanApply}}</p>
+                                </div>
+                            </div>
+                            <div class="career-main-detail pt-3">
+                                <div class="career-info-detail-title ">
+                                    <h4>Skills required</h4>
+                                </div>
+                                <div>
+                                    <p> {{info.Skill}}</p>
+                                </div>
+                            </div>
+                            <div class="career-main-detail pt-3">
+                                <div class="career-info-detail-title ">
+                                    <h4>Job Responsibility</h4>
+                                </div>
+                                <div>
+                                    <p> {{info.JobResponsibility}}</p>
+                                </div>
+                            </div>
+                            <div class="career-main-detail pt-3">
+                                <div class="career-info-detail-title ">
+                                    <h4>No of opening.</h4>
+                                </div>
+                                <div>
+                                    <p> {{info.NoOfOpening}}</p>
+                                </div>
+                            </div>
+                            <div class="career-main-detail pt-3 pb-5">
+                                <div class="career-info-detail-title ">
+                                    <h4>Perks</h4>
+                                </div>
+                                <div class="badge-career-info">
+                                    <span> {{info.Pearks}}</span>
+
+                                </div>
+                            </div>
+                            <div class="text-center pb-5">
+                                <button type=" submit " class="btn-curve btn-color btn-apply"><span>Apply Now</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-        <div>
-            <div>
-                <h4>Who can Apply</h4>
-            </div>
-            <div>
-                {{info.WhoCanApply}}
-            </div>
-        </div>
-        <div>
-            <div>
-                <h4>Skills required</h4>
-            </div>
-            <div>
-                {{info.Skill}}
-            </div>
-        </div>
-        <div>
-            <div>
-                <h4>Job Responsibility</h4>
-            </div>
-            <div>
-                {{info.JobResponsibility}}
-            </div>
-        </div>
-        <div>
-            <div>
-                <h4>No of opening.</h4>
-            </div>
-            <div>
-                {{info.NoOfOpening}}
-            </div>
-        </div>
-        <div>
-            <div>
-                <h4>Perks</h4>
-            </div>
-            <div>
-                {{info.Pearks}}
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-lg-3 valign">
-        <a routerLink="contact" class="btn-curve btn-blc wow fadeInUp" data-wow-delay=".5s"><span>Get In
-                Touch</span></a>
     </div>
 </div>
