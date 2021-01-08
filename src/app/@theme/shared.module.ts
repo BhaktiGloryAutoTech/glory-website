@@ -45,6 +45,7 @@ import { ModalModule } from "ngb-modal";
     NgSelectModule,
     NeedTeamService,
     ModalModule,
+    NbIconModule
   ],
   entryComponents: [],
 })

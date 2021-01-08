@@ -8,8 +8,7 @@
                     <div class="cont text-center">
                         <h1>Need Team?</h1>
                         <div class="path">
-                            <a routerLink='home'>Home</a><span>/</span><a routerLink='needTeam'
-                                class="active">NeedTeam</a>
+                            <a routerLink='home'>Home</a><span>/</span><a routerLink='needTeam' class="active">NeedTeam</a>
                         </div>
                     </div>
                 </div>
@@ -22,65 +21,68 @@
 
         <!-- ==================== Start Contact ==================== -->
 
-        <section class="contact section-padding detail-career">
-            <div class="container">
+        <section class="contact section-padding detail-career pt-5">
+            <div class="container team-container">
                 <form [formGroup]="needTeamForm">
                     <div class="row">
-                        <div class="col-lg-6 col-12">
+                        <div class="col-lg-12 col-12">
 
                             <div class="form md-mb50">
-
-
-                                <div class="form-messages text-center mb-4 pb-3">Application</div>
+                                <div class="need-team-header">
+                                    <div class="row m-0">
+                                        <div class="col-lg-9 col-6 col-sm-6 dis-flex-start">
+                                            <div class="form-messages text-center teamform">Need A Team</div>
+                                        </div>
+                                        <div class="col-lg-3 col-6 col-sm-6 dis-flex-end">
+                                            <div class="form-group m-0">
+                                                <div class="col-md-offset-2 col-md-4 col-12">
+                                                    <button type="button" class="btn btn-primary btn-need-team" (click)="onAddStep()">
+                                                        Add Developer
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="controls career-form-group">
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <input type="email" name="email" placeholder="Email Address"
-                                                    formControlName="Email" required="required">
+                                                <input type="email" name="email" placeholder="Email Address" formControlName="Email" required="required">
                                             </div>
-                                            <div class="text-danger"
-                                                *ngIf="needTeamForm.get('Email').invalid&&(formSubmitted||needTeamForm.get('Email').touched)">
+                                            <div class="text-danger" *ngIf="needTeamForm.get('Email').invalid&&(formSubmitted||needTeamForm.get('Email').touched)">
                                                 Email is Require.
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <input type="tel" name="number" placeholder="Phone Number"
-                                                    formControlName="ContactNo" required="required">
+                                                <input type="tel" name="number" placeholder="Phone Number" formControlName="ContactNo" required="required">
                                             </div>
-                                            <div class="text-danger"
-                                                *ngIf="needTeamForm.get('ContactNo').invalid&&(formSubmitted||needTeamForm.get('ContactNo').touched)">
+                                            <div class="text-danger" *ngIf="needTeamForm.get('ContactNo').invalid&&(formSubmitted||needTeamForm.get('ContactNo').touched)">
                                                 Contact No is Require.
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <input type="date" name="startDate" placeholder="Start Date"
-                                                    formControlName="StartDate" required="required">
+                                                <input type="date" name="startDate" placeholder="Start Date" formControlName="StartDate" required="required" class="pad-10">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="number" name="budget" placeholder="Budget"
-                                                    formControlName="Budget" required="required">
+                                                <input type="number" name="budget" placeholder="Budget" formControlName="Budget" required="required">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="file" name="uploadresume" class="up-res"
-                                                    placeholder="Upload Resume" (change)="handleFileInput($event)"
-                                                    required="required">
+                                                <input type="file" name="uploadresume" class="up-res" placeholder="Upload Resume" (change)="handleFileInput($event)" required="required">
                                             </div>
                                         </div>
 
 
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <textarea name="projectDescription" placeholder="Project Description"
-                                                    rows="4" formControlName="ProjectDescription"
-                                                    required="required"></textarea>
+                                                <textarea name="projectDescription" placeholder="Project Description" rows="4" formControlName="ProjectDescription" required="required"></textarea>
                                             </div>
                                         </div>
 
@@ -91,66 +93,63 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-6 col-12">
-                            <!--Add Developer card button-->
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-4 col-12">
-                                    <button type="button" class="btn btn-primary" (click)="onAddStep()">
-                                        Add Developer
-                                    </button>
-                                </div>
-                            </div>
-                            <div>
-                                <div *ngFor="let list of developerDataList">
-                                    <div class="form-group">
-                                        <div class="col-md-offset-2 col-md-4 col-12">
-                                            <button type="button" class="btn btn-primary" (click)="onDeleteStep(list)">
-                                                delete
-                                            </button>
+                    </div>
+                    <div class="card-detail-team">
+                        <div class="row">
+                            <div class="col-lg-4 col-12" *ngFor="let list of developerDataList">
+                                <!--Add Developer card button-->
+
+                                <div class="card-detail-teammem mt-5-5">
+                                    <div class="row">
+                                        <div class="col-md-8 col-lg-8 col-12">
+                                            <div>
+                                                <label>Developer:</label>
+                                                <span>{{list.developerName}}</span>
+                                            </div>
+                                            <div>
+                                                <label>Hr/day:</label>
+                                                <span>{{list.hrDay}}</span>
+                                            </div>
+                                            <div>
+                                                <label>Duration:</label>
+                                                <span>{{list.duration}}</span>
+                                            </div>
+                                            <div>
+                                                <label>Experience:</label>
+                                                <span>{{list.experience}}</span>
+                                            </div>
+                                            <div>
+                                                <label>No of Developer:</label>
+                                                <span>{{list.noOfDeveloper}}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-offset-2 col-md-4 col-12">
-                                            <button type="button" class="btn btn-primary" (click)="onEditStep(list)">
-                                                edit
-                                            </button>
+                                        <div class="col-md-4 col-lg-4 col-12">
+
+                                            <div class="btn-icon-card-edit-delete">
+                                                <div class="">
+                                                    <button type="button" class="btn btn-primary" (click)="onEditStep(list)">
+                                                        edit
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary" (click)="onDeleteStep(list)">
+                                                        delete
+                                                    </button>
+
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <label>Developer:</label>
-                                        <span>{{list.developerName}}</span>
-                                    </div>
-                                    <div>
-                                        <label>Hr/day:</label>
-                                        <span>{{list.hrDay}}</span>
-                                    </div>
-                                    <div>
-                                        <label>Duration:</label>
-                                        <span>{{list.duration}}</span>
-                                    </div>
-                                    <div>
-                                        <label>Experience:</label>
-                                        <span>{{list.experience}}</span>
-                                    </div>
-                                    <div>
-                                        <label>No of Developer:</label>
-                                        <span>{{list.noOfDeveloper}}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="form-group text-right">
-                                <nb-icon icon="plus-circle" status="primary" (click)="onAddStep()"
-                                    class="plus-add add-modal"></nb-icon>
-                            </div> -->
 
 
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="text-center btn-mobile pb-5 pt-4">
-                                <button type="button" class="btn-curve btn-color"
-                                    (click)="addNeedTeam()"><span>Submit</span>
+                                <button type="button" class="btn-curve btn-color" (click)="addNeedTeam()"><span>Submit</span>
                                 </button>
                             </div>
                         </div>
@@ -161,7 +160,8 @@
 
         <!-- ==================== End Contact ==================== -->
 
-    </div> <!-- ==================== Start Footer ==================== -->
+    </div>
+    <!-- ==================== Start Footer ==================== -->
 
     <footer class="footer-half sub-bg section-padding pb-0">
         <div class="container">
@@ -175,12 +175,10 @@
                         </div>
                         <div class="con-info custom-font">
                             <ul>
-                                <li><span>Email : </span><a
-                                        href="mailto:hrgloryautotech@gmail.com">hrgloryautotech@gmail.com</a>
+                                <li><span>Email : </span><a href="mailto:hrgloryautotech@gmail.com">hrgloryautotech@gmail.com</a>
                                 </li>
                                 <li>
-                                    <div class="display-block-task"><span>Address: </span> 309 - 310 , SNS Arista ,
-                                        behind Prime Shoppers, Vesu.
+                                    <div class="display-block-task"><span>Address: </span> 309 - 310 , SNS Arista , behind Prime Shoppers, Vesu.
                                     </div>
                                 </li>
                                 <li>

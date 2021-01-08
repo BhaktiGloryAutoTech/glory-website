@@ -7107,6 +7107,12 @@ a:hover {
     align-items: center;
 }
 
+.dis-flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .get-in-num,
 .phone-get-in {
     display: inline-block;
@@ -7362,6 +7368,96 @@ h6 {
 .color-i {
     margin-right: 10px;
     color: #08adc3;
+}
+
+.teamform {
+    border: 0;
+}
+
+
+/* team page design */
+
+.need-team-header {
+    background: #0a2065;
+    color: #fff;
+    padding: 10px;
+}
+
+.career-form-group {
+    padding: 15px 27px;
+    border: 1px solid #d2d2d2;
+}
+
+.pad-10 {
+    padding-bottom: 10px !important;
+}
+
+.btn-need-team {
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    color: #0a2065;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-need-team:hover {
+    background-color: #08adc3;
+}
+
+.btn-need-team:focus,
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.modal-content {
+    border-radius: 0;
+    border: 0;
+}
+
+.mt-5-5 {
+    margin: 3rem 0 !important;
+}
+
+.modal-developer {
+    background-color: #0a2065;
+    border-radius: 0;
+}
+
+.close-icon {
+    color: #fff;
+}
+
+.close-icon:focus,
+.close:focus {
+    outline: 0;
+}
+
+.nb-text {
+    color: #fff;
+    font-size: 20px;
+}
+
+.modal-detail .form-group label {
+    color: #0a2065;
+}
+
+.card-detail-teammem {
+    border: 2px solid #000;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.main-card-developer,
+.btn-icon-card-edit-delete {
+    display: inline-block;
+}
+
+@media (min-width: 992px) {
+    .team-container {
+        max-width: 960px !important;
+    }
 }
 
 @media (max-width: 767px) {
