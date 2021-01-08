@@ -16,12 +16,24 @@ import { CareerService } from "./services/career.service";
 import { CommonService } from "./services/common.service";
 import { HomeService } from "./services/home.service";
 import { ServiceService } from "./services/service.service";
+import { NgSelectModule } from "@ng-select/ng-select";
+import { NeedTeamService } from "./services/needTeam.service";
+import { NbEvaIconsModule } from "@nebular/eva-icons";
+import { NbIconModule } from "@nebular/theme";
+import { ModalModule } from "ngb-modal";
+
 //import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 //import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [],
-  imports: [FormsModule, ngFormsModule, ReactiveFormsModule],
+  imports: [
+    FormsModule,
+    ngFormsModule,
+    ReactiveFormsModule,
+    NbEvaIconsModule,
+    NbIconModule,
+  ],
 
   exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
   providers: [
@@ -30,6 +42,9 @@ import { ServiceService } from "./services/service.service";
     CommonService,
     HomeService,
     ServiceService,
+    NgSelectModule,
+    NeedTeamService,
+    ModalModule,
   ],
   entryComponents: [],
 })
