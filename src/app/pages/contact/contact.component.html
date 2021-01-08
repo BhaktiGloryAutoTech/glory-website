@@ -80,25 +80,21 @@
     <!-- ==================== End Slider ==================== -->
 
     <!-- ==================== Start Quote ==================== -->
-    <div class="get-in-touch-background">
-        <div class="row">
-            <div class="col-md-12 col-12">
-                <div class=" get-in-touch-head" data-aos="zoom-out">
-                    <h2 class="h2-text-heading"> GET AHOLD OF US</h2>
-                </div>
-            </div>
-        </div>
-        <div>
+    <div class="get-in-touch-background sub-bg">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12 col-12 col-sm-12">
-                    <div class=" get-in-touch-content" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-                        <span class="content small-view">
-                            <p>
-                                Feel free to reach out to us with any questions.
-                                We are always open to discussing new projets,
-                                intersting ideas or opportunities to be part of an event.
+                <div class="col-md-12 col-12">
+                    <div class="text-center pb-5 pt-5" data-aos="fade-down" data-aos-duration="2000">
+                        <div class="get-in-touch-head">
+                            <h2 class="wow custom-font"> GET AHOLD OF US</h2>
+                        </div>
+
+                        <div class=" get-in-touch-content">
+                            <p class="wow txt about-text text-center">
+                                Feel free to reach out to us with any questions. We are always open to discussing new projets, intersting ideas or opportunities to be part of an event.
                             </p>
-                        </span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -115,15 +111,15 @@
         <section class="contact section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="2000">
                         <div class="form md-mb50">
 
-                            <h4 class="extra-title mb-50" data-aos="zoom-out">Get In Touch.</h4>
+                            <h4 class="extra-title mb-50">Get In Touch.</h4>
 
                             <form [formGroup]="contactForm">
                                 <div class="controls">
                                     <div class="row">
-                                        <div class="col-md-12 col-12" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                        <div class="col-md-12 col-12">
                                             <div class="form-group">
                                                 <input id="form_name" type="text" name="Name" placeholder="Name" formControlName="Name" required="required">
                                                 <div class="text-danger" *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
@@ -134,7 +130,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6 col-12" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                        <div class="col-md-6 col-12">
                                             <div class="form-group">
                                                 <input id="form_email" type="Email" name="Email" placeholder="Email" formControlName="Email" required="required">
                                                 <div class="text-danger" *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
@@ -145,7 +141,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-12" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                        <div class="col-md-6 col-12">
                                             <div class="form-group">
                                                 <input id="form_contactNo" type="tel" name="ContactNo" formControlName="ContactNo" placeholder="Contact No" required="required">
                                                 <div class="text-danger" *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
@@ -156,7 +152,7 @@
                                     </div>
 
 
-                                    <div class="form-group" data-aos="fade-right" data-aos-easing="ease-in-sine">
+                                    <div class="form-group">
                                         <textarea id="form_message" name="Message" placeholder="Message" rows="4" formControlName="Message" required="required"></textarea>
                                         <div class="text-danger" *ngIf="contactForm.get('Message').invalid && (formSubmitted)">
                                             Message is required.
@@ -168,19 +164,24 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="2000">
                         <div class="cont-info">
                             <h4 class="extra-title mb-50">Contact Info.</h4>
                             <h3 class="custom-font wow" data-splitting>Let's Talk.
                             </h3>
                             <div class="item mb-40">
-                                <h5><a href="mailto:hrgloryautotech@gmail.com">hrgloryautotech@gmail.com</a></h5>
-                                <h5>
-                                    <a href="tel:(+91) 8000078216">(+91)
-                                        8000078216
-                                    </a>
-                                    <div>
-                                        <a href="tel:(+91) 8141422244">(+91) 8141422244</a>
+                                <h5 class="link-text dis-flex-start"><i class="fa fa-envelope color-i"></i><a href="mailto:hrgloryautotech@gmail.com">hrgloryautotech@gmail.com</a></h5>
+                                <h5 class="link-text dis-flex-start">
+                                    <div class="phone-get-in">
+                                        <i class="fa fa-phone color-i"></i>
+                                    </div>
+                                    <div class="get-in-num">
+                                        <a href="tel:(+91) 8000078216">(+91)
+                                            8000078216
+                                        </a>
+                                        <div class="link-text">
+                                            <a href="tel:(+91) 8141422244">(+91) 8141422244</a>
+                                        </div>
                                     </div>
                                 </h5>
                             </div>
@@ -191,7 +192,7 @@
                                     <br>behind Prime Shoppers, Vesu.
                                 </h6>
                             </div>
-                            <div class="social mt-50">
+                            <div class="social pt-4">
                                 <a href="#0" class="icon">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
@@ -216,7 +217,7 @@
 
         <!-- ==================== Start Map ==================== -->
 
-        <div class="map">
+        <div class="map" data-aos="fade-up" data-aos-duration="2500">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.1345388658488!2d72.76401256424738!3d21.147043489107144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0527879958e57%3A0x79be4eb327b92649!2sSNS%20Arista!5e0!3m2!1sen!2sin!4v1608555219387!5m2!1sen!2sin"
                 width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>

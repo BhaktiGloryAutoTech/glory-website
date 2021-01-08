@@ -6283,8 +6283,13 @@ span:hover {
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     margin-bottom: 10px;
+    font-family: inherit;
+}
+
+.icon {
+    color: #08adc3 !important;
 }
 
 .contact .cont-info .item h5 {
@@ -6295,10 +6300,11 @@ span:hover {
 }
 
 .contact .cont-info .item h6 {
-    font-size: 14px;
-    font-weight: 300;
-    color: #777;
+    font-size: 15px;
+    font-weight: 400;
     line-height: 1.7;
+    color: #000 !important;
+    font-family: system-ui !important;
 }
 
 .contact .cont-info .social a {
@@ -7095,6 +7101,17 @@ a:hover {
     align-items: center;
 }
 
+.dis-flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.get-in-num,
+.phone-get-in {
+    display: inline-block;
+}
+
 
 /* about us page services */
 
@@ -7337,6 +7354,16 @@ h6 {
     color: #000;
 }
 
+.link-text a {
+    color: #000 !important;
+    font-family: system-ui !important;
+}
+
+.color-i {
+    margin-right: 10px;
+    color: #08adc3;
+}
+
 @media (max-width: 767px) {
     .about .ftbox ul li h6 {
         font-size: 14px;
@@ -7355,5 +7382,8 @@ h6 {
     }
     .btn-mobile {
         text-align: center;
+    }
+    .get-in-touch-content {
+        margin: 0 !important;
     }
 }
