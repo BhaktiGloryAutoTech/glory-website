@@ -7333,6 +7333,10 @@ h6 {
     width: 100%;
 } */
 
+.about-what-we-do b {
+    color: #000;
+}
+
 @media (max-width: 767px) {
     .about .ftbox ul li h6 {
         font-size: 14px;
