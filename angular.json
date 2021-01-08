@@ -46,7 +46,8 @@
                             "node_modules/ngx-toastr/toastr.css",
                             "src/responsive.css",
                             "node_modules/aos/dist/aos.css",
-                            "src/owl-style.css"
+                            "src/owl-style.css",
+                            "node_modules/@nebular/theme/styles/prebuilt/default.css"
 
                         ],
                         "scripts": [

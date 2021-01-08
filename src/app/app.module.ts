@@ -14,6 +14,8 @@ import { RouterModule } from "@angular/router";
 import { SharedModule } from "./@theme/shared.module";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
+import { NgSelectModule } from "@ng-select/ng-select";
+import { NbThemeModule } from "@nebular/theme";
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,9 +24,12 @@ import { HttpClientModule } from "@angular/common/http";
     NgwWowModule,
     ToastrModule,
     RouterModule,
+    SharedModule,
+    NgSelectModule,
     FormsModule,
     ngFormsModule,
     ReactiveFormsModule,
+    NbThemeModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 3000,
       closeButton: true,
