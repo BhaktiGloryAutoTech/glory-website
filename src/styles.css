@@ -10,19 +10,19 @@
   background: url("./assets/img/slid/1.jpg") no-repeat;
 }
 
-.get-in-touch-head {
-  padding-top: 50px;
-  font-family: "Salsa";
-  width: 100%;
-  text-align: center;
+/* .get-in-touch-head {
+    padding-top: 50px;
+    font-family: "Salsa";
+    width: 100%;
+    text-align: center;
 }
 
 .get-in-touch-content {
-  width: 100%;
-  padding-top: 0.4%;
-  font-size: 1.35rem;
-  text-align: center;
-}
+    width: 100%;
+    padding-top: 0.4%;
+    font-size: 1.35rem;
+    text-align: center;
+} */
 
 .hr-style {
   width: 50%;
@@ -32,10 +32,15 @@
   border-color: #ccccb3 !important;
 }
 
-.get-in-touch-background {
-  background: url("assets/img/business-bg.png") no-repeat;
-  background-size: cover;
+.get-in-touch-content {
+  margin: 0 21%;
+  margin-top: 13px;
 }
+
+/* .get-in-touch-background {
+    background: url("assets/img/business-bg.png") no-repeat;
+    background-size: cover;
+} */
 
 .content p {
   max-width: 600px;

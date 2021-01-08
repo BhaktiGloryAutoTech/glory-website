@@ -8,8 +8,7 @@
                     <div class="cont text-center">
                         <h1>Services</h1>
                         <div class="path">
-                            <a routerLink="home">Home</a><span>/</span><a routerLink="services"
-                                class="active">Service</a>
+                            <a routerLink="home">Home</a><span>/</span><a routerLink="services" class="active">Service</a>
                         </div>
                     </div>
                 </div>
@@ -26,7 +25,7 @@
                 <!-- gallery item -->
                 <div class="row service-main">
 
-                    <div class="col-lg-3 col-md-4 items" *ngFor="let service of serviceList">
+                    <div class="col-lg-3 col-md-4 items" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
                         <div class="item-img wow fadeInUp" data-wow-delay=".4s">
                             <a>
                                 <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
