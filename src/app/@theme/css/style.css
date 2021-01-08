@@ -4342,8 +4342,8 @@ span:hover {
 }
 
 .portfolio .gallery .items .item-img:hover {
-    -webkit-clip-path: inset(5px 10px);
-    clip-path: inset(5px 10px);
+    -webkit-clip-path: inset(2px 0);
+    clip-path: inset(2px 0);
 }
 
 .portfolio .gallery .items .item-img:hover img {
@@ -7196,7 +7196,7 @@ a:hover {
 /* career detail page */
 
 .detail-career {
-    border: 1px solid #eee;
+    border: 1px solid #dcdcdc;
     border-radius: 6px;
     padding: 24px 24px 0;
 }
@@ -7233,7 +7233,7 @@ a:hover {
 }
 
 .career-main-detail:not(:first-child) {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #dcdcdc;
 }
 
 .badge-career-info span {
@@ -7335,7 +7335,7 @@ h6 {
 
 .form-messages {
     font-size: 27px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #dcdcdc;
     font-weight: 500;
 }
 
