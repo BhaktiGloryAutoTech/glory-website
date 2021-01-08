@@ -24,7 +24,8 @@ import { CareerModule } from "./career/career.module";
 import { HomeService } from "../@theme/services/home.service";
 import { ServiceService } from "../@theme/services/service.service";
 import { NeedTeamService } from "../@theme/services/needTeam.service";
-import { AddDeveloperComponent } from './add-developer/add-developer.component';
+import { AddDeveloperComponent } from "./add-developer/add-developer.component";
+import { WorkService } from "../@theme/services/work.service";
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { AddDeveloperComponent } from './add-developer/add-developer.component';
     HomeService,
     ServiceService,
     NeedTeamService,
+    WorkService,
   ],
 })
 export class PagesModule {}
