@@ -97,29 +97,14 @@
                     </div>
                     <div class="card-detail-team">
                         <div class="row">
-                            <div class="col-lg-3 col-12" *ngFor="let list of developerDataList">
+                            <div class="col-lg-4 col-12" *ngFor="let list of developerDataList">
                                 <!--Add Developer card button-->
 
                                 <div class="card-detail-teammem mt-5-5 sub-bg">
 
                                     <div class="row">
-                                        <div class="col-md-12 col-lg-12 col-12">
 
-                                            <div class="btn-icon-card-edit-delete">
-                                                <div class="">
-                                                    <button type="button" class="btn btn-primary btn-team-icon" (click)="onEditStep(list)">
-                                                        <img src="../../../assets/team/edit.png" class="img-responsive team-action">
-                                                    </button>
-                                                    <button type="button" class="btn btn-primary btn-team-icon" (click)="onDeleteStep(list)">
-                                                        <img src="../../../assets/team/delete.png" class="img-responsive team-action">
-                                                    </button>
-
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-md-12 col-lg-12 col-12">
+                                        <div class="col-md-9 col-lg-9 col-9">
                                             <div class="main-content-team">
                                                 <div class="card-main-label">
                                                     <label>Developer:</label>
@@ -144,7 +129,22 @@
                                             </div>
                                         </div>
 
+                                        <div class="col-md-3 col-lg-3 col-3">
 
+                                            <div class="btn-icon-card-edit-delete">
+                                                <div class="btn-2-action">
+                                                    <button type="button" class="btn btn-primary btn-team-icon btn-edit" (click)="onEditStep(list)">
+                                                        <nb-icon icon="edit-2-outline"></nb-icon>
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary btn-team-icon btn-delete" (click)="onDeleteStep(list)">
+                                                        <nb-icon icon="trash-outline"></nb-icon>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
 
                                     </div>
                                 </div>
