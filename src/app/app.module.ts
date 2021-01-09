@@ -15,7 +15,7 @@ import { SharedModule } from "./@theme/shared.module";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgSelectModule } from "@ng-select/ng-select";
-import { NbThemeModule } from "@nebular/theme";
+import { NbLayoutModule, NbThemeModule } from "@nebular/theme";
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -29,6 +29,7 @@ import { NbThemeModule } from "@nebular/theme";
     FormsModule,
     ngFormsModule,
     ReactiveFormsModule,
+    NbLayoutModule,
     NbThemeModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 3000,

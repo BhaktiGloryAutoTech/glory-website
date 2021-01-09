@@ -32,8 +32,8 @@ import { WorkService } from "./services/work.service";
     FormsModule,
     ngFormsModule,
     ReactiveFormsModule,
-    NbEvaIconsModule,
     NbIconModule,
+    NbEvaIconsModule,
     ModalModule,
   ],
 
