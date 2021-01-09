@@ -66,7 +66,8 @@
                 <div class="cont text-center">
                     <h1>About Us</h1>
                     <div class="path">
-                        <a routerLink="home">Home</a><span>/</span><a routerLink="about" class="active">About Us</a>
+                        <a [routerLink]="['/pages/home']">Home</a><span>/</span><a [routerLink]="['/pages/about']"
+                            class="active">About Us</a>
                     </div>
                 </div>
             </div>
@@ -187,7 +188,8 @@
         <div class="row">
             <div class="col-md-12 col-12" data-aos="fade-up" data-aos-duration="2000">
                 <div class="services-about-btn text-center pb-4 pt-5">
-                    <button type=" submit " class="btn-curve btn-color "><span>View More</span></button>
+                    <button type=" submit " class="btn-curve btn-color " [routerLink]="['/pages/services']"><span>View
+                            More</span></button>
                 </div>
             </div>
         </div>
