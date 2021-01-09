@@ -10,24 +10,9 @@ import { WorkComponent } from "./pages/work/work.component";
 const routes: Routes = [
   {
     path: "pages",
-
-    children: [
-      { path: "", redirectTo: "home", pathMatch: "full" },
-      {
-        path: "home",
-        component: HomeComponent,
-      },
-      { path: "contact", component: ContactComponent },
-      { path: "about", component: AboutComponent },
-      { path: "needTeam", component: NeedTeamComponent },
-      { path: "services", component: ServicesComponent },
-      { path: "work", component: WorkComponent },
-      {
-        path: "career",
-        loadChildren: () =>
-          import("./pages/career/career.module").then((m) => m.CareerModule),
-      },
-    ],
+    loadChildren: () =>
+          import("./pages/pages.module").then((m) => m.PagesModule),
+   
   },
   { path: "", redirectTo: "pages", pathMatch: "full" },
 

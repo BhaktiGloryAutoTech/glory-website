@@ -17,8 +17,7 @@
                         <option *ngFor="let d of developerList" [value]="d.Devid">
                             {{d.DevSkill}}</option>
                     </select>
-                    <div class="text-danger" style="color: red;"
-                        *ngIf="(name1.invalid)&&(modalSubmitted || name1.touched)">
+                    <div class="text-danger" style="color: red;" *ngIf="(name1.invalid)&&(modalSubmitted || name1.touched)">
                         Developer is required.
                     </div>
                 </div>
@@ -28,10 +27,7 @@
                 <div class="form-group">
 
                     <label>Hours/Day</label>
-                    <input class="form-control input-group" type="number" name="hrDay" [(ngModel)]="hrDay"
-                        #name12="ngModel"
-                        [ngClass]="{'is-invalid':(name12.invalid)&&(modalSubmitted || name12.touched)}" required
-                        placeholder="Hours/day" min="0" max="2">
+                    <input class="form-control input-group" type="number" name="hrDay" [(ngModel)]="hrDay" #name12="ngModel" [ngClass]="{'is-invalid':(name12.invalid)&&(modalSubmitted || name12.touched)}" required placeholder="Hours/day" min="0" max="2">
                     <div class="invalid-feedback" *ngIf="(name12.invalid)&&(modalSubmitted || name12.touched)">
                         Hours/day is required.
                     </div>
@@ -43,12 +39,8 @@
                 <div class="form-group">
                     <label>Duration</label>
 
-                    <input class="form-control input-group" type="number" name="duration" [(ngModel)]="duration"
-                        #name123="ngModel"
-                        [ngClass]="{'is-invalid':(name123.invalid)&&(modalSubmitted || name123.touched)}" required
-                        placeholder="Duration" min="0" step="1">
-                    <div class="invalid-feedback" style="color: red;"
-                        *ngIf="(name123.invalid)&&(modalSubmitted || name123.touched)">
+                    <input class="form-control input-group" type="number" name="duration" [(ngModel)]="duration" #name123="ngModel" [ngClass]="{'is-invalid':(name123.invalid)&&(modalSubmitted || name123.touched)}" required placeholder="Duration" min="0" step="1">
+                    <div class="invalid-feedback" style="color: red;" *ngIf="(name123.invalid)&&(modalSubmitted || name123.touched)">
                         Duration is required.
                     </div>
 
@@ -58,8 +50,7 @@
                 <div class="form-group">
                     <label>Experience</label>
 
-                    <input class="form-control input-group" type="text" name="Experience" [(ngModel)]="experience"
-                        #name1234="ngModel" placeholder="Experience">
+                    <input class="form-control input-group" type="text" name="Experience" [(ngModel)]="experience" #name1234="ngModel" placeholder="Experience">
 
 
                 </div>
@@ -68,12 +59,8 @@
                 <div class="form-group">
                     <label>No of Developer</label>
 
-                    <input class="form-control input-group" type="number" name="noOfDeveloper"
-                        [(ngModel)]="noOfDeveloper" #name12345="ngModel"
-                        [ngClass]="{'is-invalid':(name12345.invalid)&&(modalSubmitted || name12345.touched)}" required
-                        placeholder="No of Developer" min="0">
-                    <div class="invalid-feedback" style="color: red;"
-                        *ngIf="(name12345.invalid)&&(modalSubmitted || name12345.touched)">
+                    <input class="form-control input-group" type="number" name="noOfDeveloper" [(ngModel)]="noOfDeveloper" #name12345="ngModel" [ngClass]="{'is-invalid':(name12345.invalid)&&(modalSubmitted || name12345.touched)}" required placeholder="No of Developer" min="0">
+                    <div class="invalid-feedback" style="color: red;" *ngIf="(name12345.invalid)&&(modalSubmitted || name12345.touched)">
                         No of Developer is required.
                     </div>
 

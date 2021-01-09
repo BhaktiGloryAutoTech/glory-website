@@ -7423,6 +7423,7 @@ h6 {
 .modal-developer {
     background-color: #0a2065;
     border-radius: 0;
+    padding: 9px 15px;
 }
 
 .close-icon {
@@ -7452,6 +7453,49 @@ h6 {
 .main-card-developer,
 .btn-icon-card-edit-delete {
     display: inline-block;
+}
+
+
+/* need team card */
+
+.card-main-label label {
+    color: #000;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+.card-main-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.card-main-label span {
+    font-family: system-ui;
+    font-weight: 400;
+}
+
+.btn-design {
+    border-radius: 0;
+    background: #08adc3;
+    border-color: #08adc3;
+}
+
+.btn-design:focus {
+    box-shadow: none !important;
+}
+
+.team-action {
+    width: 20px;
+}
+
+.btn-team-icon {
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    margin-right: 7px;
 }
 
 @media (min-width: 992px) {

@@ -12,7 +12,7 @@ import { DeveloperList } from "src/app/@theme/modal/needTeam.class";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { AddDeveloperComponent } from "../add-developer/add-developer.component";
 import { ToastrService } from "ngx-toastr";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
 
 @Component({
   selector: "app-need-team",
@@ -24,7 +24,7 @@ export class NeedTeamComponent implements OnInit {
   value64: any;
   formSubmitted: boolean = false;
   developerDataList: DeveloperList[] = [];
-  faCoffee = faCoffee;
+  
 
   constructor(
     private needTeamService: NeedTeamService,
