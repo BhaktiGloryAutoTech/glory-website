@@ -10,8 +10,7 @@ import { ServicesComponent } from "./services/services.component";
 import { WorkComponent } from "./work/work.component";
 
 const routes: Routes = [
-  {path:"",
-  children: [
+ 
     { path: "", redirectTo: "home", pathMatch: "full" },
     {
       path: "home",
@@ -27,7 +26,7 @@ const routes: Routes = [
       loadChildren: () =>
         import("./career/career.module").then((m) => m.CareerModule),
     },
-  ],}
+  
 ];
 
 @NgModule({
