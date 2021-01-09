@@ -9,23 +9,7 @@ import { PagesComponent } from "./pages.component";
 import { ServicesComponent } from "./services/services.component";
 import { WorkComponent } from "./work/work.component";
 
-const routes: Routes = [
-  { path: "", component: HomeComponent },
-  {
-    path: "home",
-    component: HomeComponent,
-  },
-  { path: "contact", component: ContactComponent },
-  { path: "about", component: AboutComponent },
-  { path: "needTeam", component: NeedTeamComponent },
-  { path: "services", component: ServicesComponent },
-  { path: "work", component: WorkComponent },
-  {
-    path: "career",
-    loadChildren: () =>
-      import("./career/career.module").then((m) => m.CareerModule),
-  },
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
