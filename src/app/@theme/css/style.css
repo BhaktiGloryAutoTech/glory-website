@@ -7417,7 +7417,7 @@ h6 {
 }
 
 .mt-5-5 {
-    margin: 3rem 0 !important;
+    margin: 3rem 0 0;
 }
 
 .modal-developer {
@@ -7445,7 +7445,7 @@ h6 {
 }
 
 .card-detail-teammem {
-    border: 2px solid #000;
+    border: 2px solid #d1d1d1;
     padding: 16px;
     border-radius: 6px;
 }
@@ -7459,7 +7459,7 @@ h6 {
 /* need team card */
 
 .card-main-label label {
-    color: #000;
+    color: #0a2065;
     font-weight: 600;
     margin-right: 8px;
     margin-bottom: 0;
@@ -7469,12 +7469,12 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 .card-main-label span {
     font-family: system-ui;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .btn-design {
@@ -7496,6 +7496,45 @@ h6 {
     background: transparent !important;
     border: 0 !important;
     margin-right: 7px;
+}
+
+.btn-icon-card-edit-delete {
+    height: 100%;
+}
+
+.btn-2-action {
+    height: 100%;
+    display: grid;
+}
+
+.btn-team-icon {
+    margin: 0;
+}
+
+.btn-team-icon nb-icon {
+    display: flex;
+}
+
+.btn-edit {
+    margin: 0;
+    border: 2px solid #08adc3 !important;
+    padding: 10px!Important;
+    background-color: #08adc314!Important;
+}
+
+.btn-edit nb-icon {
+    color: #08adc3;
+}
+
+.btn-delete {
+    margin: 0;
+    border: 2px solid red !important;
+    padding: 10px!Important;
+    background-color: #f93c3c1a!Important;
+}
+
+.btn-delete nb-icon {
+    color: red;
 }
 
 @media (min-width: 992px) {
@@ -7525,5 +7564,20 @@ h6 {
     }
     .get-in-touch-content {
         margin: 0 !important;
+    }
+    .card-main-label label {
+        font-size: 14px;
+    }
+    .card-main-label span {
+        font-size: 14px;
+    }
+    .card-main-label {
+        margin-bottom: 0 !important;
+    }
+    .mt-5-5 {
+        margin: 1.5rem 0 0 !important;
+    }
+    .teamform {
+        font-size: 15px !important;
     }
 }
