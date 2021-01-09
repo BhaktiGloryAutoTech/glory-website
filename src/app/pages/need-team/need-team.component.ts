@@ -7,10 +7,12 @@ import {
   Validators,
 } from "@angular/forms";
 import { NeedTeamService } from "src/app/@theme/services/needTeam.service";
-import { AfterViewChecked, ChangeDetectorRef } from "@angular/core";
+import { ChangeDetectorRef } from "@angular/core";
 import { DeveloperList } from "src/app/@theme/modal/needTeam.class";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { AddDeveloperComponent } from "../add-developer/add-developer.component";
+import { ToastrService } from "ngx-toastr";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "app-need-team",
@@ -19,27 +21,17 @@ import { AddDeveloperComponent } from "../add-developer/add-developer.component"
 })
 export class NeedTeamComponent implements OnInit {
   needTeamForm: FormGroup | any;
-
-  duration: any;
   value64: any;
-  skills: any;
   formSubmitted: boolean = false;
   developerDataList: DeveloperList[] = [];
-  tempData: any = [
-    {
-      duration: new FormControl(null, Validators.required),
-      Devid: new FormControl(null, Validators.required),
-      hrDay: new FormControl(null, Validators.required),
-      experience: new FormControl(null),
-      noOfDeveloper: new FormControl(null, Validators.required),
-    },
-  ];
+  faCoffee = faCoffee;
 
   constructor(
     private needTeamService: NeedTeamService,
     private fb: FormBuilder,
     private readonly changeDetectorRef: ChangeDetectorRef,
-    private _modalService: NgbModal
+    private _modalService: NgbModal,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -53,22 +45,9 @@ export class NeedTeamComponent implements OnInit {
       ContactNo: null,
       Attachment: null,
       Email: null,
-      Developers: this.fb.array([this.addSkillFormGroup()]),
+      Developers: this.fb.array([]),
     });
     console.log(this.needTeamForm);
-  }
-
-  ngAfterViewChecked(): void {
-    this.changeDetectorRef.detectChanges();
-  }
-  addSkillFormGroup(): FormGroup {
-    return this.fb.group({
-      duration: null,
-      Devid: null,
-      hrDay: null,
-      experience: null,
-      noOfDeveloper: null,
-    });
   }
 
   handleFileInput(event: any) {
@@ -77,18 +56,10 @@ export class NeedTeamComponent implements OnInit {
     reader.readAsDataURL(file);
     reader.onload = () => {
       this.value64 = reader.result;
+      console.log(this.value64);
     };
   }
 
-  addDeveloper() {
-    (<FormArray>this.needTeamForm.get("Developers")).push(
-      this.addSkillFormGroup()
-    );
-    console.log(this.needTeamForm);
-  }
-  addNeedTeam() {
-    console.log(this.needTeamForm);
-  }
   onAddStep() {
     const modalRef = this._modalService.open(AddDeveloperComponent);
     modalRef.componentInstance.position = this.developerDataList.length + 1;
@@ -155,5 +126,42 @@ export class NeedTeamComponent implements OnInit {
         );
       }
     });
+  }
+  setDeveloperData(): FormGroup {
+    let developerData: any = [];
+    this.developerDataList.forEach((element: any) => {
+      developerData = this.fb.group({
+        duration: element.duration,
+        Devid: element.Devid,
+        experience: element.experience,
+        hrDay: element.hrDay,
+        noOfDeveloper: element.noOfDeveloper,
+      });
+    });
+    return developerData;
+  }
+  addNeedTeam() {
+    this.formSubmitted = true;
+    if (this.needTeamForm.valid) {
+      this.needTeamForm.patchValue({
+        Attachment: this.value64,
+      });
+      (<FormArray>this.needTeamForm.get("Developers")).push(
+        this.setDeveloperData()
+      );
+      console.log(this.needTeamForm);
+      this.needTeamService.addNeedTeam(this.needTeamForm.value).subscribe(
+        (data) => {
+          this.needTeamForm.reset(this.needTeamForm.value);
+          this.toastrService.success("We Will get back to you soon.");
+        },
+        (error: any) => {
+          console.log(error);
+          this.toastrService.error("Something Went Wrong. Try Again");
+        }
+      );
+    } else {
+      return;
+    }
   }
 }

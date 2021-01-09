@@ -5,7 +5,7 @@ import { CommonService } from "./common.service";
 @Injectable({
   providedIn: "root",
 })
-export class NeedTeamService {
+export class WorkService {
   constructor(
     private _http: HttpClient,
     private commonService: CommonService
@@ -16,10 +16,7 @@ export class NeedTeamService {
     return Observable.throw(err.message);
   }
 
-  getDeveloperList() {
-    return this._http.get(this.commonService.envurl() + "getDevelopersList");
-  }
-  addNeedTeam(data: any) {
-    return this._http.post(this.commonService.envurl() + "AddNeedTeam", data);
+  getProjectList() {
+    return this._http.get(this.commonService.envurl() + "getProjectList");
   }
 }
