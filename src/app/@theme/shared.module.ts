@@ -46,6 +46,7 @@ import { WorkService } from "./services/work.service";
     ServiceService,
     NgSelectModule,
     NeedTeamService,
+
     WorkService,
   ],
   entryComponents: [],

@@ -1,11 +1,11 @@
-<div class="modal-header nb-header">
+<div class="modal-header nb-header modal-developer">
     <h4 class="modal-title nb-text" id="modal-basic-title">Add Developer</h4>
     <button type="button" class="close btn-foucs-none" aria-label="Close" (click)="activeModal.close(false)">
         <span aria-hidden="true" class="close-icon">&times;</span>
     </button>
 </div>
 <form #stepForm="ngForm">
-    <div class="modal-body">
+    <div class="modal-body modal-detail">
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -13,9 +13,7 @@
                     <!-- <input class="form-control input-group" type="text" name="stepName" [(ngModel)]="stepName"
                         #name1="ngModel" [ngClass]="{'is-invalid':(name1.invalid)&&(modalSubmitted || name1.touched)}"
                         required placeholder="Step Name"> -->
-                    <select #name1="ngModel" class="form-control" name="Devid"
-                        [ngClass]="{'is-invalid':(name1.invalid)&&(modalSubmitted || name1.touched)}"
-                        [(ngModel)]="Devid" placeholder="Select Developer">
+                    <select #name1="ngModel" class="form-control" name="Devid" [ngClass]="{'is-invalid':(name1.invalid)&&(modalSubmitted || name1.touched)}" [(ngModel)]="Devid" placeholder="Select Developer">
                         <option *ngFor="let d of developerList" [value]="d.Devid">
                             {{d.DevSkill}}</option>
                     </select>
@@ -28,6 +26,7 @@
 
             <div class="col-md-6">
                 <div class="form-group">
+
                     <label>Hours/Day</label>
                     <input class="form-control input-group" type="number" name="hrDay" [(ngModel)]="hrDay"
                         #name12="ngModel"
@@ -43,6 +42,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label>Duration</label>
+
                     <input class="form-control input-group" type="number" name="duration" [(ngModel)]="duration"
                         #name123="ngModel"
                         [ngClass]="{'is-invalid':(name123.invalid)&&(modalSubmitted || name123.touched)}" required
@@ -51,19 +51,23 @@
                         *ngIf="(name123.invalid)&&(modalSubmitted || name123.touched)">
                         Duration is required.
                     </div>
+
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label>Experience</label>
+
                     <input class="form-control input-group" type="text" name="Experience" [(ngModel)]="experience"
                         #name1234="ngModel" placeholder="Experience">
+
 
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label>No of Developer</label>
+
                     <input class="form-control input-group" type="number" name="noOfDeveloper"
                         [(ngModel)]="noOfDeveloper" #name12345="ngModel"
                         [ngClass]="{'is-invalid':(name12345.invalid)&&(modalSubmitted || name12345.touched)}" required
@@ -72,14 +76,13 @@
                         *ngIf="(name12345.invalid)&&(modalSubmitted || name12345.touched)">
                         No of Developer is required.
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-sm btn-design" style="margin-right:20px"
-            (click)="onCreate(stepForm)">{{submitButton}}</button>
-        <button type="button" class="btn btn-primary btn-sm btn-design" style="margin-right:20px"
-            (click)="activeModal.close(false)">Cancel</button>
+        <button type="button" class="btn btn-primary btn-sm btn-design" style="margin-right:20px" (click)="onCreate(stepForm)">{{submitButton}}</button>
+        <button type="button" class="btn btn-primary btn-sm btn-design" style="margin-right:20px" (click)="activeModal.close(false)">Cancel</button>
     </div>
 </form>
