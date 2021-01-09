@@ -8,7 +8,8 @@
             <img src="../../../assets/img/2LOGO.png" alt="logo" class="logo-img-width">
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"><i class="fas fa-bars"></i></span>
         </button>
 
@@ -16,32 +17,36 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" [routerLink]="['/pages/home']">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" [routerLink]="['/pages/about']">About</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Services</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="blog-details.html">Web Design</a>
-                        <a class="dropdown-item" href="blog-details.html">Web Development</a>
-                        <a class="dropdown-item" href="blog-details.html">Ecommerce</a>
+                        <a class="dropdown-item" [routerLink]="['/pages/services']">Web Design</a>
+                        <a class="dropdown-item" [routerLink]="['/pages/services']">Web Development</a>
+                        <a class="dropdown-item" [routerLink]="['/pages/services']">Ecommerce</a>
                     </div>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/pages/services']">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="works.html">Portfolio</a>
+                    <a class="nav-link" [routerLink]="['/pages/work']">Portfolio</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="career.html">Career</a>
+                    <a class="nav-link" [routerLink]="['/pages/career']">Career</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" [routerLink]="['/pages/contact']">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="needTeam">Need A Team?</a>
+                    <a class="nav-link" [routerLink]="['/pages/needTeam']">Need A Team?</a>
                 </li>
             </ul>
             <!--<div class="search">
@@ -63,8 +68,10 @@
 <!-- ==================== Start Map ==================== -->
 
 <div class="map" data-aos="fade-up" data-aos-duration="2500">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.1345388658488!2d72.76401256424738!3d21.147043489107144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0527879958e57%3A0x79be4eb327b92649!2sSNS%20Arista!5e0!3m2!1sen!2sin!4v1608555219387!5m2!1sen!2sin"
-        width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.1345388658488!2d72.76401256424738!3d21.147043489107144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0527879958e57%3A0x79be4eb327b92649!2sSNS%20Arista!5e0!3m2!1sen!2sin!4v1608555219387!5m2!1sen!2sin"
+        width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
 </div>
 
 <!-- ==================== End Map ==================== -->
@@ -82,10 +89,12 @@
                     </div>
                     <div class="con-info custom-font ">
                         <ul>
-                            <li><span>Email : </span><a href="mailto:hrgloryautotech@gmail.com ">hrgloryautotech@gmail.com</a>
+                            <li><span>Email : </span><a
+                                    href="mailto:hrgloryautotech@gmail.com ">hrgloryautotech@gmail.com</a>
                             </li>
                             <li>
-                                <div class="display-block-task "><span>Address: </span> 309 - 310 , SNS Arista , behind Prime Shoppers, Vesu.
+                                <div class="display-block-task "><span>Address: </span> 309 - 310 , SNS Arista , behind
+                                    Prime Shoppers, Vesu.
                                 </div>
                             </li>
                             <li>
@@ -120,24 +129,25 @@
             <div class="col-lg-5 offset-lg-2 col-md-6 ">
                 <div class="subscribe mb-50 ">
                     <h6 class="custom-font stit simple-btn ">Quick Link</h6>
-                    <li><a routerLink="home ">Home</a></li>
-                    <li><a routerLink="about ">About Us</a></li>
-                    <li><a routerLink="work ">Portfolio</a></li>
-                    <li><a routerLink="career ">Career</a></li>
-                    <li><a routerLink="contact ">Contact</a></li>
+                    <li><a [routerLink]="['/pages/home']">Home</a></li>
+                    <li><a [routerLink]="['/pages/about']">About Us</a></li>
+                    <li><a [routerLink]="['/pages/work']">Portfolio</a></li>
+                    <li><a [routerLink]="['/pages/career']">Career</a></li>
+                    <li><a [routerLink]="['/pages/contact']">Contact</a></li>
+                    <li><a [routerLink]="['/pages/needTeam']">Need A Team?</a></li>
                 </div>
                 <div class="subscribe mb-50 ">
                     <h6 class="custom-font stit simple-btn ">Services</h6>
-                    <li><a routerLink="servicees ">Web Design</a></li>
-                    <li><a routerLink="servicees ">Web Development</a></li>
-                    <li><a routerLink="servicees ">Ecommerce</a></li>
+                    <li><a [routerLink]="['/pages/services']">Web Design</a></li>
+                    <li><a [routerLink]="['/pages/services']">Web Development</a></li>
+                    <li><a [routerLink]="['/pages/services']">Ecommerce</a></li>
                 </div>
 
             </div>
 
         </div>
         <div class="copyrights text-center ">
-            <p>Copyright © 2020, GloryAutotech. Design by <a routerLink="home ">GloryAutotech</a>.</p>
+            <p>Copyright © 2020, GloryAutotech. Design by <a [routerLink]="['/pages/home']">GloryAutotech</a>.</p>
         </div>
     </div>
 </footer>
