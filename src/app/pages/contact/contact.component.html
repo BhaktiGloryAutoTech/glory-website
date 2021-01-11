@@ -8,8 +8,7 @@
                     <div class="cont text-center">
                         <h1>Contact Us</h1>
                         <div class="path">
-                            <a [routerLink]="['/pages/home']">Home</a><span>/</span><a [routerLink]="['/pages/contact']"
-                                class="active">Contact Us</a>
+                            <a [routerLink]="['/pages/home']">Home</a><span>/</span><a [routerLink]="['/pages/contact']" class="active">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -31,8 +30,7 @@
 
                         <div class=" get-in-touch-content">
                             <p class="wow txt about-text text-center">
-                                Feel free to reach out to us with any questions. We are always open to discussing new
-                                projets, intersting ideas or opportunities to be part of an event.
+                                Feel free to reach out to us with any questions. We are always open to discussing new projets, intersting ideas or opportunities to be part of an event.
                             </p>
                         </div>
 
@@ -49,7 +47,7 @@
 
         <!-- ==================== Start Contact ==================== -->
 
-        <section class="contact section-padding">
+        <section class="contact section-padding pt-5 pb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-right" data-aos-duration="2000">
@@ -62,10 +60,8 @@
                                     <div class="row">
                                         <div class="col-md-12 col-12">
                                             <div class="form-group">
-                                                <input id="form_name" type="text" name="Name" placeholder="Name"
-                                                    formControlName="Name" required="required">
-                                                <div class="text-danger"
-                                                    *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
+                                                <input id="form_name" type="text" name="Name" placeholder="Name" formControlName="Name" required="required">
+                                                <div class="text-danger" *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
                                                     Name is require.
                                                 </div>
                                             </div>
@@ -75,25 +71,19 @@
                                     <div class="row">
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
-                                                <input id="form_email" type="Email" name="Email" placeholder="Email"
-                                                    formControlName="Email" required="required">
-                                                <div class="text-danger"
-                                                    *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
+                                                <input id="form_email" type="Email" name="Email" placeholder="Email" formControlName="Email" required="required">
+                                                <div class="text-danger" *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
                                                     Email is require.
                                                 </div>
-                                                <div class="text-danger"
-                                                    *ngIf="contactForm.get('Email').error?.pattern">
+                                                <div class="text-danger" *ngIf="contactForm.get('Email').error?.pattern">
                                                     Enter Valid Email.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
-                                                <input id="form_contactNo" type="tel" name="ContactNo"
-                                                    formControlName="ContactNo" placeholder="Contact No"
-                                                    required="required">
-                                                <div class="text-danger"
-                                                    *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
+                                                <input id="form_contactNo" type="tel" name="ContactNo" formControlName="ContactNo" placeholder="Contact No" required="required">
+                                                <div class="text-danger" *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
                                                     Contact No is required.
                                                 </div>
                                             </div>
@@ -102,16 +92,13 @@
 
 
                                     <div class="form-group">
-                                        <textarea id="form_message" name="Message" placeholder="Message" rows="4"
-                                            formControlName="Message" required="required"></textarea>
-                                        <div class="text-danger"
-                                            *ngIf="contactForm.get('Message').invalid && (formSubmitted)">
+                                        <textarea id="form_message" name="Message" placeholder="Message" rows="4" formControlName="Message" required="required"></textarea>
+                                        <div class="text-danger" *ngIf="contactForm.get('Message').invalid && (formSubmitted)">
                                             Message is required.
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn-curve btn-color"
-                                        (click)="addContact()"><span>Submit</span></button>
+                                    <button type="submit" class="btn-curve btn-color" (click)="addContact()"><span>Submit</span></button>
                                 </div>
                             </form>
                         </div>
@@ -122,8 +109,7 @@
                             <h3 class="custom-font wow" data-splitting>Let's Talk.
                             </h3>
                             <div class="item mb-40">
-                                <h5 class="link-text dis-flex-start"><i class="fa fa-envelope color-i"></i><a
-                                        href="mailto:hrgloryautotech@gmail.com">hrgloryautotech@gmail.com</a></h5>
+                                <h5 class="link-text dis-flex-start"><i class="fa fa-envelope color-i"></i><a href="mailto:hrgloryautotech@gmail.com">hrgloryautotech@gmail.com</a></h5>
                                 <h5 class="link-text dis-flex-start">
                                     <div class="phone-get-in">
                                         <i class="fa fa-phone color-i"></i>

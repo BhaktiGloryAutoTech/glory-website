@@ -7557,7 +7557,7 @@ h6 {
         margin: 20px 0;
     }
     .pages-header .cont h1 {
-        font-size: 54px;
+        font-size: 40px;
     }
     .btn-mobile {
         text-align: center;
@@ -7579,5 +7579,15 @@ h6 {
     }
     .teamform {
         font-size: 15px !important;
+    }
+    .career-main-detail:not(:first-child) {
+        margin-bottom: 11px;
+    }
+    .career-title {
+        padding-bottom: 5px !important;
+        padding-top: 10px;
+    }
+    .cont-info {
+        padding-left: 0 !important;
     }
 }
