@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 //import { NgwWowService } from "ngx-wow";
 import * as AOS from "aos";
 
@@ -8,11 +9,16 @@ import * as AOS from "aos";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  // constructor(private wowServices: NgwWowService) {
-  //   this.wowServices.init();
-  // }
+  constructor(private router:Router) {
+    
+  }
   title = "test-application";
   ngOnInit() {
     AOS.init();
+  }
+  reload(value:any){
+  this.router.navigate([value]).then(()=>{
+    location.reload()
+  })
   }
 }
