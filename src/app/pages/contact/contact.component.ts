@@ -17,6 +17,7 @@ import { ContactService } from "src/app/@theme/services/contact.service";
 })
 export class ContactComponent implements OnInit {
   //contactForm: ContactForm = new ContactForm();
+  public loading = false;
   formSubmitted: boolean = false;
   contactForm: FormGroup | any;
   constructor(
@@ -48,16 +49,18 @@ export class ContactComponent implements OnInit {
   }
   addContact() {
     this.formSubmitted = true;
+    this.loading = true;
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);
       this.contactService.getInTouch(this.contactForm.value).subscribe(
         (data) => {
           this.contactForm.reset();
           this.formSubmitted = false;
+          this.loading = false;
           this.toastr.success("Thank You! We Will reach you sonn.");
         },
         (error) => {
-          console.log(error);
+          this.loading = false;
           this.toastr.error("Something Went Wrong! Try Again.. ");
         }
       );

@@ -27,6 +27,7 @@ import { NgxLoadingModule } from "ngx-loading";
 //import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 //import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
+import { IvyCarouselModule } from "angular-responsive-carousel";
 @NgModule({
   declarations: [],
   imports: [
@@ -37,9 +38,10 @@ import { NgxLoadingModule } from "ngx-loading";
     NbEvaIconsModule,
     NgxLoadingModule,
     ModalModule,
+    IvyCarouselModule,
   ],
 
-  exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
+  exports: [FormsModule, ngFormsModule, ReactiveFormsModule, IvyCarouselModule],
   providers: [
     ContactService,
     CareerService,
