@@ -8,6 +8,7 @@ import { NeedTeamService } from "src/app/@theme/services/needTeam.service";
   styleUrls: ["./add-developer.component.css"],
 })
 export class AddDeveloperComponent implements OnInit {
+  public loading = false;
   developerList: any = [];
   duration = "";
   Devid = "";
@@ -57,9 +58,11 @@ export class AddDeveloperComponent implements OnInit {
     }
   }
   getDeveloperList() {
+    this.loading = true;
     this.needTeamService.getDeveloperList().subscribe(
       (data: any) => {
         this.developerList = data["data"];
+        this.loading = false;
         console.log(this.developerList);
       },
       (error) => {}

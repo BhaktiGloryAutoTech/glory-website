@@ -22,10 +22,12 @@ import { NbEvaIconsModule } from "@nebular/eva-icons";
 import { NbIconModule } from "@nebular/theme";
 import { ModalModule } from "ngb-modal";
 import { WorkService } from "./services/work.service";
+import { NgxLoadingModule } from "ngx-loading";
 
 //import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 //import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
+import { IvyCarouselModule } from "angular-responsive-carousel";
 @NgModule({
   declarations: [],
   imports: [
@@ -34,10 +36,12 @@ import { WorkService } from "./services/work.service";
     ReactiveFormsModule,
     NbIconModule,
     NbEvaIconsModule,
+    NgxLoadingModule,
     ModalModule,
+    IvyCarouselModule,
   ],
 
-  exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
+  exports: [FormsModule, ngFormsModule, ReactiveFormsModule, IvyCarouselModule],
   providers: [
     ContactService,
     CareerService,

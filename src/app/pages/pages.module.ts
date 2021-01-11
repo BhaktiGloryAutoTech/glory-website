@@ -28,6 +28,7 @@ import { AddDeveloperComponent } from "./add-developer/add-developer.component";
 import { WorkService } from "../@theme/services/work.service";
 import { NbIconModule } from "@nebular/theme";
 import { NbEvaIconsModule } from "@nebular/eva-icons";
+import { NgxLoadingModule } from "ngx-loading";
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { NbEvaIconsModule } from "@nebular/eva-icons";
     CareerModule,
     NbIconModule,
     NbEvaIconsModule,
+    NgxLoadingModule,
   ],
   exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
   providers: [
