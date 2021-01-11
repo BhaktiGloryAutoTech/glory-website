@@ -16,6 +16,8 @@ import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { NbLayoutModule, NbThemeModule } from "@nebular/theme";
+import { NgxLoadingModule } from "ngx-loading";
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -37,6 +39,7 @@ import { NbLayoutModule, NbThemeModule } from "@nebular/theme";
       preventDuplicates: true,
     }),
     BrowserAnimationsModule,
+    NgxLoadingModule.forRoot({}),
     HttpClientModule,
   ],
   exports: [FormsModule, ngFormsModule, ReactiveFormsModule],

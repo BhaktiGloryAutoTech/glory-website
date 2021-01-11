@@ -11,6 +11,7 @@ import { CareerService } from "src/app/@theme/services/career.service";
   styleUrls: ["./career-info.component.css"],
 })
 export class CareerInfoComponent implements OnInit {
+  public loading = false;
   careerForm: FormGroup | any;
   vacancyInfo: any = [];
   id: any;
@@ -21,6 +22,7 @@ export class CareerInfoComponent implements OnInit {
   applyNowFlag: boolean = false;
   value64: string | any;
   formSubmitted: boolean = false;
+  fileSize = false;
   constructor(
     private careerService: CareerService,
     private route: Router,
@@ -67,6 +69,7 @@ export class CareerInfoComponent implements OnInit {
   }
 
   handleFileInput(event: any) {
+    this.fileSize = false;
     const file = event.target.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(file);
@@ -77,6 +80,7 @@ export class CareerInfoComponent implements OnInit {
 
   addCareerApplication() {
     this.formSubmitted = true;
+    this.loading = true;
     if (this.careerForm.valid) {
       this.careerForm.patchValue({
         Vaccancyid: this.id,
@@ -85,11 +89,18 @@ export class CareerInfoComponent implements OnInit {
 
       this.careerService.hireApplication(this.careerForm.value).subscribe(
         (data) => {
+          this.loading = false;
           this.toastr.success("We will get back to you soon");
           this.applyNowFlag = false;
         },
         (error) => {
-          this.toastr.error("Something went wrong. try again later.");
+          if (413) {
+            this.loading = false;
+            this.fileSize = true;
+          } else {
+            this.loading = false;
+            this.toastr.error("Something went wrong. try again later.");
+          }
         }
       );
     } else {

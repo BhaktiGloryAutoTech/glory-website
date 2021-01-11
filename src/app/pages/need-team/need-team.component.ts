@@ -12,7 +12,7 @@ import { DeveloperList } from "src/app/@theme/modal/needTeam.class";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { AddDeveloperComponent } from "../add-developer/add-developer.component";
 import { ToastrService } from "ngx-toastr";
-
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: "app-need-team",
@@ -20,18 +20,20 @@ import { ToastrService } from "ngx-toastr";
   styleUrls: ["./need-team.component.css"],
 })
 export class NeedTeamComponent implements OnInit {
+  public loading = false;
   needTeamForm: FormGroup | any;
   value64: any;
   formSubmitted: boolean = false;
   developerDataList: DeveloperList[] = [];
-  
+  public fileSizeFlag = false;
 
   constructor(
     private needTeamService: NeedTeamService,
     private fb: FormBuilder,
     private readonly changeDetectorRef: ChangeDetectorRef,
     private _modalService: NgbModal,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -51,6 +53,7 @@ export class NeedTeamComponent implements OnInit {
   }
 
   handleFileInput(event: any) {
+    this.fileSizeFlag = false;
     const file = event.target.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(file);
@@ -142,6 +145,8 @@ export class NeedTeamComponent implements OnInit {
   }
   addNeedTeam() {
     this.formSubmitted = true;
+    this.loading = true;
+    this.fileSizeFlag = false;
     if (this.needTeamForm.valid) {
       this.needTeamForm.patchValue({
         Attachment: this.value64,
@@ -152,15 +157,25 @@ export class NeedTeamComponent implements OnInit {
       console.log(this.needTeamForm);
       this.needTeamService.addNeedTeam(this.needTeamForm.value).subscribe(
         (data) => {
-          this.needTeamForm.reset(this.needTeamForm.value);
+          this.needTeamForm.reset();
+          this.loading = false;
+          this.formSubmitted = false;
           this.toastrService.success("We Will get back to you soon.");
+          this.router.navigate(["/pages/home"]);
         },
         (error: any) => {
           console.log(error);
-          this.toastrService.error("Something Went Wrong. Try Again");
+          if (413) {
+            console.log("hdsgfhsgdf");
+            this.fileSizeFlag = true;
+            this.loading = false;
+          } else {
+            this.toastrService.error("Something Went Wrong. Try Again");
+          }
         }
       );
     } else {
+      this.loading = false;
       return;
     }
   }

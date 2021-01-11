@@ -22,6 +22,7 @@ import { NbEvaIconsModule } from "@nebular/eva-icons";
 import { NbIconModule } from "@nebular/theme";
 import { ModalModule } from "ngb-modal";
 import { WorkService } from "./services/work.service";
+import { NgxLoadingModule } from "ngx-loading";
 
 //import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 //import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
@@ -34,6 +35,7 @@ import { WorkService } from "./services/work.service";
     ReactiveFormsModule,
     NbIconModule,
     NbEvaIconsModule,
+    NgxLoadingModule,
     ModalModule,
   ],
 

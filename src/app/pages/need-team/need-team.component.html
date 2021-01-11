@@ -1,3 +1,4 @@
+<ngx-loading [show]="loading"></ngx-loading>
 <div>
     <!-- ==================== Start Slider ==================== -->
 
@@ -86,6 +87,9 @@
                                                 <input type="file" name="uploadresume" class="up-res"
                                                     placeholder="Upload Resume" (change)="handleFileInput($event)"
                                                     required="required">
+                                            </div>
+                                            <div class="text-danger" *ngIf="fileSizeFlag">
+                                                File should be less than 100KB
                                             </div>
                                         </div>
 
