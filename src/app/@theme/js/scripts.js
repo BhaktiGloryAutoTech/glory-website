@@ -679,10 +679,18 @@ paceOptions = {
     eventLag: false
 };
 
-// Pace.on('done', function() {
-//     $('#preloader').addClass("isdone");
-//     $('.loading-text').addClass("isdone");
-// });
+Pace.on('done', function() {
+    $('#preloader').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
+Pace.on('done', function() {
+    $('#preloaderabout').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
+Pace.on('done', function() {
+    $('#preloaderservices').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
 
 
 /* ===============================  Scroll back to top  =============================== */

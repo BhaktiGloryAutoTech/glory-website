@@ -7040,6 +7040,7 @@ span:hover {
 
 .custom-font ul li a {
     letter-spacing: 1px;
+    font-family: system-ui;
 }
 
 .display-block-task {
@@ -7537,6 +7538,16 @@ h6 {
     color: red;
 }
 
+.career-second-form {
+    border: 0;
+}
+
+.font-fa .display-block-task,
+.font-fa a {
+    font-family: system-ui;
+    font-weight: 300;
+}
+
 @media (min-width: 992px) {
     .team-container {
         max-width: 960px !important;
@@ -7544,6 +7555,12 @@ h6 {
 }
 
 @media (max-width: 767px) {
+    .portfolio .gallery .items {
+        margin: 50px 0 !important;
+    }
+    .mb-50 {
+        margin-bottom: 8px !important;
+    }
     .about .ftbox ul li h6 {
         font-size: 14px;
     }
@@ -7552,6 +7569,7 @@ h6 {
     }
     .section-padding {
         padding: 20px 0;
+        margin: 0 15px;
     }
     .services .mas-item {
         margin: 20px 0;
