@@ -4394,7 +4394,7 @@ span:hover {
     margin: 0 10px 0 0;
 }
 
-.portfolio .gallery .items .cont {
+.services-portfolio .services-gallery .items .cont {
     margin-top: 30px;
     text-align: center;
     margin-left: auto !important;
@@ -4416,7 +4416,7 @@ span:hover {
     position: relative;
 }
 
-.portfolio .gallery .items .cont h6 {
+.services-portfolio .services-gallery .items .cont h6 {
     font-weight: 600;
     margin-bottom: 5px;
     color: #fff;
@@ -7568,7 +7568,7 @@ h6 {
         padding: 35px 9px;
     }
     .section-padding {
-        padding: 20px 0;
+        padding: 50px 0;
         margin: 0 15px;
     }
     .services .mas-item {
