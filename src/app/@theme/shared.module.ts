@@ -28,6 +28,8 @@ import { NgxLoadingModule } from "ngx-loading";
 //import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 import { IvyCarouselModule } from "angular-responsive-carousel";
+import { SlickCarouselModule } from "ngx-slick-carousel";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 @NgModule({
   declarations: [],
   imports: [
@@ -39,9 +41,18 @@ import { IvyCarouselModule } from "angular-responsive-carousel";
     NgxLoadingModule,
     ModalModule,
     IvyCarouselModule,
+    SlickCarouselModule,
+    NgbModule,
   ],
 
-  exports: [FormsModule, ngFormsModule, ReactiveFormsModule, IvyCarouselModule],
+  exports: [
+    FormsModule,
+    ngFormsModule,
+    ReactiveFormsModule,
+    IvyCarouselModule,
+    SlickCarouselModule,
+    NgbModule,
+  ],
   providers: [
     ContactService,
     CareerService,

@@ -195,3 +195,13 @@ p.small {
   margin-top: -20px;
   /* justify-content: center;*/
 }
+
+.client-bg-img {
+  background: url("assets/img/slid/1.jpg");
+}
+.carousel-indicators li {
+  width: 0%;
+}
+.space-padding {
+  padding-top: 150px;
+}

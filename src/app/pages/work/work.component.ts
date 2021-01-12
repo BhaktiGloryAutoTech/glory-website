@@ -7,6 +7,7 @@ import { WorkService } from "src/app/@theme/services/work.service";
   styleUrls: ["./work.component.css"],
 })
 export class WorkComponent implements OnInit {
+  value: number = 3;
   projectDataList: any = [];
   constructor(private workService: WorkService) {}
 
