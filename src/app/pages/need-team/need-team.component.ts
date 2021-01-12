@@ -22,10 +22,11 @@ import { ActivatedRoute, Router } from "@angular/router";
 export class NeedTeamComponent implements OnInit {
   public loading = false;
   needTeamForm: FormGroup | any;
-  value64: any;
+  value64: any = [];
   formSubmitted: boolean = false;
   developerDataList: DeveloperList[] = [];
   public fileSizeFlag = false;
+  developerAddCheck = true;
 
   constructor(
     private needTeamService: NeedTeamService,
@@ -54,13 +55,23 @@ export class NeedTeamComponent implements OnInit {
 
   handleFileInput(event: any) {
     this.fileSizeFlag = false;
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      this.value64 = reader.result;
-      console.log(this.value64);
-    };
+    let test: [] = event.target.files;
+    for (let i = 0; i < event.target.files.length; i++) {
+      const element = event.target.files[i];
+      const file = event.target.files[i];
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        this.value64 = reader.result;
+      };
+    }
+    // const file = event.target.files[0];
+    // const reader = new FileReader();
+    // reader.readAsDataURL(file);
+    // reader.onload = () => {
+    //   this.value64 = reader.result;
+    //   console.log(this.value64);
+    // };
   }
 
   onAddStep() {
@@ -70,6 +81,7 @@ export class NeedTeamComponent implements OnInit {
     modalRef.componentInstance.editStep = false;
     modalRef.result.then((result) => {
       if (result) {
+        this.developerAddCheck = false;
         let developerList = new DeveloperList();
         developerList.Devid = result.Devid;
         developerList.duration = result.duration;
@@ -147,6 +159,10 @@ export class NeedTeamComponent implements OnInit {
     this.formSubmitted = true;
     this.loading = true;
     this.fileSizeFlag = false;
+    if (this.developerAddCheck) {
+      this.loading = false;
+      this.toastrService.warning("Please Add Developer");
+    }
     if (this.needTeamForm.valid) {
       this.needTeamForm.patchValue({
         Attachment: this.value64,
@@ -157,7 +173,6 @@ export class NeedTeamComponent implements OnInit {
       console.log(this.needTeamForm);
       this.needTeamService.addNeedTeam(this.needTeamForm.value).subscribe(
         (data) => {
-          this.needTeamForm.reset();
           this.loading = false;
           this.formSubmitted = false;
           this.toastrService.success("We Will get back to you soon.");
