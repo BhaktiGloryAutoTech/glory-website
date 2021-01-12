@@ -90,6 +90,7 @@ export class CareerInfoComponent implements OnInit {
       this.careerService.hireApplication(this.careerForm.value).subscribe(
         (data) => {
           this.loading = false;
+          this.route.navigate(["/pages/career"]);
           this.toastr.success("We will get back to you soon");
           this.applyNowFlag = false;
         },

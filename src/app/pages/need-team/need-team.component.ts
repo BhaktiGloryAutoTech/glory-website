@@ -27,6 +27,7 @@ export class NeedTeamComponent implements OnInit {
   developerDataList: DeveloperList[] = [];
   public fileSizeFlag = false;
   developerAddCheck = true;
+  today: any;
 
   constructor(
     private needTeamService: NeedTeamService,
@@ -38,7 +39,15 @@ export class NeedTeamComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getCurrentDate();
     this.getdata();
+  }
+  getCurrentDate() {
+    this.today = new Date();
+    var dd = String(this.today.getDate()).padStart(2, "0");
+    var mm = String(this.today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var yyyy = this.today.getFullYear();
+    this.today = yyyy + "-" + mm + "-" + dd;
   }
   getdata() {
     this.needTeamForm = this.fb.group({
@@ -50,7 +59,6 @@ export class NeedTeamComponent implements OnInit {
       Email: null,
       Developers: this.fb.array([]),
     });
-    console.log(this.needTeamForm);
   }
 
   handleFileInput(event: any) {
@@ -89,7 +97,6 @@ export class NeedTeamComponent implements OnInit {
         developerList.hrDay = result.hrDay;
         developerList.noOfDeveloper = result.noOfDeveloper;
         developerList.id = result.position;
-        console.log(developerList.id);
         this.needTeamService.getDeveloperList().subscribe((data: any) => {
           data["data"].forEach((element: any) => {
             if (developerList.Devid == element.Devid) {
@@ -98,7 +105,6 @@ export class NeedTeamComponent implements OnInit {
           });
         });
         this.developerDataList.push(developerList);
-        console.log("DeveloperList", this.developerDataList);
       }
     });
   }
@@ -170,7 +176,6 @@ export class NeedTeamComponent implements OnInit {
       (<FormArray>this.needTeamForm.get("Developers")).push(
         this.setDeveloperData()
       );
-      console.log(this.needTeamForm);
       this.needTeamService.addNeedTeam(this.needTeamForm.value).subscribe(
         (data) => {
           this.loading = false;
@@ -179,9 +184,7 @@ export class NeedTeamComponent implements OnInit {
           this.router.navigate(["/pages/home"]);
         },
         (error: any) => {
-          console.log(error);
           if (413) {
-            console.log("hdsgfhsgdf");
             this.fileSizeFlag = true;
             this.loading = false;
           } else {

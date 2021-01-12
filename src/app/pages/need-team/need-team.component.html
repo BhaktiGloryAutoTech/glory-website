@@ -72,7 +72,9 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <input type="date" name="startDate" placeholder="Start Date"
-                                                    formControlName="StartDate" required="required" class="pad-10">
+                                                    formControlName="StartDate" required class="pad-10" [min]="today">
+                                                <!-- <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1">
+                                                <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time> -->
                                             </div>
                                         </div>
                                         <div class="col-sm-6">

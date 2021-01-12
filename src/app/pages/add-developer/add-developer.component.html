@@ -34,7 +34,12 @@
                     <input class="form-control input-group" type="number" name="hrDay" [(ngModel)]="hrDay"
                         #name12="ngModel"
                         [ngClass]="{'is-invalid':(name12.invalid)&&(modalSubmitted || name12.touched)}" required
-                        placeholder="Hours/day" min="0" max="2">
+                        pattern="^((?:[1-9]|1[0-9]|2[0-3])?|24?)$" (input)="check24($event)" placeholder="Hours/day"
+                        min="0" max="24"><span class="validity"></span>
+
+                    <div class="invalid-feedback" *ngIf="check24Value">
+                        Hours should be less than 24
+                    </div>
                     <div class="invalid-feedback" *ngIf="(name12.invalid)&&(modalSubmitted || name12.touched)">
                         Hours/day is required.
                     </div>
@@ -50,8 +55,7 @@
                         #name123="ngModel"
                         [ngClass]="{'is-invalid':(name123.invalid)&&(modalSubmitted || name123.touched)}" required
                         placeholder="Duration" min="0" step="1">
-                    <div class="invalid-feedback" style="color: red;"
-                        *ngIf="(name123.invalid)&&(modalSubmitted || name123.touched)">
+                    <div class="invalid-feedback" *ngIf="(name123.invalid)&&(modalSubmitted || name123.touched)">
                         Duration is required.
                     </div>
 
@@ -75,8 +79,7 @@
                         [(ngModel)]="noOfDeveloper" #name12345="ngModel"
                         [ngClass]="{'is-invalid':(name12345.invalid)&&(modalSubmitted || name12345.touched)}" required
                         placeholder="No of Developer" min="0">
-                    <div class="invalid-feedback" style="color: red;"
-                        *ngIf="(name12345.invalid)&&(modalSubmitted || name12345.touched)">
+                    <div class="invalid-feedback" *ngIf="(name12345.invalid)&&(modalSubmitted || name12345.touched)">
                         No of Developer is required.
                     </div>
 
