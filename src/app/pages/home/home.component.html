@@ -2,7 +2,7 @@
 
     <!-- ==================== Start Slider ==================== -->
 
-    <header class="slider-bus position-re valign">
+    <!-- <header class="slider-bus position-re valign">
         <div class="container ontop">
             <div class="swiper-container swiper-content">
                 <div class="swiper-wrapper">
@@ -14,7 +14,8 @@
                                         <div class="thin">Unique brand</div>
                                         Stories
                                     </h1>
-                                    <p>If you need to redesign your new project, new visual strategy, ux structure or you do have some cool ideas for collaboration.</p>
+                                    <p>If you need to redesign your new project, new visual strategy, ux structure or
+                                        you do have some cool ideas for collaboration.</p>
                                     <a href="#0" class="btn-curve btn-color btn-radius mt-30">
                                         <span>Discover Work</span>
                                     </a>
@@ -30,7 +31,8 @@
                                         <div class="thin">Digital Design</div>
                                         Awards
                                     </h1>
-                                    <p>If you need to redesign your new project, new visual strategy, ux structure or you do have some cool ideas for collaboration.</p>
+                                    <p>If you need to redesign your new project, new visual strategy, ux structure or
+                                        you do have some cool ideas for collaboration.</p>
                                     <a href="#0" class="btn-curve btn-color btn-radius mt-30">
                                         <span>Discover Work</span>
                                     </a>
@@ -46,7 +48,8 @@
                                         <div class="thin">Original</div>
                                         Solutions
                                     </h1>
-                                    <p>If you need to redesign your new project, new visual strategy, ux structure or you do have some cool ideas for collaboration.</p>
+                                    <p>If you need to redesign your new project, new visual strategy, ux structure or
+                                        you do have some cool ideas for collaboration.</p>
                                     <a href="#0" class="btn-curve btn-color btn-radius mt-30">
                                         <span>Discover Work</span>
                                     </a>
@@ -60,16 +63,16 @@
         <div class="swiper-container swiper-img">
             <div class="swiper-wrapper">
                 <div class="swiper-slide bg-img slide-1" data-overlay-dark="6">
-                    <!-- <img src="../../../assets/img/slid/1.jpg"> -->
-                </div>
+                    <img src="../../../assets/img/slid/1.jpg"> -->
+    <!-- </div>
                 <div class="swiper-slide bg-img slide-2" data-overlay-dark="6"></div>
                 <div class="swiper-slide bg-img slide-3" data-overlay-dark="6"></div>
             </div>
         </div>
-        <div class="curve-bg bg-img" data-background="assets/img/business-bg.png"></div>
+        <div class="curve-bg bg-img" data-background="assets/img/business-bg.png"></div> -->
 
-        <!-- slider setting -->
-        <div class="setone">
+    <!-- slider setting -->
+    <!-- <div class="setone">
             <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
                 <i class="fas fa-chevron-right"></i>
             </div>
@@ -78,8 +81,79 @@
             </div>
         </div>
         <div class="swiper-pagination custom-font"></div>
+    </header>-->
+    <header class="slider-bus position-re valign">
+        <div class="container ontop">
+            <ngb-carousel data-interval="false">
+                <ng-template ngbSlide>
+                    <div data-overlay-dark="6">
+                        <img src="../../../assets/img/slid/1.jpg">
+                    </div>
+                    <div class="">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                                <div class="carousel-caption">
+                                    <h1 data-splitting>
+                                        <div class="thin">We Don't Deliver Product</div>
+                                        We Deliver an Experiance
+                                    </h1>
+                                    <p>If you need to redesign your new project, new visual strategy, ux structure
+                                        or you do have some cool ideas for collaboration.</p>
+                                    <a class="btn-curve btn-color btn-radius mt-30">
+                                        <span>Discover Work</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div data-overlay-dark="6">
+                        <img src="../../../assets/img/slid/freelancer.jpg">
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                                <div class="carousel-caption">
+                                    <h1 data-splitting>
+                                        <div class="thin">Building Brand is</div>
+                                        Our Business
+                                    </h1>
+                                    <p>If you need to redesign your new project, new visual strategy, ux structure
+                                        or you do have some cool ideas for collaboration.</p>
+                                    <a class="btn-curve btn-color btn-radius mt-30">
+                                        <span>Discover Work</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="bg-img" data-overlay-dark="6">
+                        <img src="../../../assets/img/slid/1.jpg">
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                                <div class="carousel-caption">
+                                    <h1 data-splitting>
+                                        <div class="thin">We Deevelop</div>
+                                        You Grow
+                                    </h1>
+                                    <p>If you need to redesign your new project, new visual strategy, ux structure
+                                        or you do have some cool ideas for collaboration.</p>
+                                    <a class="btn-curve btn-color btn-radius mt-30">
+                                        <span>Discover Work</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
     </header>
-
     <!-- ==================== End Slider ==================== -->
     <div class="main-content">
 
@@ -117,9 +191,12 @@
                                     <span></span>
                                     <span></span>
                                 </div>
-                                <h2 class="extra-title wow" data-splitting>We help to create strategies, design & development.
+                                <h2 class="extra-title wow" data-splitting>We help to create strategies, design &
+                                    development.
                                 </h2>
-                                <p class="wow txt about-text">We build professional websites that convert visitor into customers and help your Business grow. We feel very Strong about our skills when it comes to planning, designing and coding applications.</p>
+                                <p class="wow txt about-text">We build professional websites that convert visitor into
+                                    customers and help your Business grow. We feel very Strong about our skills when it
+                                    comes to planning, designing and coding applications.</p>
                             </div>
 
                             <div class="ftbox mt-30">
@@ -175,15 +252,19 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <h2 class="extra-title wow" data-splitting>We help to create strategies, design & development.
+                            <h2 class="extra-title wow" data-splitting>We help to create strategies, design &
+                                development.
                             </h2>
                         </div>
                     </div>
                     <div class="col-lg-5 valign wow fadeInRight" data-wow-delay=".25s">
                         <div class="full-width">
-                            <p class="wow txt about-text">We never underestimate any parts of each project as they're all essential to meeting the ultimate goal. you'll be engaged in with our positive and enthusiastic attitude.
+                            <p class="wow txt about-text">We never underestimate any parts of each project as they're
+                                all essential to meeting the ultimate goal. you'll be engaged in with our positive and
+                                enthusiastic attitude.
                             </p>
-                            <a routerLink="about" class="simple-btn custom-font mt-20 wow btn-new-design" data-splitting><span>Know
+                            <a routerLink="about" class="simple-btn custom-font mt-20 wow btn-new-design" data-splitting
+                                routerLink="/pages/about"><span>Know
                                     More</span></a>
                         </div>
                     </div>
@@ -205,7 +286,8 @@
                                 <div class="services-home-main">
                                     <div class="child-services-home">
                                         <div class="main-img-home-child">
-                                            <img src="../../../assets/about-icon/android-logo.png" class="img-responsive" alt="">
+                                            <img src="../../../assets/about-icon/android-logo.png"
+                                                class="img-responsive" alt="">
                                         </div>
                                         <div class="detail-home-desc">
                                             <h2>Mobile Development</h2>
@@ -213,7 +295,8 @@
                                     </div>
                                 </div>
                                 <div class="width-100">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies" [routerLink]="['/pages/services']"><span>View
+                                    <button type="submit" class="btn-curve btn-color btn-home-servcies"
+                                        [routerLink]="['/pages/services']"><span>View
                                             More</span>
                                     </button>
                                 </div>
@@ -224,7 +307,8 @@
                                 <div class="services-home-main">
                                     <div class="child-services-home">
                                         <div class="main-img-home-child">
-                                            <img src="../../../assets/about-icon/data.png" class="img-responsive" alt="">
+                                            <img src="../../../assets/about-icon/data.png" class="img-responsive"
+                                                alt="">
                                         </div>
                                         <div class="detail-home-desc">
                                             <h2>Web Design & Development</h2>
@@ -232,7 +316,8 @@
                                     </div>
                                 </div>
                                 <div class="width-100">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies" [routerLink]="['/pages/services']"><span>View
+                                    <button type="submit" class="btn-curve btn-color btn-home-servcies"
+                                        [routerLink]="['/pages/services']"><span>View
                                             More</span>
                                     </button>
                                 </div>
@@ -243,7 +328,8 @@
                                 <div class="services-home-main">
                                     <div class="child-services-home">
                                         <div class="main-img-home-child">
-                                            <img src="../../../assets/about-icon/test.png" class="img-responsive" alt="">
+                                            <img src="../../../assets/about-icon/test.png" class="img-responsive"
+                                                alt="">
                                         </div>
                                         <div class="detail-home-desc">
                                             <h2>Tesing & QA</h2>
@@ -251,7 +337,8 @@
                                     </div>
                                 </div>
                                 <div class="width-100">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies" [routerLink]="['/pages/services']"><span>View
+                                    <button type="submit" class="btn-curve btn-color btn-home-servcies"
+                                        [routerLink]="['/pages/services']"><span>View
                                             More</span>
                                     </button>
                                 </div>
@@ -262,7 +349,8 @@
                                 <div class="services-home-main">
                                     <div class="child-services-home">
                                         <div class="main-img-home-child">
-                                            <img src="../../../assets/about-icon/ui-ux.png" class="img-responsive" alt="">
+                                            <img src="../../../assets/about-icon/ui-ux.png" class="img-responsive"
+                                                alt="">
                                         </div>
                                         <div class="detail-home-desc">
                                             <h2>UI/UX Designing</h2>
@@ -270,7 +358,8 @@
                                     </div>
                                 </div>
                                 <div class="width-100">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies" [routerLink]="['/pages/services']"><span>View
+                                    <button type="submit" class="btn-curve btn-color btn-home-servcies"
+                                        [routerLink]="['/pages/services']"><span>View
                                             More</span>
                                     </button>
                                 </div>
@@ -287,8 +376,9 @@
 
         <!-- ==================== Start block-sec ==================== -->
 
-        <section class="block-sec ">
-            <div class="background bg-img section-padding pb-0 " data-background="img/slid/1.jpg " data-overlay-dark="8 ">
+        <!-- <section class="block-sec ">
+            <div class="background bg-img section-padding pb-0 " data-background="img/slid/1.jpg "
+                data-overlay-dark="8 ">
                 <div class="container ">
                     <div class="row ">
                         <div class="col-lg-6 ">
@@ -308,6 +398,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-5 offset-lg-1 ">
                             <div class="testim-box ">
                                 <div class="head-box wow fadeIn" data-wow-delay=".25s">
@@ -322,7 +413,8 @@
                                             <div class="info">
                                                 <div class="img">
                                                     <div class="img-box">
-                                                        <img src="{{'data:image/jpg;base64,' + client.ClientLogo}}" alt="">
+                                                        <img src="{{'data:image/jpg;base64,' + client.ClientLogo}}"
+                                                            alt="">
                                                     </div>
                                                 </div>
                                                 <div class="cont">
@@ -340,13 +432,76 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- ==================== End block-sec ==================== -->
 
+        <!--Start Client Saying Custom Made-->
+
+        <section class="block-sec">
+            <div class="background bg-img section-padding pb-0 slide-1" data-overlay-dark="8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="vid-area ">
+                                <div class="vid-icon ">
+                                    <a class="vid ">
+                                        <div class="vid-butn ">
+                                            <span class="icon ">
+                                                <i class="fas fa-play "></i>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="cont ">
+                                    <h3 class="wow " data-splitting>So that's us. There's no other way to put it.</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 offset-lg-1 col-md-5 col-12">
+                            <div class="testim-box">
+                                <div class="head-box wow fadeIn" data-wow-delay=".25s">
+                                    <h6 class="wow fadeIn " data-wow-delay=".5s ">Our Happy Clients</h6>
+                                    <h4 class="wow fadeIn " data-wow-delay=".5s ">What Client's Say?</h4>
+                                </div>
+                                <div>
+                                    <ngb-carousel data-interval="false">
+                                        <ng-template ngbSlide *ngFor="let client of clientData">
+                                            <div class="item">
+                                                <p>{{client.ClientMessage}}</p>
+                                                <div class="info">
+                                                    <div class="img">
+                                                        <div class="img-box">
+                                                            <img src="{{'data:image/jpg;base64,' + client.ClientLogo}}"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont">
+                                                        <div class="author">
+                                                            <h6 class="author-name custom-font">{{client.ClientName}}
+                                                            </h6>
+                                                            <span class="author-details">Co-founder, Colabrio</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ng-template>
+                                    </ngb-carousel>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--End Client saying Custom Made-->
 
         <!-- ==================== Start Skills Circle ==================== -->
-
+        <!-- 
         <section class="skills-circle sub-bg pt-50 pb-50 ">
             <div class="container ">
                 <div class="row ">
@@ -380,14 +535,14 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- ==================== End Skills Circle ==================== -->
 
 
         <!-- ==================== Start clients Brands ==================== -->
 
-        <section class="clients section-padding pt-5 pb-5">
+        <section class="clients section-padding space-padding pt-6 pb-5">
             <div class="container ">
                 <div class="row ">
                     <div class="col-lg-4 valign wow fadeInLeft" data-wow-delay=".25s">
@@ -435,12 +590,14 @@
                     <div class="col-md-8 col-lg-9 wow fadeInLeft" data-wow-delay=".25s">
                         <div class="content sm-mb30 ">
                             <h6 class="wow " data-splitting>Let’s Talk</h6>
-                            <h2 class="wow custom-font " data-splitting>about your <b>next project</b>.</h2>
+                            <h2 class="wow custom-font " data-splitting>about your <b>next
+                                    project</b>.</h2>
                         </div>
                     </div>
 
                     <div class="col-md-4 col-lg-3 valign wow fadeInRight" data-wow-delay=".25s">
-                        <a [routerLink]="['/pages/contact']" class="btn-curve btn-blc wow fadeInUp " data-wow-delay=".5s "><span>Get
+                        <a [routerLink]="['/pages/contact']" class="btn-curve btn-blc wow fadeInUp "
+                            data-wow-delay=".5s "><span>Get
                                 In
                                 Touch</span></a>
                     </div>

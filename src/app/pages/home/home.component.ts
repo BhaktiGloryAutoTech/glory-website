@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
     private homeService: HomeService,
     private _sanitizer: DomSanitizer
   ) {}
+  // images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
   clientData: any = [];
   imagePath: any;
   logo: any;
