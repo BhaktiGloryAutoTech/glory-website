@@ -28,6 +28,7 @@ export class NeedTeamComponent implements OnInit {
   public fileSizeFlag = false;
   developerAddCheck = true;
   today: any;
+  modifiedToday: any;
 
   constructor(
     private needTeamService: NeedTeamService,
@@ -48,6 +49,7 @@ export class NeedTeamComponent implements OnInit {
     var mm = String(this.today.getMonth() + 1).padStart(2, "0"); //January is 0!
     var yyyy = this.today.getFullYear();
     this.today = yyyy + "-" + mm + "-" + dd;
+    this.modifiedToday = dd + "-" + mm + "-" + yyyy;
   }
   getdata() {
     this.needTeamForm = this.fb.group({
