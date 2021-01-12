@@ -28,8 +28,8 @@ import { NgxLoadingModule } from "ngx-loading";
 //import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 import { IvyCarouselModule } from "angular-responsive-carousel";
-import { SlickCarouselModule } from "ngx-slick-carousel";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from "ng-pick-datetime";
 @NgModule({
   declarations: [],
   imports: [
@@ -41,8 +41,9 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     NgxLoadingModule,
     ModalModule,
     IvyCarouselModule,
-    SlickCarouselModule,
     NgbModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
   ],
 
   exports: [
@@ -50,8 +51,9 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     ngFormsModule,
     ReactiveFormsModule,
     IvyCarouselModule,
-    SlickCarouselModule,
     NgbModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
   ],
   providers: [
     ContactService,

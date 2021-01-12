@@ -8,6 +8,7 @@ import { NeedTeamService } from "src/app/@theme/services/needTeam.service";
   styleUrls: ["./add-developer.component.css"],
 })
 export class AddDeveloperComponent implements OnInit {
+  check24Value = false;
   public loading = false;
   developerList: any = [];
   duration = "";
@@ -67,6 +68,14 @@ export class AddDeveloperComponent implements OnInit {
       },
       (error) => {}
     );
+  }
+  check24(value: any) {
+    this.check24Value = false;
+    console.log(value.target.value);
+    if (value.target.value > 24) {
+      this.check24Value = true;
+      console.log("sadhfukhas");
+    }
   }
   onCreate(myForm: any) {
     this.modalSubmitted = true;
