@@ -83,8 +83,8 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="file" name="uploadresume" class="up-res"
-                                                    placeholder="Upload Resume" (change)="handleFileInput($event)"
+                                                <input type="file" name="uploadresume" multiple="true" class="up-res"
+                                                    placeholder="Attachment" (change)="handleFileInput($event)"
                                                     required="required">
                                             </div>
                                             <div class="text-danger" *ngIf="fileSizeFlag">
