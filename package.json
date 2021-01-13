@@ -24,7 +24,7 @@
     "@nebular/eva-icons": "^6.2.1",
     "@nebular/theme": "^6.2.1",
     "@ng-bootstrap/ng-bootstrap": "^8.0.1",
-    "@ng-select/ng-select": "^5.0.14",
+    "@ng-select/ng-select": "^5.0.15",
     "angular-responsive-carousel": "^2.0.2",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",

@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   imagePath: any;
   logo: any;
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.getClientList();
   }
 

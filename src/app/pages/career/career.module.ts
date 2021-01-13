@@ -7,6 +7,7 @@ import { CareerInfoComponent } from "./career-info/career-info.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { SharedModule } from "src/app/@theme/shared.module";
 import { NgxLoadingModule } from "ngx-loading";
+import { NgSelectModule } from "@ng-select/ng-select";
 
 @NgModule({
   declarations: [CareerComponent, CareerInfoComponent],
@@ -16,6 +17,7 @@ import { NgxLoadingModule } from "ngx-loading";
     ReactiveFormsModule,
     SharedModule,
     NgxLoadingModule,
+    NgSelectModule,
   ],
 })
 export class CareerModule {}

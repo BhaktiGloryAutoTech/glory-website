@@ -10,6 +10,7 @@ export class ServicesComponent implements OnInit {
   constructor(private serviceService: ServiceService) {}
   serviceList: any = [];
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.getServiceList();
   }
 

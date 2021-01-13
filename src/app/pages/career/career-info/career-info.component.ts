@@ -23,6 +23,8 @@ export class CareerInfoComponent implements OnInit {
   value64: string | any;
   formSubmitted: boolean = false;
   fileSize = false;
+  vacancyTitle: any = [];
+  selectedVaccancyName: any;
   constructor(
     private careerService: CareerService,
     private route: Router,
@@ -31,14 +33,43 @@ export class CareerInfoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.getData();
     this.getIdFromUrl();
+    this.getDeveloprList();
+  }
+  afterViewInit() {
+    this.selectedVaccancyName = this.vacancyInfo.VacancyName;
+  }
+  getDeveloprList() {
+    this.careerService.getJobTitle().subscribe(
+      (data: any) => {
+        this.vacancyTitle = data["data"];
+        console.log(this.vacancyTitle);
+      },
+      (error) => {}
+    );
+  }
+  showSelectedData(value: any) {
+    console.log(value);
+    this.VacancyId.Vacancyid = value;
+    console.log("hdsgfjgsdk");
+    this.selectedVaccancyName = value;
+    this.careerService.getVacancyListById(this.VacancyId).subscribe(
+      (data: any) => {
+        this.vacancyInfo = data["data"];
+        console.log(this.selectedVaccancyName);
+        console.log(this.vacancyInfo);
+      },
+      (error) => {}
+    );
   }
   getIdFromUrl() {
     this.id = this._route.snapshot.paramMap.get("id");
-    console.log(this.id);
     this.VacancyId.Vacancyid = this.id;
     console.log(this.VacancyId.Vacancyid);
+    this.selectedVaccancyName = this.id;
+    console.log("vid", this.selectedVaccancyName);
     this.careerService.getVacancyListById(this.VacancyId).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];
@@ -47,7 +78,10 @@ export class CareerInfoComponent implements OnInit {
       (error) => {}
     );
   }
-
+  setDefaultValu() {
+    console.log("close");
+    this.getIdFromUrl();
+  }
   getData() {
     this.careerForm = new FormGroup({
       FirstName: new FormControl(null, Validators.required),
@@ -105,6 +139,7 @@ export class CareerInfoComponent implements OnInit {
         }
       );
     } else {
+      this.loading = false;
       return;
     }
   }

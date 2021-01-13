@@ -12,6 +12,7 @@ export class WorkComponent implements OnInit {
   constructor(private workService: WorkService) {}
 
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.getData();
   }
   getData() {

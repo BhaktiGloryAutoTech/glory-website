@@ -11,7 +11,14 @@
                             <div class=" career-main-detail dis-flex-space pb-3">
                                 <div class="career-info-detail-title main-name-company-info wow fadeIn"
                                     data-wow-delay=".25s">
-                                    <h4>{{info.VacancyName}}</h4>
+                                    <h4>
+                                        <ng-select name="vname" id="vnameid" [(ngModel)]='selectedVaccancyName'
+                                            (clear)="setDefaultValu()" (change)="showSelectedData($event)">
+                                            <ng-option *ngFor="let data of vacancyTitle" [value]="data.Vacancyid">
+                                                {{data.VacancyName}}
+                                            </ng-option>
+                                        </ng-select>
+                                    </h4>
                                     <h5>Glory Autotech</h5>
                                 </div>
                                 <div class="glory-logo wow fadeIn" data-wow-delay=".25s">

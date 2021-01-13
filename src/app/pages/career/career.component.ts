@@ -12,6 +12,7 @@ export class CareerComponent implements OnInit {
   constructor(private careerService: CareerService, private route: Router) {}
 
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.getJobTitle();
   }
   getJobTitle() {
