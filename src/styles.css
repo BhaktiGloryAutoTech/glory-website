@@ -205,3 +205,17 @@ p.small {
 .space-padding {
   padding-top: 150px;
 }
+.ng-width {
+  width: 220px;
+}
+.email-colon-spacing {
+  padding-left: 29px;
+}
+.conatct-colon-spacing {
+  padding-left: 13px;
+}
+@media (max-width: 767px) {
+  .address-mobile-spacing {
+    margin-right: 21px;
+  }
+}

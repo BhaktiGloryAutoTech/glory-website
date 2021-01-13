@@ -76,6 +76,7 @@
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
                                                 <input id="form_email" type="Email" name="Email" placeholder="Email"
+                                                    pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
                                                     formControlName="Email" required="required">
                                                 <div class="text-danger"
                                                     *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
@@ -89,12 +90,16 @@
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
-                                                <input id="form_contactNo" type="tel" name="ContactNo"
-                                                    formControlName="ContactNo" placeholder="Contact No"
-                                                    required="required">
+                                                <input id="form_contactNo" pattern="^[6-9]{1}[0-9]{9}$" type="tel"
+                                                    name="ContactNo" formControlName="ContactNo"
+                                                    placeholder="Contact No" required>
                                                 <div class="text-danger"
                                                     *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
                                                     Contact No is required.
+                                                </div>
+                                                <div class="text-danger"
+                                                    *ngIf="contactForm.get('ContactNo').errors?.pattern">
+                                                    <span>Please enter valid 10 digit contact</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -103,8 +108,8 @@
 
                                     <div class="form-group">
                                         <textarea id="form_message" name="Message" placeholder="Message" rows="4"
-                                            formControlName="Message" required="required"></textarea>
-                                        <div class="text-danger"
+                                            formControlName="Message"></textarea>
+                                        <div class="text-danger" required
                                             *ngIf="contactForm.get('Message').invalid && (formSubmitted)">
                                             Message is required.
                                         </div>

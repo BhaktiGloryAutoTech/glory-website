@@ -43,7 +43,7 @@ export class ContactComponent implements OnInit {
       ]),
       ContactNo: new FormControl(null, [
         Validators.required,
-        Validators.pattern(/^[0-9]{10}/),
+        Validators.pattern(/^[6-9]{1}[0-9]{9}/),
       ]),
       Message: new FormControl(null, [Validators.required]),
     });
