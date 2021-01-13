@@ -40,6 +40,7 @@ export class NeedTeamComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.getCurrentDate();
     this.getdata();
   }

@@ -7473,14 +7473,65 @@ h6 {
   font-family: system-ui;
   font-weight: 300;
 }
+.carousel-caption {
+  bottom: 31%;
+  left: 8%;
+  text-align: left;
+}
+.carousel-control-next:hover {
+  top: 83%;
+}
+.carousel-control-prev:hover {
+  top: 73%;
+}
+.carousel-control-next {
+  right: -1%;
+  bottom: -77%;
+}
+.carousel-control-prev {
+  left: 86%;
+  bottom: -57%;
+}
+.carousel-control-next-icon {
+  color: #ccc;
+  height: 63px;
+  line-height: 88px;
+  text-align: center;
+  margin: 5px 0;
+  padding: 23px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: static;
+}
+.carousel-control-prev-icon {
+  color: #ccc;
+  height: 63px;
+  line-height: 88px;
+  text-align: center;
+  margin: 5px 0;
+  padding: 23px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: static;
+}
 
 @media (min-width: 992px) {
   .team-container {
     max-width: 960px !important;
   }
 }
+@media (min-width: 1024px) {
+  .carousel-inner {
+    height: 100vh;
+  }
+}
 
 @media (max-width: 767px) {
+  .carousel-caption {
+    display: none;
+  }
+  .slider-bus {
+    min-height: 0;
+    height: 100%;
+  }
   .portfolio .gallery .items {
     margin: 50px 0 !important;
   }
@@ -7539,6 +7590,40 @@ h6 {
   }
   .space-padding {
     padding-top: 50px !important;
+  }
+  .carousel-control-next:hover {
+    top: 74%;
+  }
+  .carousel-control-prev:hover {
+    top: 73%;
+  }
+  .carousel-control-next {
+    right: -1%;
+    bottom: -77%;
+  }
+  .carousel-control-prev {
+    left: 86%;
+    bottom: -57%;
+  }
+  .carousel-control-next-icon {
+    color: #ccc;
+    height: 63px;
+    line-height: 88px;
+    text-align: center;
+    margin: 5px 0;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: static;
+  }
+  .carousel-control-prev-icon {
+    color: #ccc;
+    height: 23px;
+    line-height: 88px;
+    text-align: center;
+    margin: 5px 0;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: static;
   }
 }
 .file-name-formatting {

@@ -28,6 +28,7 @@ export class ContactComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.getData();
   }
 
@@ -65,6 +66,7 @@ export class ContactComponent implements OnInit {
         }
       );
     } else {
+      this.loading = false;
       return;
     }
   }

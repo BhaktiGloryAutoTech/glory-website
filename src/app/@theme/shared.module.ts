@@ -44,6 +44,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from "ng-pick-datetime";
     NgbModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
+    NgSelectModule,
   ],
 
   exports: [
@@ -54,6 +55,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from "ng-pick-datetime";
     NgbModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
+    NgSelectModule,
   ],
   providers: [
     ContactService,

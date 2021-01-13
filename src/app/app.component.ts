@@ -9,16 +9,14 @@ import * as AOS from "aos";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  constructor(private router:Router) {
-    
-  }
+  constructor(private router: Router) {}
   title = "test-application";
   ngOnInit() {
     AOS.init();
   }
-  reload(value:any){
-  this.router.navigate([value]).then(()=>{
-    location.reload()
-  })
+  reload(value: any) {
+    //this.router.navigate([value]).then(()=>{
+    // location.reload()
+    // })
   }
 }
