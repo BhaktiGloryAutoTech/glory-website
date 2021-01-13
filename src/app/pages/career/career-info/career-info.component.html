@@ -11,14 +11,19 @@
                             <div class=" career-main-detail dis-flex-space pb-3">
                                 <div class="career-info-detail-title main-name-company-info wow fadeIn"
                                     data-wow-delay=".25s">
+                                    <!-- <div class="row">
+                                        <div class="col-md-4 col-lg-4"> -->
                                     <h4>
-                                        <ng-select name="vname" id="vnameid" [(ngModel)]='selectedVaccancyName'
-                                            (clear)="setDefaultValu()" (change)="showSelectedData($event)">
+                                        <ng-select name="vname" class="ng-width" id="vnameid"
+                                            [(ngModel)]='selectedVaccancyName' (clear)="setDefaultValu()"
+                                            (change)="showSelectedData($event)">
                                             <ng-option *ngFor="let data of vacancyTitle" [value]="data.Vacancyid">
                                                 {{data.VacancyName}}
                                             </ng-option>
                                         </ng-select>
                                     </h4>
+                                    <!-- </div>
+                                    </div> -->
                                     <h5>Glory Autotech</h5>
                                 </div>
                                 <div class="glory-logo wow fadeIn" data-wow-delay=".25s">
@@ -144,6 +149,9 @@
                                                     *ngIf="careerForm.get('Email').invalid&&(formSubmitted||careerForm.get('Email').touched)">
                                                     Email is Require.
                                                 </div>
+                                                <div class="text-danger" *ngIf="careerForm.get('Email').error?.pattern">
+                                                    Enter Valid Email.
+                                                </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
@@ -154,11 +162,15 @@
                                                     *ngIf="careerForm.get('ContactNo').invalid&&(formSubmitted||careerForm.get('ContactNo').touched)">
                                                     Contact No is Require.
                                                 </div>
+                                                <div class="text-danger"
+                                                    *ngIf="careerForm.get('ContactNo').errors?.pattern">
+                                                    <span>Please enter valid 10 digit contact</span>
+                                                </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <input type="date" name="birthdate" placeholder="D.O.B"
-                                                        formControlName="DOB" required="required">
+                                                        formControlName="DOB">
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
@@ -174,14 +186,13 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <input type="number" name="experience" placeholder="Experience"
-                                                        formControlName="Experience" required="required">
+                                                        formControlName="Experience">
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group file-name-formatting">
                                                     <input type="file" name="uploadresume" class="up-res"
-                                                        placeholder="Upload Resume" (change)="handleFileInput($event)"
-                                                        required="required">
+                                                        placeholder="Upload Resume" (change)="handleFileInput($event)">
                                                 </div>
                                                 <div class="text-danger" *ngIf="fileSize">
                                                     File should be less than 50MB
@@ -190,7 +201,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <textarea name="message" placeholder="Message" rows="4"
-                                                        formControlName="Message" required="required"></textarea>
+                                                        formControlName="Message"></textarea>
                                                 </div>
                                             </div>
 

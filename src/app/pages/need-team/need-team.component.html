@@ -61,33 +61,34 @@
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <input type="tel" name="number" placeholder="Phone Number"
+                                                <input type="tel" name="number" pattern="" placeholder="Phone Number"
                                                     formControlName="ContactNo" required="required">
                                             </div>
                                             <div class="text-danger"
                                                 *ngIf="needTeamForm.get('ContactNo').invalid&&(formSubmitted||needTeamForm.get('ContactNo').touched)">
                                                 Contact No is Require.
                                             </div>
+                                            <div class="text-danger"
+                                                *ngIf="needTeamForm.get('ContactNo').errors?.pattern">
+                                                <span>Please enter valid 10 digit contact</span>
+                                            </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <input type="date" name="startDate" placeholder="Start Date"
-                                                    formControlName="StartDate" required class="pad-10" [min]="today">
-                                                <!-- <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1">
-                                                <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time> -->
+                                                    formControlName="StartDate" class="pad-10" [min]="today">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <input type="number" name="budget" placeholder="Budget"
-                                                    formControlName="Budget" required="required">
+                                                    formControlName="Budget" min="0">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group file-name-formatting">
                                                 <input type="file" name="uploadresume" multiple="true" class="up-res"
-                                                    placeholder="Attachment" (change)="handleFileInput($event)"
-                                                    required="required">
+                                                    placeholder="Attachment" (change)="handleFileInput($event)">
                                             </div>
                                             <div class="text-danger" *ngIf="fileSizeFlag">
                                                 File should be less than 50MB

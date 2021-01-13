@@ -86,8 +86,16 @@ export class CareerInfoComponent implements OnInit {
     this.careerForm = new FormGroup({
       FirstName: new FormControl(null, Validators.required),
       LastName: new FormControl(null, Validators.required),
-      ContactNo: new FormControl(null, Validators.required),
-      Email: new FormControl(null, Validators.required),
+      ContactNo: new FormControl(null, [
+        Validators.required,
+        Validators.pattern(/^[6-9]{1}[0-9]{9}/),
+      ]),
+      Email: new FormControl(null, [
+        Validators.required,
+        Validators.pattern(
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}/
+        ),
+      ]),
       DOB: new FormControl(null),
       Gender: new FormControl(null),
       Experience: new FormControl(null),
