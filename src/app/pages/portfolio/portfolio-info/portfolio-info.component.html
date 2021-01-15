@@ -1,3 +1,24 @@
+<!-- ==================== Start Slider ==================== -->
+
+<header class="pages-header bg-img valign parallaxie" d data-overlay-dark="6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cont text-center" *ngFor="let data of selectedProjectData">
+                    <h1>{{data.ProjectName}}</h1>
+                    <div class="path">
+                        <a routerLink="home">Home</a><span>/</span><a routerLink="Portfolio" class="active">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== End Slider ==================== -->
+
+
+
 <div class="career-main-info">
     <div class="container">
     <div class="row">
@@ -13,7 +34,7 @@
         </div>
         <div class="col-md-6 col-12">
             <!--Content-->
-            <div class="main-container career-info-container pt-2">
+            <div class="main-container career-info-container pt-5">
                 <div *ngFor="let data of selectedProjectData">
                     <div>
                         <h2>{{data.ProjectName}}</h2>
