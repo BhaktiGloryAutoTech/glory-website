@@ -219,3 +219,73 @@ p.small {
     margin-right: 21px;
   }
 }
+.slick-slider {
+  width: 90%;
+  margin: auto;
+  background: #000;
+}
+
+.nav-btn {
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 100px !important;
+}
+
+.prev-slide.slick-disabled,
+.next-slide.slick-disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.prev-slide {
+  background: url(assets/img/nav-icon-p.png) no-repeat scroll 0 0;
+  left: -33px;
+  color: black;
+}
+
+.next-slide {
+  background: url(assets/img/nav-icon-n.png) no-repeat scroll -24px 0px;
+  right: -33px;
+}
+
+.prev-slide:hover {
+  background-position: 0px -53px;
+}
+
+.next-slide:hover {
+  background-position: -24px -53px;
+}
+.container-port {
+  position: relative;
+  width: 50%;
+}
+.imgHover {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.hideImgHover {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+}
+.container-port:hover .imgHover {
+  opacity: 0.3;
+}
+.container-port:hover .hideImgHover {
+  opacity: 1;
+}
+.container-port:hover .hideImgHover h3 {
+  color: #ffffff;
+}
