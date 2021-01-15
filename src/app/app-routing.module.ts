@@ -15,6 +15,7 @@ const routes: Routes = [
    
   },
   { path: "", redirectTo: "pages", pathMatch: "full" },
+  { path: 'portfolio', loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule) },
 
   { path: "**", redirectTo: "pages" },
 ];

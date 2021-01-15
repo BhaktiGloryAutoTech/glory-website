@@ -19,4 +19,7 @@ export class WorkService {
   getProjectList() {
     return this._http.get(this.commonService.envurl() + "getProjectList");
   }
+  getProjectImageList(){
+    return this._http.get(this.commonService.envurl()+ "getprojectidnameimg");
+  }
 }
