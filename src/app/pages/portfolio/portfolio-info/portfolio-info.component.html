@@ -7,7 +7,8 @@
                 <div class="cont text-center" *ngFor="let data of selectedProjectData">
                     <h1>{{data.ProjectName}}</h1>
                     <div class="path">
-                        <a routerLink="home">Home</a><span>/</span><a routerLink="Portfolio" class="active">Portfolio</a>
+                        <a routerLink="home">Home</a><span>/</span><a routerLink="Portfolio"
+                            class="active">Portfolio</a>
                     </div>
                 </div>
             </div>
@@ -21,35 +22,35 @@
 
 <div class="career-main-info">
     <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-12">
-            <!--Image Slider-->
-             <div class="main-container career-info-container pt-5">
-                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-                    <div ngxSlickItem *ngFor="let data of selectedProjectData" class="slide">
-                        <img src="{{'data:image/jpg;base64,' + data.Projectimage}}" alt="">
-                    </div>
-                </ngx-slick-carousel>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <!--Image Slider-->
+                <div class="main-container career-info-container pt-5">
+                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                        <div ngxSlickItem *ngFor="let data of selectedProjectData" class="slide">
+                            <img src="{{'data:image/jpg;base64,' + data.Projectimage}}" alt="">
+                        </div>
+                    </ngx-slick-carousel>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6 col-12">
-            <!--Content-->
-            <div class="main-container career-info-container pt-5">
-                <div *ngFor="let data of selectedProjectData">
-                    <div>
-                        <h2>{{data.ProjectName}}</h2>
+            <div class="col-md-6 col-12">
+                <!--Content-->
+                <div class="main-container career-info-container pt-5">
+                    <div *ngFor="let data of selectedProjectData">
+                        <div>
+                            <h2>{{data.ProjectName}}</h2>
+                        </div>
+                        <div>
+                            <h4>Description:</h4>
+                            <p>{{data.ProjectDescription}}</p>
+                        </div>
+                        <div>
+                            <h4>Stack</h4>
+                            <span class="badge-career-info">{{data.Stack}}</span>
+                        </div>
                     </div>
                     <div>
-                        <h4>Description:</h4>
-                        <p>{{data.ProjectDescription}}</p>
-                    </div>
-                    <div>
-                        <h4>Stack</h4>
-                        <span>{{data.Stack}}</span>
                     </div>
                 </div>
-            <div>
-        </div>
-    </div>
-    <div>
-</div>
+                <div>
+                </div>

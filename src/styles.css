@@ -257,20 +257,20 @@ p.small {
 .next-slide:hover {
   background-position: -24px -53px;
 }
-.container-port{
-   position: relative;
+.container-port {
+  position: relative;
   width: 50%;
 }
-.imgHover{
+.imgHover {
   opacity: 1;
   display: block;
   width: 100%;
   height: auto;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
-.hideImgHover{
-  transition: .5s ease;
+.hideImgHover {
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -278,10 +278,14 @@ p.small {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  color: #ffffff;
 }
 .container-port:hover .imgHover {
   opacity: 0.3;
 }
 .container-port:hover .hideImgHover {
   opacity: 1;
+}
+.container-port:hover .hideImgHover h3 {
+  color: #ffffff;
 }

@@ -111,11 +111,12 @@
 </ngb-carousel> -->
 
 <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-    <div ngxSlickItem *ngFor="let port of projectDataList" class="slide container-port" [routerLink]="['/pages/portfolio/portfolioInfo',port.Projectid]">
-            <img class="imgHover" src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
-            <span class="hideImgHover">
-                {{port.ProjectName}}
-            </span>
+    <div ngxSlickItem *ngFor="let port of projectDataList" class="slide container-port"
+        [routerLink]="['/pages/portfolio/portfolioInfo',port.Projectid]">
+        <img class="imgHover" src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
+        <span class="hideImgHover">
+            <h3>{{port.ProjectName}}</h3>
+        </span>
     </div>
 </ngx-slick-carousel>
 
