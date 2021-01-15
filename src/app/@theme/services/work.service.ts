@@ -22,4 +22,7 @@ export class WorkService {
   getProjectImageList(){
     return this._http.get(this.commonService.envurl()+ "getprojectidnameimg");
   }
+  getProjectDataById(id:any){
+    return this._http.post(this.commonService.envurl()+ "getprojectbyid",id);
+  }
 }

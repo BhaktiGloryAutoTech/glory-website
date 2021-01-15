@@ -92,7 +92,7 @@
     </div>
 </div>
 <!--Slider Of Portfolio Data-->
-<ngb-carousel>
+<!-- <ngb-carousel>
     <div class="row">
         <ng-template ngbSlide>
 
@@ -108,17 +108,20 @@
             <img src="../../../assets/img/slid/1.jpg">
         </ng-template>
     </div>
-</ngb-carousel>
+</ngb-carousel> -->
 
 <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-    <div ngxSlickItem *ngFor="let port of projectDataList" class="slide">
-        <img src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
+    <div ngxSlickItem *ngFor="let port of projectDataList" class="slide container-port" [routerLink]="['/pages/portfolio/portfolioInfo',port.Projectid]">
+            <img class="imgHover" src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
+            <span class="hideImgHover">
+                {{port.ProjectName}}
+            </span>
     </div>
 </ngx-slick-carousel>
 
 
 <!--End of Portfolio Data-->
-<carousel>
+<!-- <carousel>
     <div class="carousel-cell">
         <img src="../../../assets/img/slid/freelancer.jpg">
     </div>
@@ -158,9 +161,9 @@
     <div class="carousel-cell">
         <img src="../../../assets/img/slid/freelancer.jpg">
     </div>
-</carousel>
+</carousel> -->
 
-<div>
+<!-- <div>
     <div class="row">
         <div class="col-sm-12 btn btn-primary">
             Image Slider
@@ -174,4 +177,4 @@
             <img src="{{ image.img }}" width="100%">
         </div>
     </ngx-slick-carousel>
-</div>
+</div> -->

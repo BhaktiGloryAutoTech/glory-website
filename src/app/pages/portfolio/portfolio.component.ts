@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { WorkService } from "src/app/@theme/services/work.service";
+import {Router} from '@angular/router';
 
 @Component({
   selector: "app-portfolio",
@@ -26,7 +27,7 @@ export class PortfolioComponent implements OnInit {
     { img: "../../../assets/img/slid/freelancer.jpg" },
     { img: "../../../assets/img/slid/1.jpg" },
   ];
-  constructor(private workService: WorkService) {}
+  constructor(private workService: WorkService, private route:Router) {}
 
   ngOnInit(): void {
     window.scroll(0, 0);
@@ -42,4 +43,5 @@ export class PortfolioComponent implements OnInit {
       (error) => {}
     );
   }
+  
 }
