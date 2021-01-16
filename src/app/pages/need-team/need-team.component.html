@@ -52,26 +52,25 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <input type="email" name="email" placeholder="Email Address"
+                                                    pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                                                     formControlName="Email" required="required">
                                             </div>
                                             <div class="text-danger"
                                                 *ngIf="needTeamForm.get('Email').invalid&&(formSubmitted||needTeamForm.get('Email').touched)">
-                                                Email is Require.
+                                                Valid Email is Require.
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <input type="tel" name="number" pattern="" placeholder="Phone Number"
-                                                    formControlName="ContactNo" required="required">
+                                                    pattern="^[789][0-9]{9}$" formControlName="ContactNo"
+                                                    required="required">
                                             </div>
                                             <div class="text-danger"
                                                 *ngIf="needTeamForm.get('ContactNo').invalid&&(formSubmitted||needTeamForm.get('ContactNo').touched)">
-                                                Contact No is Require.
+                                                Valid 10 digit Contact No is Require.
                                             </div>
-                                            <div class="text-danger"
-                                                *ngIf="needTeamForm.get('ContactNo').errors?.pattern">
-                                                <span>Please enter valid 10 digit contact</span>
-                                            </div>
+
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">

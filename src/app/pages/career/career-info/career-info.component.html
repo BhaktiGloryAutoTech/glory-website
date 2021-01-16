@@ -1,10 +1,82 @@
+<nav class="navbar change navbar-expand-lg">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="logo" href="index.html">
+            <img src="../../../assets/img/2LOGO.png" alt="logo" class="logo-img-width">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item change-career-nav-color">
+                    <a class="nav-link change-career-nav-color" [routerLink]="['/pages/home']">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link change-career-nav-color" [routerLink]="['/pages/about']">About</a>
+                </li>
+
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Services</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="['/pages/services']">Web Design</a>
+                        <a class="dropdown-item" [routerLink]="['/pages/services']">Web Development</a>
+                        <a class="dropdown-item" [routerLink]="['/pages/services']">Ecommerce</a>
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link change-career-nav-color" [routerLink]="['/pages/services']">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link change-career-nav-color" [routerLink]="['/pages/portfolio']">Portfolio</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link change-career-nav-color" [routerLink]="['/pages/career']">Connect</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link change-career-nav-color" [routerLink]="['/pages/contact']">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link need-Team-highlight change-career-nav-color"
+                        [routerLink]="['/pages/needTeam']">Need A
+                        Team?</a>
+                </li>
+            </ul>
+            <!--<div class="search">
+                <span class="icon pe-7s-search cursor-pointer"></span>
+                <div class="search-form text-center custom-font">
+                    <form>
+                        <input type="text" name="search" placeholder="Search">
+                    </form>
+                    <span class="close pe-7s-close cursor-pointer"></span>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="progress-wrap cursor-pointer">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+<!-- ==================== End Navbar ==================== -->
 
 
 <div class="career-main-info">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-12">
-                <div class="main-container career-info-container text-center pt-2">
+                <div class="main-container career-info-container text-center pt-5">
                     <div *ngFor="let info of vacancyInfo">
                         <div class="career-title pb-4 wow fadeIn" data-wow-delay=".25s">
                             <h2>{{info.VacancyName}}</h2>
@@ -149,10 +221,7 @@
                                                 </div>
                                                 <div class="text-danger"
                                                     *ngIf="careerForm.get('Email').invalid&&(formSubmitted||careerForm.get('Email').touched)">
-                                                    Email is Require.
-                                                </div>
-                                                <div class="text-danger" *ngIf="careerForm.get('Email').error?.pattern">
-                                                    Enter Valid Email.
+                                                    Valid Email is Require.
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
@@ -162,11 +231,7 @@
                                                 </div>
                                                 <div class="text-danger"
                                                     *ngIf="careerForm.get('ContactNo').invalid&&(formSubmitted||careerForm.get('ContactNo').touched)">
-                                                    Contact No is Require.
-                                                </div>
-                                                <div class="text-danger"
-                                                    *ngIf="careerForm.get('ContactNo').errors?.pattern">
-                                                    <span>Please enter valid 10 digit contact</span>
+                                                    Valid 10 digit Contact No is Require.
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
