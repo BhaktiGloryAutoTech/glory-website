@@ -289,3 +289,10 @@ p.small {
 .container-port:hover .hideImgHover h3 {
   color: #ffffff;
 }
+.need-Team-highlight {
+  font-size: 23px !important;
+}
+.slick-slide img {
+  padding: 8px;
+  background-color: #fff;
+}

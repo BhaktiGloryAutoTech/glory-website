@@ -24,6 +24,7 @@ export class PortfolioInfoComponent implements OnInit {
   constructor(private router:Router, private _router:ActivatedRoute,private workService:WorkService) { }
 
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.getId()
   }
   getId(){

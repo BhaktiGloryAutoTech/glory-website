@@ -63,7 +63,7 @@
                                         <div class="col-md-12 col-12">
                                             <div class="form-group">
                                                 <input id="form_name" type="text" name="Name" placeholder="Name"
-                                                    formControlName="Name" required="required">
+                                                    pattern="[a-zA-Z]" formControlName="Name" required="required">
                                                 <div class="text-danger"
                                                     *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
                                                     Name is require.
@@ -80,12 +80,9 @@
                                                     formControlName="Email" required="required">
                                                 <div class="text-danger"
                                                     *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
-                                                    Email is require.
+                                                    Valid Email is require.
                                                 </div>
-                                                <div class="text-danger"
-                                                    *ngIf="contactForm.get('Email').error?.pattern">
-                                                    Enter Valid Email.
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-12">
@@ -95,12 +92,9 @@
                                                     placeholder="Contact No" required>
                                                 <div class="text-danger"
                                                     *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
-                                                    Contact No is required.
+                                                    Valid 10 digit Contact No is required.
                                                 </div>
-                                                <div class="text-danger"
-                                                    *ngIf="contactForm.get('ContactNo').errors?.pattern">
-                                                    <span>Please enter valid 10 digit contact</span>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
