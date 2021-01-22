@@ -1,14 +1,13 @@
 <!-- ==================== Start Slider ==================== -->
 
-<header class="pages-header bg-img valign parallaxie" d data-overlay-dark="6">
+<header class="pages-header bg-img valign parallaxie contact-bg" d data-overlay-dark="6">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="cont text-center" *ngFor="let data of selectedProjectData">
                     <h1>{{data.ProjectName}}</h1>
                     <div class="path">
-                        <a routerLink="home">Home</a><span>/</span><a routerLink="Portfolio"
-                            class="active">Portfolio</a>
+                        <a routerLink="home">Home</a><span>/</span><a routerLink="Portfolio" class="active">Portfolio</a>
                     </div>
                 </div>
             </div>
@@ -20,12 +19,12 @@
 
 
 
-<div class="career-main-info">
+<div class="career-main-info pt-50 pb-50">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-12">
                 <!--Image Slider-->
-                <div class="main-container career-info-container pt-5">
+                <div class="main-container career-info-container">
                     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
                         <div ngxSlickItem *ngFor="let data of selectedProjectData" class="slide">
                             <img src="{{'data:image/jpg;base64,' + data.Projectimage}}" alt="">
@@ -35,18 +34,21 @@
             </div>
             <div class="col-md-6 col-12 ">
                 <!--Content-->
-                <div class="main-container career-info-container pt-5 mobile-padding">
+                <div class="main-container career-info-container mobile-padding">
                     <div *ngFor="let data of selectedProjectData">
                         <div>
-                            <h2>{{data.ProjectName}}</h2>
+                            <h2 class="work-detail-title">{{data.ProjectName}}</h2>
                         </div>
-                        <div>
-                            <h4>Description:</h4>
+                        <div class="work-dec-mb">
+                            <h4 class="work-detail-dec">Description:</h4>
                             <p>{{data.ProjectDescription}}</p>
                         </div>
                         <div>
-                            <h4>Stack</h4>
-                            <span class="badge-career-info">{{data.Stack}}</span>
+                            <h4 class="work-detail-dec mb-5">Stack</h4>
+                            <div class="badge-career-info">
+                                <span>{{data.Stack}}</span>
+                            </div>
+
                         </div>
                     </div>
                     <div>
