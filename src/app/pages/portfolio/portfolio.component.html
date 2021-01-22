@@ -72,8 +72,7 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <h2 class="extra-title wow" data-splitting>Preparing Your Digital Dreams, Taking Your
-                                Business Ahead
+                            <h2 class="extra-title wow" data-splitting>Preparing Your Digital Dreams, Taking Your Business Ahead
                             </h2>
                         </div>
                     </div>
@@ -81,15 +80,9 @@
 
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="work-desc">
-                        <p class="portfolio-align">When business, people and technology collide true innovation happen.
-                            We help you build a team that can deliver your business needs. We don’t just complete task
-                            but
-                            care about the end result and the future of our client’s project. We
-                            integrate continuous skill development into our workflow to stay up on the latest
-                            technology,
-                            industry trends.We will help you to build right product for your business and startUps with
-                            agile methodology.We create custom software
-                            to help businesses thrive in the digital age. We will lead your business from good to great.
+                        <p class="portfolio-align">When business, people and technology collide true innovation happen. We help you build a team that can deliver your business needs. We don’t just complete task but care about the end result and the future of our client’s project.
+                            We integrate continuous skill development into our workflow to stay up on the latest technology, industry trends.We will help you to build right product for your business and startUps with agile methodology.We create custom
+                            software to help businesses thrive in the digital age. We will lead your business from good to great.
                         </p>
                     </div>
                 </div>
@@ -98,73 +91,17 @@
     </div>
 </div>
 
+<div class="work-slide pb-5">
+    <div class="container">
 
-<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-    <div ngxSlickItem *ngFor="let port of projectDataList" class="slide container-port"
-        [routerLink]="['/pages/portfolio/portfolioInfo',port.Projectid]">
-        <img class="imgHover" src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
-        <span class="hideImgHover">
-            <h3>{{port.ProjectName}}</h3>
-        </span>
-    </div>
-</ngx-slick-carousel>
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let port of projectDataList" class="slide container-port" [routerLink]="['/pages/portfolio/portfolioInfo',port.Projectid]">
+                <img class="imgHover" src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
+                <span class="hideImgHover">
+                    <h3>{{port.ProjectName}}</h3>
+                </span>
+            </div>
+        </ngx-slick-carousel>
 
-
-<!--End of Portfolio Data-->
-<!-- <carousel>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/freelancer.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/1.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/freelancer.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/1.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/freelancer.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/1.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/freelancer.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/1.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/freelancer.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/1.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/freelancer.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/1.jpg">
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/img/slid/freelancer.jpg">
-    </div>
-</carousel> -->
-
-<!-- <div>
-    <div class="row">
-        <div class="col-sm-12 btn btn-primary">
-            Image Slider
-        </div>
     </div>
 </div>
-<hr style="background-color:black" />
-<div class="row">
-    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let image of images" class="slide">
-            <img src="{{ image.img }}" width="100%">
-        </div>
-    </ngx-slick-carousel>
-</div> -->
