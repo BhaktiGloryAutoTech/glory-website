@@ -7660,6 +7660,11 @@ h6 {
     font-weight: 300!important;
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    cursor: pointer;
+}
+
 @media (min-width: 992px) {
     .team-container {
         max-width: 960px !important;
