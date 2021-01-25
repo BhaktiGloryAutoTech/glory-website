@@ -1,4 +1,4 @@
-<nav class="navbar change navbar-expand-lg">
+<nav class="navbar change navbar-expand-lg desktop-border">
     <div class="container">
 
         <!-- Logo -->
@@ -6,9 +6,8 @@
             <img src="../../../assets/img/2LOGO.png" alt="logo" class="logo-img-width">
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"><i class="fas fa-bars"></i></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar color-black-nav"><i class="fas fa-bars"></i></span>
         </button>
 
         <!-- navbar links -->
@@ -44,8 +43,7 @@
                     <a class="nav-link change-career-nav-color" [routerLink]="['/pages/contact']">Connect</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link need-Team-highlight change-career-nav-color"
-                        [routerLink]="['/pages/needTeam']">Need A
+                    <a class="nav-link need-Team-highlight change-career-nav-color" [routerLink]="['/pages/needTeam']">Need A
                         Team?</a>
                 </li>
             </ul>
@@ -83,14 +81,11 @@
                         </div>
                         <div class="detail-career text-left">
                             <div class=" career-main-detail dis-flex-space pb-3">
-                                <div class="career-info-detail-title main-name-company-info wow fadeIn"
-                                    data-wow-delay=".25s">
+                                <div class="career-info-detail-title main-name-company-info wow fadeIn" data-wow-delay=".25s">
                                     <!-- <div class="row">
                                         <div class="col-md-4 col-lg-4"> -->
                                     <h4>
-                                        <ng-select name="vname" class="ng-width" id="vnameid"
-                                            [(ngModel)]='selectedVaccancyName' (clear)="setDefaultValu()"
-                                            (change)="showSelectedData($event)">
+                                        <ng-select name="vname" class="ng-width" id="vnameid" [(ngModel)]='selectedVaccancyName' (clear)="setDefaultValu()" (change)="showSelectedData($event)">
                                             <ng-option *ngFor="let data of vacancyTitle" [value]="data.Vacancyid">
                                                 {{data.VacancyName}}
                                             </ng-option>
@@ -109,14 +104,9 @@
                                     <h4>About Glory Autotech</h4>
                                 </div>
                                 <div>
-                                    <p>When business, people and technology collide true innovation happen. We help you
-                                        build a team that can deliver your business needs. We don’t just complete task
-                                        but care about the end result and the future of our client’s
-                                        project. We integrate continuous skill development into our workflow to stay up
-                                        on the latest technology, industry trends.We will help you to build right
-                                        product for your business and startUps with agile methodology.We
-                                        create custom software to help businesses thrive in the digital age. We will
-                                        lead your business from good to great.</p>
+                                    <p>When business, people and technology collide true innovation happen. We help you build a team that can deliver your business needs. We don’t just complete task but care about the end result and the future of our client’s
+                                        project. We integrate continuous skill development into our workflow to stay up on the latest technology, industry trends.We will help you to build right product for your business and startUps with agile methodology.We
+                                        create custom software to help businesses thrive in the digital age. We will lead your business from good to great.</p>
                                 </div>
                             </div>
                             <div class="career-main-detail pt-3 wow fadeIn" data-wow-delay=".25s">
@@ -161,8 +151,7 @@
                                 </div>
                             </div>
                             <div class="text-center pb-5 wow fadeIn" data-wow-delay=".25s">
-                                <button type=" submit " (click)="chekApplyNow()"
-                                    class="btn-curve btn-color btn-apply"><span>Apply
+                                <button type=" submit " (click)="chekApplyNow()" class="btn-curve btn-color btn-apply"><span>Apply
                                         Now</span></button>
                             </div>
                         </div>
@@ -196,48 +185,39 @@
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="text" name="name" placeholder="First Name"
-                                                        formControlName="FirstName" required="required">
+                                                    <input type="text" name="name" placeholder="First Name" formControlName="FirstName" required="required">
                                                 </div>
-                                                <div class="text-danger"
-                                                    *ngIf="careerForm.get('FirstName').invalid&&(formSubmitted||careerForm.get('FirstName').touched)">
+                                                <div class="text-danger" *ngIf="careerForm.get('FirstName').invalid&&(formSubmitted||careerForm.get('FirstName').touched)">
                                                     Firstname is Require.
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="text" name="name" placeholder="Last Name"
-                                                        formControlName="LastName" required="required">
+                                                    <input type="text" name="name" placeholder="Last Name" formControlName="LastName" required="required">
                                                 </div>
-                                                <div class="text-danger"
-                                                    *ngIf="careerForm.get('LastName').invalid&&(formSubmitted||careerForm.get('LastName').touched)">
+                                                <div class="text-danger" *ngIf="careerForm.get('LastName').invalid&&(formSubmitted||careerForm.get('LastName').touched)">
                                                     Lastname is Require.
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="email" name="email" placeholder="Email"
-                                                        formControlName="Email" required="required">
+                                                    <input type="email" name="email" placeholder="Email" formControlName="Email" required="required">
                                                 </div>
-                                                <div class="text-danger"
-                                                    *ngIf="careerForm.get('Email').invalid&&(formSubmitted||careerForm.get('Email').touched)">
+                                                <div class="text-danger" *ngIf="careerForm.get('Email').invalid&&(formSubmitted||careerForm.get('Email').touched)">
                                                     Valid Email is Require.
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="tel" name="number" placeholder="Phone Number"
-                                                        formControlName="ContactNo" required="required">
+                                                    <input type="tel" name="number" placeholder="Phone Number" formControlName="ContactNo" required="required">
                                                 </div>
-                                                <div class="text-danger"
-                                                    *ngIf="careerForm.get('ContactNo').invalid&&(formSubmitted||careerForm.get('ContactNo').touched)">
+                                                <div class="text-danger" *ngIf="careerForm.get('ContactNo').invalid&&(formSubmitted||careerForm.get('ContactNo').touched)">
                                                     Valid 10 digit Contact No is Require.
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="date" name="birthdate" placeholder="D.O.B"
-                                                        formControlName="DOB">
+                                                    <input type="date" name="birthdate" placeholder="D.O.B" formControlName="DOB">
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
@@ -252,14 +232,12 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <input type="number" name="experience" placeholder="Experience"
-                                                        formControlName="Experience">
+                                                    <input type="number" name="experience" placeholder="Experience" formControlName="Experience">
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group file-name-formatting">
-                                                    <input type="file" name="uploadresume" class="up-res"
-                                                        placeholder="Upload Resume" (change)="handleFileInput($event)">
+                                                    <input type="file" name="uploadresume" class="up-res" placeholder="Upload Resume" (change)="handleFileInput($event)">
                                                 </div>
                                                 <div class="text-danger" *ngIf="fileSize">
                                                     File should be less than 50MB
@@ -267,15 +245,13 @@
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <textarea name="message" placeholder="Message" rows="4"
-                                                        formControlName="Message"></textarea>
+                                                    <textarea name="message" placeholder="Message" rows="4" formControlName="Message"></textarea>
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-12">
                                                 <div class="text-center btn-mobile pb-5 pt-4">
-                                                    <button type="button" (click)="addCareerApplication()"
-                                                        class="btn-curve btn-color"><span>Submit</span>
+                                                    <button type="button" (click)="addCareerApplication()" class="btn-curve btn-color"><span>Submit</span>
                                                     </button>
                                                 </div>
                                             </div>
