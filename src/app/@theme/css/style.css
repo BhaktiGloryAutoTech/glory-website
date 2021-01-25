@@ -6469,7 +6469,7 @@ span:hover {
 
 .footer-half .copyrights {
     margin-top: 50px;
-    padding: 30px 0;
+    padding: 30px 15px;
     background: #13161d;
 }
 
@@ -7665,9 +7665,28 @@ h6 {
     cursor: pointer;
 }
 
+.card1 p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.add-disply-flex {
+    display: flex;
+}
+
+.color-black-nav {
+    color: #000 !important
+}
+
 @media (min-width: 992px) {
     .team-container {
         max-width: 960px !important;
+    }
+    .desktop-border {
+        border-bottom: 1px solid #00000017
     }
 }
 
@@ -7754,20 +7773,6 @@ h6 {
     .carousel-control-prev {
         align-items: center;
     }
-    /* .carousel-control-next:hover {
-        top: 74%;
-    }
-    .carousel-control-prev:hover {
-        top: 73%;
-    } */
-    /* .carousel-control-next {
-        right: -1%;
-        bottom: -77%;
-    }
-    .carousel-control-prev {
-        left: 86%;
-        bottom: -57%;
-    } */
     .carousel-control-next-icon {
         color: #ccc;
         height: 55px;
@@ -7798,6 +7803,14 @@ h6 {
     button.slick-arrow {
         display: none !important;
     }
+    .font-fa .display-block-task,
+    .font-fa a,
+    .address-mobile-spacing {
+        font-size: 13px;
+    }
+    .mar-bot-20 {
+        margin-bottom: 20px !important;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -7809,6 +7822,19 @@ h6 {
     }
     .carousel-control-next-icon {
         right: 30px;
+    }
+    .card1 h3 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media (max-width: 352px) {
+    .glory-logo {
+        display: none;
     }
 }
 

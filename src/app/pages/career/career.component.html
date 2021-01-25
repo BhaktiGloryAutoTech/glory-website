@@ -9,8 +9,7 @@
                     <div class="cont text-center">
                         <h1>Join Team</h1>
                         <div class="path">
-                            <a [routerLink]="['/pages/home']">Home</a><span>/</span><a [routerLink]="['/pages/career']"
-                                class="active">Join Team</a>
+                            <a [routerLink]="['/pages/home']">Home</a><span>/</span><a [routerLink]="['/pages/career']" class="active">Join Team</a>
                         </div>
                     </div>
                 </div>
@@ -20,18 +19,20 @@
 
     <!-- ==================== End Slider ==================== -->
     <!-- (click)="redirectInfo(t.Vacancyid)" -->
-    <div class="card-container pb-5 wow fadeIn pt-4" data-wow-delay=".25s">
-        <div *ngFor="let t of vacancyTitle" class="text-center pt-3">
-            <a class="card1" [routerLink]="['/pages/career/careerInfo',t.Vacancyid]">
-                <h3>{{t.VacancyName}}</h3>
-                <p class="small">Card description with lots of great facts and interesting details.</p>
-                <div class="go-corner">
-                    <div class="go-arrow">
-                        →
+    <div class="container pb-5 wow fadeIn pt-4" data-wow-delay=".25s">
+        <div class="row">
+            <div *ngFor="let t of vacancyTitle" class="col-lg-3 col-md-4 col-12 text-center pt-3">
+                <a class="card1" [routerLink]="['/pages/career/careerInfo',t.Vacancyid]">
+                    <h3>{{t.VacancyName}}</h3>
+                    <p class="small">Card description with lots of great facts and interesting details.</p>
+                    <div class="go-corner">
+                        <div class="go-arrow">
+                            →
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
+            </div>
         </div>
     </div>
 
