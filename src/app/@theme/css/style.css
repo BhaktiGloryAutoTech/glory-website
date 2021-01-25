@@ -7681,6 +7681,10 @@ h6 {
     color: #000 !important
 }
 
+.btn-ser:focus {
+    outline: none;
+}
+
 @media (min-width: 992px) {
     .team-container {
         max-width: 960px !important;
@@ -7829,6 +7833,12 @@ h6 {
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
+    }
+    .footer-half .copyrights {
+        margin-top: 0 !important;
+    }
+    .cont-info {
+        padding-left: 0 !important;
     }
 }
 
