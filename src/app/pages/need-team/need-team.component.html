@@ -1,15 +1,14 @@
 <div>
     <!-- ==================== Start Slider ==================== -->
 
-    <header class="pages-header bg-img valign parallaxie contact-bg" data-overlay-dark="6">
+    <header class="pages-header bg-img valign parallaxie needteam-bg" data-overlay-dark="6">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="cont text-center">
                         <h1>Need Team?</h1>
                         <div class="path">
-                            <a [routerLink]="['/pages/home']">Home</a><span>/</span><a
-                                [routerLink]="['/pages/needTeam']" class="active">NeedTeam</a>
+                            <a [routerLink]="['/pages/home']">Home</a><span>/</span><a [routerLink]="['/pages/needTeam']" class="active">NeedTeam</a>
                         </div>
                     </div>
                 </div>
@@ -37,8 +36,7 @@
                                         <div class="col-lg-3 col-6 col-sm-6 dis-flex-end">
                                             <div class="form-group m-0">
                                                 <div class="col-md-offset-2 col-md-4 col-12">
-                                                    <button type="button" class="btn btn-primary btn-need-team"
-                                                        (click)="onAddStep()">
+                                                    <button type="button" class="btn btn-primary btn-need-team" (click)="onAddStep()">
                                                         Add Developer
                                                     </button>
                                                 </div>
@@ -51,43 +49,34 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <input type="email" name="email" placeholder="Email Address"
-                                                    pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                                                    formControlName="Email" required="required">
+                                                <input type="email" name="email" placeholder="Email Address" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" formControlName="Email" required="required">
                                             </div>
-                                            <div class="text-danger"
-                                                *ngIf="needTeamForm.get('Email').invalid&&(formSubmitted||needTeamForm.get('Email').touched)">
+                                            <div class="text-danger" *ngIf="needTeamForm.get('Email').invalid&&(formSubmitted||needTeamForm.get('Email').touched)">
                                                 Valid Email is Require.
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <input type="tel" name="number" pattern="" placeholder="Phone Number"
-                                                    pattern="^[789][0-9]{9}$" formControlName="ContactNo"
-                                                    required="required">
+                                                <input type="tel" name="number" pattern="" placeholder="Phone Number" pattern="^[789][0-9]{9}$" formControlName="ContactNo" required="required">
                                             </div>
-                                            <div class="text-danger"
-                                                *ngIf="needTeamForm.get('ContactNo').invalid&&(formSubmitted||needTeamForm.get('ContactNo').touched)">
+                                            <div class="text-danger" *ngIf="needTeamForm.get('ContactNo').invalid&&(formSubmitted||needTeamForm.get('ContactNo').touched)">
                                                 Valid 10 digit Contact No is Require.
                                             </div>
 
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <input type="date" name="startDate" placeholder="Start Date"
-                                                    formControlName="StartDate" class="pad-10" [min]="today">
+                                                <input type="date" name="startDate" placeholder="Start Date" formControlName="StartDate" class="pad-10" [min]="today">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="number" name="budget" placeholder="Budget"
-                                                    formControlName="Budget" min="0">
+                                                <input type="number" name="budget" placeholder="Budget" formControlName="Budget" min="0">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group file-name-formatting">
-                                                <input type="file" name="uploadresume" multiple="true" class="up-res"
-                                                    placeholder="Attachment" (change)="handleFileInput($event)">
+                                                <input type="file" name="uploadresume" multiple="true" class="up-res" placeholder="Attachment" (change)="handleFileInput($event)">
                                             </div>
                                             <div class="text-danger" *ngIf="fileSizeFlag">
                                                 File should be less than 50MB
@@ -97,8 +86,7 @@
 
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <textarea name="projectDescription" placeholder="Project Description"
-                                                    rows="4" formControlName="ProjectDescription"></textarea>
+                                                <textarea name="projectDescription" placeholder="Project Description" rows="4" formControlName="ProjectDescription"></textarea>
                                             </div>
                                         </div>
 
@@ -149,13 +137,10 @@
 
                                             <div class="btn-icon-card-edit-delete">
                                                 <div class="btn-2-action">
-                                                    <button type="button" class="btn btn-primary btn-team-icon btn-edit"
-                                                        (click)="onEditStep(list)">
+                                                    <button type="button" class="btn btn-primary btn-team-icon btn-edit" (click)="onEditStep(list)">
                                                         <nb-icon icon="edit-2-outline"></nb-icon>
                                                     </button>
-                                                    <button type="button"
-                                                        class="btn btn-primary btn-team-icon btn-delete"
-                                                        (click)="onDeleteStep(list)">
+                                                    <button type="button" class="btn btn-primary btn-team-icon btn-delete" (click)="onDeleteStep(list)">
                                                         <nb-icon icon="trash-outline"></nb-icon>
                                                     </button>
 
@@ -175,8 +160,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="text-center btn-mobile pb-5 pt-4">
-                                <button type="button" class="btn-curve btn-color"
-                                    (click)="addNeedTeam()"><span>Submit</span>
+                                <button type="button" class="btn-curve btn-color" (click)="addNeedTeam()"><span>Submit</span>
                                 </button>
                             </div>
                         </div>
