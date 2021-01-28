@@ -7685,6 +7685,10 @@ h6 {
     outline: none;
 }
 
+.work-dec-mb p {
+    text-align: justify;
+}
+
 @media (min-width: 992px) {
     .team-container {
         max-width: 960px !important;
@@ -7814,6 +7818,9 @@ h6 {
     }
     .mar-bot-20 {
         margin-bottom: 20px !important;
+    }
+    .wd-52 {
+        width: 52px;
     }
 }
 
