@@ -1,52 +1,52 @@
-<!-- <div> -->
+<div>
 
-<!-- ==================== Start Slider ==================== -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
-<header class="pages-header bg-img valign parallaxie services-bg" data-overlay-dark="6">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="cont text-center">
-                    <h1>Services</h1>
-                    <div class="path">
-                        <a routerLink="home">Home</a><span>/</span><a routerLink="services" class="active">Service</a>
+    <!-- ==================== Start Slider ==================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div id="preloaderse">
+    </div>
+    <header class="pages-header bg-img valign parallaxie services-bg" data-overlay-dark="6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cont text-center">
+                        <h1>Services</h1>
+                        <div class="path">
+                            <a routerLink="home">Home</a><span>/</span><a routerLink="services" class="active">Service</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<div id="preloaderse">
+    </header>
+
+    <!-- ==================== End Slider ==================== -->
+    <section class="services-portfolio section-padding pb-70">
+        <div class="container">
+
+            <!-- gallery -->
+            <div class="services-gallery full-width pt-4">
+                <!-- gallery item -->
+                <div class="row service-main">
+
+                    <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="item-img wow fadeInUp" data-wow-delay=".4s">
+                            <a>
+                                <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
+                                    <img src="{{'data:image/jpg;base64,' + service.ServiceLogo}}" alt="image">
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <h6>{{service.ServiceName}}</h6>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
 </div>
-<!-- ==================== End Slider ==================== -->
-<section class="services-portfolio section-padding pb-70">
-    <div class="container">
-
-        <!-- gallery -->
-        <div class="services-gallery full-width pt-4">
-            <!-- gallery item -->
-            <div class="row service-main">
-
-                <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
-                    <div class="item-img wow fadeInUp" data-wow-delay=".4s">
-                        <a>
-                            <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
-                                <img src="{{'data:image/jpg;base64,' + service.ServiceLogo}}" alt="image">
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="cont">
-                        <h6>{{service.ServiceName}}</h6>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- </div> -->
