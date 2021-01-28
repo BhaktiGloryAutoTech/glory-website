@@ -13,7 +13,7 @@
         </button>
 
         <!-- navbar links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse nav-slose" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="['/pages/home']" (click)="reload('/pages/home')">Home</a>
@@ -70,6 +70,9 @@
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
 </div>
+
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
 <!-- ==================== End Navbar ==================== -->
 
 <router-outlet></router-outlet>
@@ -88,7 +91,8 @@
                     </div>
                     <div class="con-info custom-font ">
                         <ul>
-                            <li class="font-fa"><span>Email </span><span class="email-colon-spacing">:</span><a href="mailto:hrgloryautotech@gmail.com ">hrgloryautotech@gmail.com</a>
+                            <li class="font-fa">
+                                <span class="wd-65">Email </span><span>:</span><a href="mailto:hrgloryautotech@gmail.com ">hrgloryautotech@gmail.com</a>
                             </li>
                             <li class="font-fa">
                                 <div class="add-disply-flex"><span>Address</span><span>:</span> <span class="address-mobile-spacing">309 - 310 , SNS Arista , behind
@@ -96,7 +100,7 @@
                                 </div>
                             </li>
                             <li class="font-fa">
-                                <div class="display-block-task "><span>Phone </span><span class="conatct-colon-spacing">:</span>
+                                <div class="display-block-task "><span class="wd-52">Phone </span><span class="conatct-colon-spacing">:</span>
                                     <div class="number-footer "><a href="tel:(+91) 8000078216 ">(+91)
                                             8000078216</a>
                                         <a href="tel:(+91) 8141422244 ">(+91) 8141422244</a>

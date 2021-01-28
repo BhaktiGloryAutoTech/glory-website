@@ -684,11 +684,35 @@ Pace.on('done', function() {
     $('.loading-text').addClass("isdone");
 });
 Pace.on('done', function() {
-    $('#preloaderabout').addClass("isdone");
+    $('#preloaderhm').addClass("isdone");
     $('.loading-text').addClass("isdone");
 });
 Pace.on('done', function() {
-    $('#preloaderservices').addClass("isdone");
+    $('#preloaderab').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
+Pace.on('done', function() {
+    $('#preloaderse').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
+Pace.on('done', function() {
+    $('#preloaderpo').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
+Pace.on('done', function() {
+    $('#preloaderjt').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
+Pace.on('done', function() {
+    $('#preloaderco').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
+Pace.on('done', function() {
+    $('#preloadernt').addClass("isdone");
+    $('.loading-text').addClass("isdone");
+});
+Pace.on('done', function() {
+    $('#preloaderdt').addClass("isdone");
     $('.loading-text').addClass("isdone");
 });
 
@@ -737,25 +761,25 @@ $(document).ready(function() {
 
 /* ===============================  Mouse effect  =============================== */
 
-// function mousecursor() {
-//     if ($("body")) {
-//         const e = document.querySelector(".cursor-inner"),
-//             t = document.querySelector(".cursor-outer");
-//         let n, i = 0,
-//             o = !1;
-//         window.onmousemove = function(s) {
-//             o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-//         }, $("body").on("mouseenter", "a, .cursor-pointer", function() {
-//             e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
-//         }), $("body").on("mouseleave", "a, .cursor-pointer", function() {
-//             $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-//         }), e.style.visibility = "visible", t.style.visibility = "visible"
-//     }
-// };
+function mousecursor() {
+    if ($("body")) {
+        const e = document.querySelector(".cursor-inner"),
+            t = document.querySelector(".cursor-outer");
+        let n, i = 0,
+            o = !1;
+        window.onmousemove = function(s) {
+            o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
+        }, $("body").on("mouseenter", "a, .cursor-pointer", function() {
+            e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
+        }), $("body").on("mouseleave", "a, .cursor-pointer", function() {
+            $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+        }), e.style.visibility = "visible", t.style.visibility = "visible"
+    }
+};
 
-// $(function() {
-//     mousecursor();
-// });
+$(function() {
+    mousecursor();
+});
 
 /* ===============================  fixed-slider  =============================== */
 

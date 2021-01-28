@@ -11,6 +11,7 @@ import * as AOS from "aos";
 export class AppComponent {
   constructor(private router: Router) {}
   title = "test-application";
+  
   ngOnInit() {
     AOS.init();
   }
@@ -18,5 +19,6 @@ export class AppComponent {
     //this.router.navigate([value]).then(()=>{
     // location.reload()
     // })
+
   }
 }
