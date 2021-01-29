@@ -28,8 +28,8 @@
                 <!--Image Slider-->
                 <div class="main-container career-info-container">
                     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-                        <div ngxSlickItem *ngFor="let data of selectedProjectData" class="slide">
-                            <img src="{{'data:image/jpg;base64,' + data.Projectimage}}" alt="">
+                        <div ngxSlickItem *ngFor="let data of selectedImg" class="slide">
+                            <img src="{{'data:image/jpg;base64,' + data}}" alt="">
                         </div>
                     </ngx-slick-carousel>
                 </div>
