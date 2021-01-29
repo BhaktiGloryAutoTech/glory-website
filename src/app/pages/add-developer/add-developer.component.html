@@ -37,6 +37,7 @@
                         pattern="^((?:[1-9]|1[0-9]|2[0-3])?|24?)$" (input)="check24($event)" placeholder="Hours/day"
                         min="0" max="24"><span class="validity"></span>
 
+
                     <div class="invalid-feedback" *ngIf="check24Value">
                         Hours should be less than 24
                     </div>
@@ -51,10 +52,16 @@
                 <div class="form-group">
                     <label>Duration (Months)</label>
 
-                    <input class="form-control input-group" type="number" name="duration" [(ngModel)]="duration"
+                    <!-- <input class="form-control input-group" type="number" name="duration" [(ngModel)]="duration"
                         #name123="ngModel"
                         [ngClass]="{'is-invalid':(name123.invalid)&&(modalSubmitted || name123.touched)}" required
-                        placeholder="Duration" min="0" step="1">
+                        placeholder="Duration" min="0" step="1"> -->
+                    <select class="form-control input-group" name="duration" [(ngModel)]="duration" #name123="ngModel"
+                        [ngClass]="{'is-invalid':(name123.invalid)&&(modalSubmitted || name123.touched)}" required>
+                        <option value="&lt; 1 Month"> &lt; 1 Month</option>
+                        <option value="1 to 3 Month">1 to 3 Month</option>
+                        <option value="3 &#62; Month">3 &#62; Month</option>
+                    </select>
                     <div class="invalid-feedback" *ngIf="(name123.invalid)&&(modalSubmitted || name123.touched)">
                         Duration is required.
                     </div>
@@ -65,9 +72,14 @@
                 <div class="form-group">
                     <label>Experience (Years)</label>
 
-                    <input class="form-control input-group" type="number" name="Experience" [(ngModel)]="experience"
-                        min="0" #name1234="ngModel" placeholder="Experience">
-
+                    <!-- <input class="form-control input-group" type="number" name="Experience" [(ngModel)]="experience"
+                        min="0" #name1234="ngModel" placeholder="Experience"> -->
+                    <select class="form-control input-group" name="Experience" id="cars" [(ngModel)]="experience"
+                        placeholder="Select Experience">
+                        <option value="&lt; 1"> &lt; 1</option>
+                        <option value="1 to 3">1 to 3</option>
+                        <option value="3 &#62;">3 &#62; </option>
+                    </select>
 
                 </div>
             </div>

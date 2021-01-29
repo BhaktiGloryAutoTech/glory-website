@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 @import "~ng-pick-datetime/assets/style/picker.min.css";
 .logo-img-width {
-  width: 230%;
+  width: 177%;
 }
 
 .contact-bg {
@@ -353,4 +353,39 @@ p.small {
 
 .need-team-bottom-size {
   font-size: 20px;
+}
+
+/* input[type="date"]:before {
+  color: rgb(204, 221, 238);
+  content: attr(placeholder);
+}
+
+input[type="date"].full:before {
+  color: black;
+  content: "" !important;
+} */
+.sizeUp {
+  padding: 6px !important;
+  font-size: 14px;
+}
+.date-padding {
+  padding-top: 0 !important;
+  padding-bottom: 6px !important;
+  font-size: 14px;
+  color: #6c757d;
+}
+.up-res {
+  padding-top: 0 !important;
+  font-size: 12px;
+  padding-bottom: 6px !important;
+}
+@media (min-width: 1024px) and (max-width: 1180px) {
+  .detail-home-desc {
+    width: 170px;
+  }
+  .detail-home-desc h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
