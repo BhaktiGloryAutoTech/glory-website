@@ -13,12 +13,12 @@ export class PortfolioInfoComponent implements OnInit {
   projectDataId: any = {
     Projectid: null,
   };
-  selectedImg = [];
+  selectedImg: string[] = [];
   slideConfig = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: "<div class='nav-btn next-slide'></div>",
-    prevArrow: "<div class='nav-btn prev-slide'></div>",
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
     dots: true,
     infinite: false,
   };
@@ -34,14 +34,13 @@ export class PortfolioInfoComponent implements OnInit {
   }
   getId() {
     this.id = this._router.snapshot.paramMap.get("id");
-    console.log(this.id);
     this.projectDataId.Projectid = this.id;
-    console.log(this.projectDataId);
     this.workService.getProjectDataById(this.projectDataId).subscribe(
       (data: any) => {
-        console.log(data["data"]);
         this.selectedProjectData = data["data"];
-        console.log(this.selectedProjectData);
+        this.selectedProjectData.forEach((element: any) => {
+          this.selectedImg = element.Projectimage;
+        });
       },
       (error) => {
         console.log(error);
