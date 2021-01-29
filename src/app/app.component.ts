@@ -11,14 +11,13 @@ import * as AOS from "aos";
 export class AppComponent {
   constructor(private router: Router) {}
   title = "test-application";
-  
+  remove: boolean = false;
   ngOnInit() {
     AOS.init();
   }
   reload(value: any) {
-    //this.router.navigate([value]).then(()=>{
-    // location.reload()
-    // })
-
+    this.router.navigate([value]).then(() => {
+      location.reload();
+    });
   }
 }
