@@ -75,11 +75,11 @@ export class CareerInfoComponent implements OnInit {
   }
   getData() {
     this.careerForm = new FormGroup({
-      FirstName: new FormControl(null, Validators.required),
+      FirstName: new FormControl(null, [Validators.required]),
       LastName: new FormControl(null, Validators.required),
       ContactNo: new FormControl(null, [
         Validators.required,
-        Validators.pattern(/^[6-9]{1}[0-9]{9}/),
+        Validators.pattern(/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}/),
       ]),
       Email: new FormControl(null, [
         Validators.required,
@@ -87,8 +87,6 @@ export class CareerInfoComponent implements OnInit {
           /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}/
         ),
       ]),
-      DOB: new FormControl(null),
-      Gender: new FormControl(null),
       Experience: new FormControl(null),
       Message: new FormControl(null),
       Vaccancyid: new FormControl(null),
@@ -98,6 +96,13 @@ export class CareerInfoComponent implements OnInit {
 
   chekApplyNow() {
     this.applyNowFlag = true;
+    let inter = setInterval(() => {
+      let va = document.getElementById("applicationId");
+      if (va) {
+        va.scrollIntoView();
+        clearInterval(inter);
+      }
+    }, 10);
     this.careerForm.reset();
   }
 

@@ -29,7 +29,9 @@ export class NeedTeamComponent implements OnInit {
   developerAddCheck = true;
   today: any;
   modifiedToday: any;
-
+  checkEmailFlag: boolean = false;
+  checkNumberFlag: boolean = false;
+  checkFlag: boolean = false;
   constructor(
     private needTeamService: NeedTeamService,
     private fb: FormBuilder,
@@ -164,6 +166,26 @@ export class NeedTeamComponent implements OnInit {
     });
     return developerData;
   }
+
+  checkEmail(value: any) {
+    if (value.target.value != null) {
+      this.checkEmailFlag = true;
+      this.checkFlag = false;
+    }
+    if (this.checkNumberFlag) {
+      this.checkFlag = false;
+    }
+  }
+
+  checkNumber(value: any) {
+    if (value.target.value != null) {
+      this.checkNumberFlag = true;
+    }
+    if (this.checkEmailFlag) {
+      this.checkFlag = false;
+    }
+  }
+
   addNeedTeam() {
     this.formSubmitted = true;
     this.loading = true;
@@ -172,30 +194,33 @@ export class NeedTeamComponent implements OnInit {
       this.loading = false;
       this.toastrService.warning("Please Add Developer");
     }
-    if (this.needTeamForm.valid) {
-      this.needTeamForm.patchValue({
-        Attachment: this.value64,
-      });
-      (<FormArray>this.needTeamForm.get("Developers")).push(
-        this.setDeveloperData()
-      );
-      this.needTeamService.addNeedTeam(this.needTeamForm.value).subscribe(
-        (data) => {
-          this.loading = false;
-          this.formSubmitted = false;
-          this.toastrService.success("We Will get back to you soon.");
-          this.router.navigate(["/pages/home"]);
-        },
-        (error: any) => {
-          if (413) {
-            this.fileSizeFlag = true;
+    if (this.checkNumberFlag == true || this.checkEmailFlag == true) {
+      {
+        this.needTeamForm.patchValue({
+          Attachment: this.value64,
+        });
+        (<FormArray>this.needTeamForm.get("Developers")).push(
+          this.setDeveloperData()
+        );
+        this.needTeamService.addNeedTeam(this.needTeamForm.value).subscribe(
+          (data) => {
             this.loading = false;
-          } else {
-            this.toastrService.error("Something Went Wrong. Try Again");
+            this.formSubmitted = false;
+            this.toastrService.success("We Will get back to you soon.");
+            this.router.navigate(["/pages/home"]);
+          },
+          (error: any) => {
+            if (413) {
+              this.fileSizeFlag = true;
+              this.loading = false;
+            } else {
+              this.toastrService.error("Something Went Wrong. Try Again");
+            }
           }
-        }
-      );
+        );
+      }
     } else {
+      this.checkFlag = true;
       this.loading = false;
       return;
     }

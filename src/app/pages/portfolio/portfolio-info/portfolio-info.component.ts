@@ -13,6 +13,7 @@ export class PortfolioInfoComponent implements OnInit {
   projectDataId: any = {
     Projectid: null,
   };
+  video: any = "";
   selectedImg: string[] = [];
   slideConfig = {
     slidesToShow: 1,
@@ -38,6 +39,7 @@ export class PortfolioInfoComponent implements OnInit {
     this.workService.getProjectDataById(this.projectDataId).subscribe(
       (data: any) => {
         this.selectedProjectData = data["data"];
+        console.log(this.selectedProjectData);
         this.selectedProjectData.forEach((element: any) => {
           this.selectedImg = element.Projectimage;
         });

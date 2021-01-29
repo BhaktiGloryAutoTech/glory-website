@@ -180,7 +180,7 @@
             <ngx-loading [show]="loading"></ngx-loading>
             <!-- ==================== Start Contact ==================== -->
 
-            <section class="contact section-padding detail-career">
+            <section class="contact section-padding detail-career" id="applicationId">
                 <div class="container">
                     <div class="row">
 
@@ -196,8 +196,10 @@
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="text" name="name" placeholder="First Name"
-                                                        formControlName="FirstName" required="required">
+                                                    <label><b>First Name:</b></label>
+                                                    <input class="sizeUp" id="fname" type="text" name="name"
+                                                        placeholder="First Name" formControlName="FirstName"
+                                                        required="required">
                                                 </div>
                                                 <div class="text-danger"
                                                     *ngIf="careerForm.get('FirstName').invalid&&(formSubmitted||careerForm.get('FirstName').touched)">
@@ -206,8 +208,10 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="text" name="name" placeholder="Last Name"
-                                                        formControlName="LastName" required="required">
+                                                    <label><b>Last Name:</b></label>
+                                                    <input class="sizeUp" type="text" name="name"
+                                                        placeholder="Last Name" formControlName="LastName"
+                                                        required="required">
                                                 </div>
                                                 <div class="text-danger"
                                                     *ngIf="careerForm.get('LastName').invalid&&(formSubmitted||careerForm.get('LastName').touched)">
@@ -216,7 +220,8 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="email" name="email" placeholder="Email"
+                                                    <label><b>Email:</b></label>
+                                                    <input class="sizeUp" type="email" name="email" placeholder="Email"
                                                         formControlName="Email" required="required">
                                                 </div>
                                                 <div class="text-danger"
@@ -226,8 +231,10 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="tel" name="number" placeholder="Phone Number"
-                                                        formControlName="ContactNo" required="required">
+                                                    <label><b>Contact No:</b></label>
+                                                    <input class="sizeUp" type="tel" name="number"
+                                                        placeholder="Phone Number" formControlName="ContactNo"
+                                                        required="required">
                                                 </div>
                                                 <div class="text-danger"
                                                     *ngIf="careerForm.get('ContactNo').invalid&&(formSubmitted||careerForm.get('ContactNo').touched)">
@@ -236,11 +243,29 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <input type="date" name="birthdate" placeholder="D.O.B"
-                                                        formControlName="DOB">
+                                                    <label><b>Experience:</b></label>
+                                                    <!-- <input type="number" name="experience" placeholder="Experience"
+                                                        formControlName="Experience"> -->
+                                                    <select class="sizeUp" name="cars" id="cars" name="experience"
+                                                        placeholder="Experience" formControlName="Experience">
+                                                        <option value="&lt; 1 Month"> &lt; 1 Month</option>
+                                                        <option value="1 to 3 Month">1 to 3 Month</option>
+                                                        <option value="3 &#62; Month">3 &#62; Month</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
+                                                <div class="form-group ">
+                                                    <label><b>Attachment:</b></label>
+                                                    <input class="file-name-formatting" type="file" name="uploadresume"
+                                                        class="up-res" placeholder="Upload Resume"
+                                                        (change)="handleFileInput($event)">
+                                                </div>
+                                                <div class="text-danger" *ngIf="fileSize">
+                                                    File should be less than 50MB
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <select name="cars" id="cars" formControlName="Gender">
                                                         <option value="option">Select an option</option>
@@ -249,25 +274,10 @@
                                                         <option value="other">Other</option>
                                                     </select>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <input type="number" name="experience" placeholder="Experience"
-                                                        formControlName="Experience">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form-group file-name-formatting">
-                                                    <input type="file" name="uploadresume" class="up-res"
-                                                        placeholder="Upload Resume" (change)="handleFileInput($event)">
-                                                </div>
-                                                <div class="text-danger" *ngIf="fileSize">
-                                                    File should be less than 50MB
-                                                </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <textarea name="message" placeholder="Message" rows="4"
+                                                    <textarea name="message" placeholder="Remark" rows="4"
                                                         formControlName="Message"></textarea>
                                                 </div>
                                             </div>

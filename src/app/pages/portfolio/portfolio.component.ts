@@ -54,13 +54,9 @@ export class PortfolioComponent implements OnInit {
   getData() {
     this.workService.getProjectImageList().subscribe(
       (data: any) => {
-        console.log("API called");
         this.projectDataList = data["data"];
-        console.log(this.projectDataList);
       },
-      (error) => {
-        console.log("error");
-      }
+      (error) => {}
     );
   }
 }
