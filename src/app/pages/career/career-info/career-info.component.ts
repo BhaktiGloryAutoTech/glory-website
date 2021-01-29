@@ -45,21 +45,16 @@ export class CareerInfoComponent implements OnInit {
     this.careerService.getJobTitle().subscribe(
       (data: any) => {
         this.vacancyTitle = data["data"];
-        console.log(this.vacancyTitle);
       },
       (error) => {}
     );
   }
   showSelectedData(value: any) {
-    console.log(value);
     this.VacancyId.Vacancyid = value;
-    console.log("hdsgfjgsdk");
     this.selectedVaccancyName = value;
     this.careerService.getVacancyListById(this.VacancyId).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];
-        console.log(this.selectedVaccancyName);
-        console.log(this.vacancyInfo);
       },
       (error) => {}
     );
@@ -67,19 +62,15 @@ export class CareerInfoComponent implements OnInit {
   getIdFromUrl() {
     this.id = this._route.snapshot.paramMap.get("id");
     this.VacancyId.Vacancyid = this.id;
-    console.log(this.VacancyId.Vacancyid);
     this.selectedVaccancyName = this.id;
-    console.log("vid", this.selectedVaccancyName);
     this.careerService.getVacancyListById(this.VacancyId).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];
-        console.log(this.vacancyInfo);
       },
       (error) => {}
     );
   }
   setDefaultValu() {
-    console.log("close");
     this.getIdFromUrl();
   }
   getData() {

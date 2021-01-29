@@ -6,7 +6,6 @@ import { PagesComponent } from "./pages.component";
 import { HomeComponent } from "./home/home.component";
 import { ContactComponent } from "./contact/contact.component";
 import { AboutComponent } from "./about/about.component";
-import { WorkComponent } from "./work/work.component";
 import { ServicesComponent } from "./services/services.component";
 import { NeedTeamComponent } from "./need-team/need-team.component";
 import { FooterComponent } from "./footer/footer.component";
@@ -36,7 +35,6 @@ import { NgxLoadingModule } from "ngx-loading";
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    WorkComponent,
     ServicesComponent,
     NeedTeamComponent,
     FooterComponent,

@@ -24,7 +24,6 @@ export class CareerComponent implements OnInit {
     );
   }
   redirectInfo(VacancyId: any) {
-    console.log(VacancyId);
     this.route.navigate(["pages/career/carrerInfo/", VacancyId]);
   }
 }
