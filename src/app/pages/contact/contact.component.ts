@@ -52,7 +52,6 @@ export class ContactComponent implements OnInit {
     this.formSubmitted = true;
     this.loading = true;
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
       this.contactService.getInTouch(this.contactForm.value).subscribe(
         (data) => {
           this.contactForm.reset();

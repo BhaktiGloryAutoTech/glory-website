@@ -41,8 +41,6 @@ export class AddDeveloperComponent implements OnInit {
     } else {
       this.submitButton = "Update";
       this.developerList = this.developerDataList;
-      console.log(this.developerList);
-      console.log("Developer Data list", this.developerDataList);
       if (this.position > 0) {
         this.stepPosition = this.position;
         this.Devid = this.developerList[this.position - 1].Devid;
@@ -64,17 +62,14 @@ export class AddDeveloperComponent implements OnInit {
       (data: any) => {
         this.developerList = data["data"];
         this.loading = false;
-        console.log(this.developerList);
       },
       (error) => {}
     );
   }
   check24(value: any) {
     this.check24Value = false;
-    console.log(value.target.value);
     if (value.target.value > 24) {
       this.check24Value = true;
-      console.log("sadhfukhas");
     }
   }
   onCreate(myForm: any) {
@@ -88,7 +83,6 @@ export class AddDeveloperComponent implements OnInit {
         noOfDeveloper: this.noOfDeveloper,
         position: this.stepPosition,
       };
-      console.log(obj);
       this.activeModal.close(obj);
     }
   }

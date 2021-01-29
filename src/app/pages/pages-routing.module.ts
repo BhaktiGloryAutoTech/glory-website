@@ -7,7 +7,6 @@ import { NeedTeamComponent } from "./need-team/need-team.component";
 
 import { PagesComponent } from "./pages.component";
 import { ServicesComponent } from "./services/services.component";
-import { WorkComponent } from "./work/work.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -19,7 +18,6 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "needTeam", component: NeedTeamComponent },
   { path: "services", component: ServicesComponent },
-  { path: "work", component: WorkComponent },
   {
     path: "career",
     loadChildren: () =>
