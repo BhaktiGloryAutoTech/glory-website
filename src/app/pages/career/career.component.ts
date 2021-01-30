@@ -19,6 +19,7 @@ export class CareerComponent implements OnInit {
     this.careerService.getJobTitle().subscribe(
       (data: any) => {
         this.vacancyTitle = data["data"];
+        console.log(this.vacancyTitle);
       },
       (error) => {}
     );
