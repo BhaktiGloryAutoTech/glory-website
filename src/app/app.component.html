@@ -17,10 +17,12 @@
         <div class="collapse navbar-collapse nav-slose" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/pages/home']" (click)="reload('/pages/home')">Home</a>
+                    <a class="nav-link" [routerLink]="['/pages/home']" skipLocationChange
+                        (click)="reload('/pages/home')">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/pages/about']" (click)="reload('/pages/about')">About</a>
+                    <a class="nav-link" [routerLink]="['/pages/about']" skipLocationChange
+                        (click)="reload('/pages/about')">About</a>
                 </li>
 
                 <!-- <li class="nav-item dropdown">
@@ -33,22 +35,24 @@
                     </div>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/pages/services']"
+                    <a class="nav-link" [routerLink]="['/pages/services']" skipLocationChange
                         (click)="reload('/pages/services')">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/pages/portfolio']"
+                    <a class="nav-link" [routerLink]="['/pages/portfolio']" skipLocationChange
                         (click)="reload('/pages/portfolio')">Portfolio</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/pages/career']" (click)="reload('/pages/career')">Join Team</a>
+                    <a class="nav-link" [routerLink]="['/pages/career']" skipLocationChange
+                        (click)="reload('/pages/career')">Join Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/pages/contact']" (click)="reload('/pages/contact')">Connect</a>
+                    <a class="nav-link" [routerLink]="['/pages/contact']" skipLocationChange
+                        (click)="reload('/pages/contact')">Connect</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link need-Team-highlight" [routerLink]="['/pages/needTeam']"
+                    <a class="nav-link need-Team-highlight" [routerLink]="['/pages/needTeam']" skipLocationChange
                         (click)="reload('/pages/needTeam')">Need A
                         Team?</a>
                 </li>
