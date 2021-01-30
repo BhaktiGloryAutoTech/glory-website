@@ -123,24 +123,32 @@
                                 <div class="career-info-detail-title ">
                                     <h4>Who can Apply</h4>
                                 </div>
-                                <div>
-                                    <p> {{info.WhoCanApply}}</p>
+                                <div *ngFor="let datainfo of info.WhoCanApply">
+                                    <p> {{datainfo}}</p>
                                 </div>
                             </div>
                             <div class="career-main-detail pt-3 wow fadeIn" data-wow-delay=".25s">
                                 <div class="career-info-detail-title ">
                                     <h4>Skills required</h4>
                                 </div>
-                                <div>
-                                    <p> {{info.Skill}}</p>
+                                <div *ngFor="let datainfo of info.Skill">
+                                    <p> {{datainfo}}</p>
                                 </div>
                             </div>
                             <div class="career-main-detail pt-3 wow fadeIn" data-wow-delay=".25s">
                                 <div class="career-info-detail-title ">
                                     <h4>Job Responsibility</h4>
                                 </div>
+                                <div *ngFor="let datainfo of info.JobResponsibility">
+                                    <p> {{datainfo}}</p>
+                                </div>
+                            </div>
+                            <div class="career-main-detail pt-3 wow fadeIn" data-wow-delay=".25s">
+                                <div class="career-info-detail-title ">
+                                    <h4>Experience</h4>
+                                </div>
                                 <div>
-                                    <p> {{info.JobResponsibility}}</p>
+                                    <p> {{info.Experience}}</p>
                                 </div>
                             </div>
                             <div class="career-main-detail pt-3 wow fadeIn" data-wow-delay=".25s">
@@ -155,8 +163,9 @@
                                 <div class="career-info-detail-title ">
                                     <h4>Perks</h4>
                                 </div>
-                                <div class="badge-career-info">
-                                    <span> {{info.Pearks}}</span>
+                                <div class="badge-career-info" *ngFor="let datainfo of info.Pearks">
+
+                                    <span> {{datainfo}}</span>
 
                                 </div>
                             </div>

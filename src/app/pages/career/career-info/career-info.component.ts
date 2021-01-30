@@ -66,6 +66,8 @@ export class CareerInfoComponent implements OnInit {
     this.careerService.getVacancyListById(this.VacancyId).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];
+        console.log(this.vacancyInfo);
+        console.log(this.vacancyInfo.WhoCanApply);
       },
       (error) => {}
     );
