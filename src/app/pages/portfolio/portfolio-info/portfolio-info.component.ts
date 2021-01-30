@@ -15,6 +15,7 @@ export class PortfolioInfoComponent implements OnInit {
   };
   video: any = "";
   selectedImg: string[] = [];
+  selectedVideo: string[] = [];
   slideConfig = {
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -42,6 +43,9 @@ export class PortfolioInfoComponent implements OnInit {
         console.log(this.selectedProjectData);
         this.selectedProjectData.forEach((element: any) => {
           this.selectedImg = element.Projectimage;
+        });
+        this.selectedProjectData.forEach((element: any) => {
+          this.selectedVideo = element.Projectvideo;
         });
       },
       (error) => {
