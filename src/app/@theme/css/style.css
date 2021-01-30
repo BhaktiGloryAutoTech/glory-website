@@ -7949,3 +7949,7 @@ h6 {
 .ul-main-ui li p {
     margin-bottom: 8px;
 }
+
+.email-text a {
+    text-transform: lowercase;
+}
