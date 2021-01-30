@@ -160,7 +160,7 @@
 
                                 </div>
                             </div>
-                            <div class="text-center pb-5 wow fadeIn" data-wow-delay=".25s">
+                            <div class="text-center pb-5 wow fadeIn" data-wow-delay=".25s" id="applicationId">
                                 <button type=" submit " (click)="chekApplyNow()"
                                     class="btn-curve btn-color btn-apply"><span>Apply
                                         Now</span></button>
@@ -175,7 +175,7 @@
     </div>
 
     <!-- ==================== Start main-content ==================== -->
-    <div *ngIf="applyNowFlag" class=" career-info-container" id="applicationId">
+    <div *ngIf="applyNowFlag" class=" career-info-container">
         <div class="main-content">
             <ngx-loading [show]="loading"></ngx-loading>
             <!-- ==================== Start Contact ==================== -->
