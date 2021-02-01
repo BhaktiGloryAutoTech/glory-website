@@ -17,7 +17,10 @@ export class AppComponent {
   }
   reload(value: any) {
     this.router.navigate([value]).then(() => {
-      location.reload();
+      document
+        .getElementById("navbarSupportedContent")
+        ?.classList.remove("show");
+      //location.reload();
     });
   }
 }
