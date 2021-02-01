@@ -7187,6 +7187,12 @@ a:hover {
     align-items: center;
 }
 
+.dis-flex-align {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
 .dis-flex-start {
     display: flex;
     justify-content: flex-start;
