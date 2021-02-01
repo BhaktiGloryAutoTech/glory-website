@@ -31,8 +31,10 @@
                             <img src="{{'data:image/jpg;base64,' + data}}" alt="">
                         </div>
                         <div *ngFor="let data of selectedVideo">
-                            <video autoplay controls src="{{'data:video/mp4;base64,'+ data}}" alt="">
+                            <video autoplay controls width="100%">
+                                <source src="{{'data:video/mp4;base64,'+ data}}" type="video/mp4">
                             </video>
+
                         </div>
                     </ngx-slick-carousel>
                 </div>

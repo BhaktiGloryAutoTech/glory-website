@@ -7953,3 +7953,21 @@ h6 {
 .email-text a {
     text-transform: lowercase;
 }
+
+
+/* totser */
+
+.toast-container .ngx-toastr {
+    box-shadow: 0 0 12px #999999 !important;
+    width: 365px !important;
+}
+
+.toast-success {
+    background-color: #08adc3 !important;
+}
+
+.toast-top-right {
+    bottom: 12px !important;
+    top: unset !important;
+    right: 78px !important;
+}
