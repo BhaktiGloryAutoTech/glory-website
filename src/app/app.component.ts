@@ -16,7 +16,7 @@ export class AppComponent {
     AOS.init();
   }
   reload(value: any) {
-    this.router.navigate([value], { skipLocationChange: true }).then(() => {
+    this.router.navigate([value]).then(() => {
       document
         .getElementById("navbarSupportedContent")
         ?.classList.remove("show");

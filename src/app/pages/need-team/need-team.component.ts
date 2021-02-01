@@ -207,7 +207,7 @@ export class NeedTeamComponent implements OnInit {
             this.loading = false;
             this.formSubmitted = false;
             this.toastrService.success("We Will get back to you soon.");
-            this.router.navigate(["/pages/home"], { skipLocationChange: true });
+            this.router.navigate(["/home"]);
           },
           (error: any) => {
             if (413) {

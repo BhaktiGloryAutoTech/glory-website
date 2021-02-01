@@ -7124,6 +7124,12 @@ a:hover {
   align-items: center;
 }
 
+.dis-flex-align {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+
 .dis-flex-start {
   display: flex;
   justify-content: flex-start;
@@ -7230,6 +7236,9 @@ a:hover {
 .career-info-container {
   max-width: 940px;
   margin: 48px auto;
+  /* max-width: 940px;
+  margin-left: 0;
+  margin-right: 0; */
 }
 
 .career-info-detail-title h4 {
@@ -7808,6 +7817,9 @@ h6 {
   .wd-52 {
     width: 52px;
   }
+  .mouse-cursor {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -7876,6 +7888,26 @@ h6 {
   margin-bottom: 8px;
 }
 
+.email-text a {
+  text-transform: lowercase;
+}
+
+/* totser */
+
+.toast-container .ngx-toastr {
+  box-shadow: 0 0 12px #999999 !important;
+  width: 365px !important;
+}
+
+.toast-success {
+  background-color: #08adc3 !important;
+}
+
+.toast-top-right {
+  bottom: 12px !important;
+  top: unset !important;
+  right: 78px !important;
+}
 .nav-link:hover {
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;

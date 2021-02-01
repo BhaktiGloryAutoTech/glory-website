@@ -1,6 +1,5 @@
 <!-- ==================== Start Slider ==================== -->
-<div id="preloaderdt">
-</div>
+<div id="preloaderdt"></div>
 <header class="pages-header bg-img valign parallaxie contact-bg" d data-overlay-dark="6">
     <div class="container">
         <div class="row">
@@ -19,32 +18,34 @@
 
 <!-- ==================== End Slider ==================== -->
 
-
-
 <div class="career-main-info pt-50 pb-50">
     <div class="container">
+
         <div class="row">
-            <div class="col-md-6 col-12">
+            <div class="col-md-12 col-12">
                 <!--Image Slider-->
                 <div class="main-container career-info-container">
                     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
                         <div ngxSlickItem *ngFor="let data of selectedImg" class="slide">
-                            <img src="{{'data:image/jpg;base64,' + data}}" alt="">
+                            <img src="{{'data:image/jpg;base64,' + data}}" alt="" />
                         </div>
                         <div *ngFor="let data of selectedVideo">
-                            <video autoplay controls src="{{'data:video/mp4;base64,'+ data." alt="">
+                            <video autoplay controls width="100%">
+                                <source src="{{'data:video/mp4;base64,'+ data}}" type="video/mp4" />
                             </video>
                         </div>
                     </ngx-slick-carousel>
                 </div>
             </div>
-            <div class="col-md-6 col-12 ">
+
+
+            <div class="col-md-12 col-12">
                 <!--Content-->
-                <div class="main-container career-info-container mobile-padding">
+                <div class="main-container career-info-container mobile-padding mt-10">
                     <div *ngFor="let data of selectedProjectData">
-                        <div>
-                            <h2 class="work-detail-title">{{data.ProjectName}}</h2>
-                        </div>
+                        <!-- <div>
+                                <h2 class="work-detail-title">{{data.ProjectName}}</h2>
+                            </div> -->
                         <div class="work-dec-mb">
                             <h4 class="work-detail-dec">Description:</h4>
                             <p>{{data.ProjectDescription}}</p>
@@ -54,11 +55,29 @@
                             <div class="badge-career-info">
                                 <span>{{data.Stack}}</span>
                             </div>
-
                         </div>
                     </div>
-                    <div>
-                    </div>
+                    <div></div>
                 </div>
-                <div>
-                </div>
+                <div></div>
+            </div>
+
+            <!-- <mdb-carousel class="carousel slide carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
+                    <mdb-carousel-item>
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
+                            alt="First slide">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg"
+                            alt="Second slide">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg"
+                            alt="Third slide">
+                    </mdb-carousel-item>
+                </mdb-carousel> -->
+            <!-- <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery> -->
+
+        </div>
+
+    </div>

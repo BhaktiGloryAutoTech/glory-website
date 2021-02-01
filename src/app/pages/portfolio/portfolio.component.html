@@ -10,7 +10,7 @@
                 <div class="cont text-center">
                     <h1>Portfolio</h1>
                     <div class="path">
-                        <a routerLink="/pages/home" [skipLocationChange]="true">Home</a><span>/</span><a
+                        <a routerLink="/home" [skipLocationChange]="true">Home</a><span>/</span><a
                             class="active">Portfolio</a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
 
         <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem *ngFor="let port of projectDataList" class="slide container-port"
-                [routerLink]="['/pages/portfolio/portfolioInfo',port.Projectid]">
+                [routerLink]="['/portfolio/portfolioInfo',port.Projectid]">
                 <img class="imgHover" src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
                 <span class="hideImgHover">
                     <h3>{{port.ProjectName}}</h3>

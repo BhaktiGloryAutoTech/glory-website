@@ -275,7 +275,7 @@ p.small {
 
 .slick-prev:before,
 .slick-next:before {
-  color: #0aaec3 !important;
+  color: #000000 !important;
 }
 
 /* .prev-slide {

@@ -21,6 +21,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { NbLayoutModule, NbThemeModule } from "@nebular/theme";
 import { NgxLoadingModule } from "ngx-loading";
+import { MDBBootstrapModule } from "angular-bootstrap-md";
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -44,6 +45,7 @@ import { NgxLoadingModule } from "ngx-loading";
     BrowserAnimationsModule,
     NgxLoadingModule.forRoot({}),
     HttpClientModule,
+    MDBBootstrapModule.forRoot(),
   ],
   exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
   providers: [],
