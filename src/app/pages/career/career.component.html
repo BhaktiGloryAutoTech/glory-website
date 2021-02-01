@@ -10,7 +10,7 @@
                     <div class="cont text-center">
                         <h1>Career</h1>
                         <div class="path">
-                            <a [routerLink]="['/pages/home']">Home</a><span>/</span><a [routerLink]="['/pages/career']"
+                            <a [routerLink]="['/pages/home']" [skipLocationChange]="true">Home</a><span>/</span><a
                                 class="active">Career</a>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
     <div class="container pb-5 wow fadeIn pt-4" data-wow-delay=".25s">
         <div class="row">
             <div *ngFor="let t of vacancyTitle" class="col-lg-3 col-md-4 col-12 text-center pt-3">
-                <a class="card1" [routerLink]="['/pages/career/careerInfo',t.Vacancyid]">
+                <a class="card1" [routerLink]="['/pages/career/careerInfo',t.Vacancyid]" [skipLocationChange]="true">
                     <h3>{{t.VacancyName}}</h3>
                     <p class="small">{{t.VacancyDesc}}</p>
                     <div class="go-corner">

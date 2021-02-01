@@ -16,8 +16,11 @@ export class AppComponent {
     AOS.init();
   }
   reload(value: any) {
-    this.router.navigate([value]).then(() => {
-      location.reload();
+    this.router.navigate([value], { skipLocationChange: true }).then(() => {
+      document
+        .getElementById("navbarSupportedContent")
+        ?.classList.remove("show");
+      //location.reload();
     });
   }
 }

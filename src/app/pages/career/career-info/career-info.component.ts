@@ -66,8 +66,6 @@ export class CareerInfoComponent implements OnInit {
     this.careerService.getVacancyListById(this.VacancyId).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];
-        console.log(this.vacancyInfo);
-        console.log(this.vacancyInfo.WhoCanApply);
       },
       (error) => {}
     );
@@ -130,7 +128,7 @@ export class CareerInfoComponent implements OnInit {
       this.careerService.hireApplication(this.careerForm.value).subscribe(
         (data) => {
           this.loading = false;
-          this.route.navigate(["/pages/career"]);
+          this.route.navigate(["/pages/career"], { skipLocationChange: true });
           this.toastr.success("We will get back to you soon");
           this.applyNowFlag = false;
         },

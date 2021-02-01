@@ -57,7 +57,7 @@ export class ContactComponent implements OnInit {
           this.contactForm.reset();
           this.formSubmitted = false;
           this.loading = false;
-          this.toastr.success("Thank You! We Will reach you sonn.");
+          this.toastr.success("Thank You! We Will reach you soon.");
         },
         (error) => {
           this.loading = false;
