@@ -58,59 +58,17 @@
             </div>
         </div>
         <div class=" row ">
-            <div class="col-lg-3 col-md-6 col-12 b mb-5 wow fadeIn pb-4" data-wow-delay=".25s ">
+            <div class="col-lg-3 col-md-6 col-12 b mb-5 wow fadeIn pb-4" data-wow-delay=".25s "
+                *ngFor="let data of serviceData">
                 <button class="item md-mb50 btn-6 wow fadeInUp btn-ser" data-wow-delay=".25s ">
                     <span>
                         <a class="img-link-text ">
                             <div class="img-about-services ">
-                                <img src="../../../assets/about-icon/data.png" alt=" " class="img-responsive ">
+                                <img src="{{'data:image/jpg;base64,' + data.ServiceImage}}" alt=" "
+                                    class="img-responsive ">
                             </div>
                             <div class="services-about-title ">
-                                <h6>Web Design & Development</h6>
-                            </div>
-                        </a>
-                    </span>
-                </button>
-                <!-- <button type="submit " class="btn-curve btn-color "><span>Read More</span></button> -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 b mb-5 wow fadeIn pb-4" data-wow-delay=".25s ">
-
-                <button class="item md-mb50 btn-6 wow fadeInUp btn-ser" data-wow-delay=".3s ">
-                    <span>
-                        <a class="img-link-text ">
-                            <div class="img-about-services ">
-                                <img src="../../../assets/about-icon/android-logo.png " alt=" " class="img-responsive ">
-                            </div>
-                            <div class="services-about-title ">
-                                <h6>Mobile Development</h6>
-                            </div>
-                        </a>
-                    </span>
-                </button>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 b mb-5 wow fadeIn pb-4" data-wow-delay=".25s ">
-                <button class="item md-mb50 btn-6 wow fadeInUp btn-ser" data-wow-delay=".3s ">
-                    <span>
-                        <a class="img-link-text ">
-                            <div class="img-about-services ">
-                                <img src="../../../assets/about-icon/ui-ux.png " alt=" " class="img-responsive ">
-                            </div>
-                            <div class="services-about-title ">
-                                <h6>UI / UX Designing</h6>
-                            </div>
-                        </a>
-                    </span>
-                </button>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 b mb-5 wow fadeIn pb-4" data-wow-delay=".25s ">
-                <button class="item md-mb50 btn-6 wow fadeInUp btn-ser" data-wow-delay=".3s ">
-                    <span>
-                        <a class="img-link-text ">
-                            <div class="img-about-services ">
-                                <img src="../../../assets/about-icon/test.png " alt=" " class="img-responsive ">
-                            </div>
-                            <div class="services-about-title ">
-                                <h6>Testing & Q/A</h6>
+                                <h6>{{data.ServiceName}}</h6>
                             </div>
                         </a>
                     </span>

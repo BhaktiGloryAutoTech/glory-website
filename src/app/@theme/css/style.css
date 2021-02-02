@@ -3624,7 +3624,7 @@ body {
   right: -20px;
   width: 100px;
   height: 150px;
-  background-image: url("src/assets/img/dots.png");
+  background-image: url("../../../assets/img/dots.png");
   opacity: 0.4;
   z-index: -1;
 }

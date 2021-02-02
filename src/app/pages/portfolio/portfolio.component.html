@@ -11,7 +11,8 @@
                 <div class="cont text-center">
                     <h1>Portfolio</h1>
                     <div class="path">
-                        <a routerLink="/home" [skipLocationChange]="true">Home</a><span>/</span><a class="active">Portfolio</a>
+                        <a routerLink="/home" [skipLocationChange]="true">Home</a><span>/</span><a
+                            class="active">Portfolio</a>
                     </div>
                 </div>
             </div>
@@ -84,9 +85,14 @@
 
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="work-desc">
-                        <p class="portfolio-align">When business, people and technology collide true innovation happen. We help you build a team that can deliver your business needs. We don’t just complete task but care about the end result and the future of our client’s project.
-                            We integrate continuous skill development into our workflow to stay up on the latest technology, industry trends.We will help you to build right product for your business and startUps with agile methodology.We create custom
-                            software to help businesses thrive in the digital age. We will lead your business from good to great.
+                        <p class="portfolio-align">When business, people and technology collide true innovation happen.
+                            We help you build a team that can deliver your business needs. We don’t just complete task
+                            but care about the end result and the future of our client’s project.
+                            We integrate continuous skill development into our workflow to stay up on the latest
+                            technology, industry trends.We will help you to build right product for your business and
+                            startUps with agile methodology.We create custom
+                            software to help businesses thrive in the digital age. We will lead your business from good
+                            to great.
                         </p>
                     </div>
                 </div>
@@ -111,11 +117,18 @@
 </div> -->
 
 
-<div class="career-main-info pt-50 pb-50">
+<div class="career-main-info pt-30 pb-50">
     <div class="container">
-        <div class="mb-4">
+        <!-- <div class="mb-4">
             <div class="our-activites text-center">
-                <h4 class="extra-title mb-50">Our Line Of Work</h4>
+                <h2 class="wow custom-font about-what-we-do" data-splitting>Our Line <b>Of Work</b></h2>
+            </div>
+
+        </div> -->
+
+        <div class="text call-action pb-4">
+            <div class="about-title content text-center">
+                <h2 class="wow custom-font about-what-we-do" data-splitting>Our Line<b> Of Work</b></h2>
             </div>
         </div>
         <div class="row">
@@ -127,11 +140,10 @@
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
                                 <img class="imgHover" src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
-                                <!-- <h1 class="text-shadow">{{port.ProjectName}}</h1> -->
                             </div>
                             <div class="flip-box-back">
                                 <h2>{{port.ProjectName}}</h2>
-                                <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                                <p>{{port.ProjectDescription}}</p>
                             </div>
                         </div>
                     </div>

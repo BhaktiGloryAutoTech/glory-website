@@ -159,79 +159,17 @@
             <div class="container">
                 <div class="main-home-card">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-12 pb-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="col-lg-3 col-md-6 col-12 pb-4 wow fadeIn" data-wow-delay=".5s"
+                            *ngFor="let data of serviceData">
                             <div class="home-card-animation">
                                 <div class="services-home-main">
                                     <div class="child-services-home">
                                         <div class="main-img-home-child">
-                                            <img src="../../../assets/about-icon/android-logo.png"
+                                            <img src="{{'data:image/jpg;base64,' + data.ServiceImage}}"
                                                 class="img-responsive" alt="">
                                         </div>
                                         <div class="detail-home-desc">
-                                            <h2>Mobile Development</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="width-100">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies"
-                                        [routerLink]="['/services']"><span>View
-                                            More</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12 pb-4 wow fadeIn" data-wow-delay="1s">
-                            <div class="home-card-animation">
-                                <div class="services-home-main">
-                                    <div class="child-services-home">
-                                        <div class="main-img-home-child">
-                                            <img src="../../../assets/about-icon/data.png" class="img-responsive"
-                                                alt="">
-                                        </div>
-                                        <div class="detail-home-desc">
-                                            <h2>Web Design & Development</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="width-100">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies"
-                                        [routerLink]="['/services']"><span>View
-                                            More</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12 pb-4 wow fadeIn" data-wow-delay="1.5s">
-                            <div class="home-card-animation">
-                                <div class="services-home-main">
-                                    <div class="child-services-home">
-                                        <div class="main-img-home-child">
-                                            <img src="../../../assets/about-icon/test.png" class="img-responsive"
-                                                alt="">
-                                        </div>
-                                        <div class="detail-home-desc">
-                                            <h2>Tesing & QA</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="width-100">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies"
-                                        [routerLink]="['/services']"><span>View
-                                            More</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12 pb-4 wow fadeIn" data-wow-delay="2s">
-                            <div class="home-card-animation">
-                                <div class="services-home-main">
-                                    <div class="child-services-home">
-                                        <div class="main-img-home-child">
-                                            <img src="../../../assets/about-icon/ui-ux.png" class="img-responsive"
-                                                alt="">
-                                        </div>
-                                        <div class="detail-home-desc">
-                                            <h2>UI/UX Designing</h2>
+                                            <h2>{{data.ServiceName}}</h2>
                                         </div>
                                     </div>
                                 </div>

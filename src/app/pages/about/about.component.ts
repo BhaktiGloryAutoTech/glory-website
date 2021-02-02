@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { HomeService } from "src/app/@theme/services/home.service";
 
 @Component({
   selector: "app-about",
@@ -6,10 +7,20 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./about.component.css"],
 })
 export class AboutComponent implements OnInit {
-  constructor() {}
+  serviceData: any = [];
+  constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
     window.scroll(0, 0);
     location.reload;
+    this.serviceList();
+  }
+  serviceList() {
+    this.homeService.getServiceList().subscribe(
+      (data: any) => {
+        this.serviceData = data["data"];
+      },
+      (error: any) => {}
+    );
   }
 }
