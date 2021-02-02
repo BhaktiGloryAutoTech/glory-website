@@ -306,9 +306,20 @@ p.small {
   opacity: 1;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   transition: 0.5s ease;
   backface-visibility: hidden;
+}
+.lo-txt {
+  color: #fff;
+  z-index: 99999;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  bottom: 21px;
 }
 
 .hideImgHover {

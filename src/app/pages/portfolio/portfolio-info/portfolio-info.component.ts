@@ -14,6 +14,7 @@ export class PortfolioInfoComponent implements OnInit {
     Projectid: null,
   };
   video: any = "";
+  slectedSlack: string[] = [];
   selectedImg: string[] = [];
   selectedVideo: string[] = [];
   slideConfig = {
@@ -45,10 +46,10 @@ export class PortfolioInfoComponent implements OnInit {
         console.log(this.selectedProjectData);
         this.selectedProjectData.forEach((element: any) => {
           this.selectedImg = element.Projectimage;
-        });
-        this.selectedProjectData.forEach((element: any) => {
           this.selectedVideo = element.Projectvideo;
+          this.slectedSlack = element.Stack;
         });
+        this.selectedProjectData.forEach((element: any) => {});
       },
       (error) => {
         console.log(error);
