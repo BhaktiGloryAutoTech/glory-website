@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-
 import { ToastrService } from "ngx-toastr";
 import { CareerService } from "src/app/@theme/services/career.service";
 
@@ -18,7 +17,6 @@ export class CareerInfoComponent implements OnInit {
   VacancyId: any = {
     Vacancyid: null,
   };
-  fileToUpload: File | any = null;
   applyNowFlag: boolean = false;
   value64: string | any;
   formSubmitted: boolean = false;
