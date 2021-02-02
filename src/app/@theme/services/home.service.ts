@@ -19,4 +19,8 @@ export class HomeService {
   getClientList() {
     return this._http.get(this.commonService.envurl() + "getClientList");
   }
+
+  getServiceList() {
+    return this._http.get(this.commonService.envurl() + "getServiceByLimit");
+  }
 }
