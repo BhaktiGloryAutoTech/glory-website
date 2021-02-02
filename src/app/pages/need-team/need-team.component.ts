@@ -1,18 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  FormArray,
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from "@angular/forms";
+import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
 import { NeedTeamService } from "src/app/@theme/services/needTeam.service";
-import { ChangeDetectorRef } from "@angular/core";
 import { DeveloperList } from "src/app/@theme/modal/needTeam.class";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { AddDeveloperComponent } from "../add-developer/add-developer.component";
 import { ToastrService } from "ngx-toastr";
-import { ActivatedRoute, Router } from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-need-team",
@@ -35,7 +28,6 @@ export class NeedTeamComponent implements OnInit {
   constructor(
     private needTeamService: NeedTeamService,
     private fb: FormBuilder,
-    private readonly changeDetectorRef: ChangeDetectorRef,
     private _modalService: NgbModal,
     private toastrService: ToastrService,
     private router: Router

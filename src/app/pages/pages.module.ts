@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-
 import { PagesRoutingModule } from "./pages-routing.module";
 import { PagesComponent } from "./pages.component";
 import { HomeComponent } from "./home/home.component";
@@ -8,9 +7,6 @@ import { ContactComponent } from "./contact/contact.component";
 import { AboutComponent } from "./about/about.component";
 import { ServicesComponent } from "./services/services.component";
 import { NeedTeamComponent } from "./need-team/need-team.component";
-import { FooterComponent } from "./footer/footer.component";
-import { HeaderComponent } from "./header/header.component";
-import { AppModule } from "../app.module";
 import { SharedModule } from "../@theme/shared.module";
 import {
   FormsModule,
@@ -37,8 +33,6 @@ import { NgxLoadingModule } from "ngx-loading";
     AboutComponent,
     ServicesComponent,
     NeedTeamComponent,
-    FooterComponent,
-    HeaderComponent,
     AddDeveloperComponent,
   ],
   imports: [
