@@ -1,13 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
-import { ContactForm } from "src/app/@theme/modal/contact.class";
-import {
-  FormControl,
-  FormGroup,
-  FormsModule,
-  Validators,
-} from "@angular/forms";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ContactService } from "src/app/@theme/services/contact.service";
 
 @Component({
@@ -16,7 +10,6 @@ import { ContactService } from "src/app/@theme/services/contact.service";
   styleUrls: ["./contact.component.css"],
 })
 export class ContactComponent implements OnInit {
-  //contactForm: ContactForm = new ContactForm();
   public loading = false;
   formSubmitted: boolean = false;
   contactForm: FormGroup | any;

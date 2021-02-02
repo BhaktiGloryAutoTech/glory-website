@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-//import { NgwWowService } from "ngx-wow";
 import * as AOS from "aos";
 
 @Component({
@@ -20,7 +19,6 @@ export class AppComponent {
       document
         .getElementById("navbarSupportedContent")
         ?.classList.remove("show");
-      //location.reload();
     });
   }
 }

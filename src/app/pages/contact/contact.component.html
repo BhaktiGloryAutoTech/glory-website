@@ -19,7 +19,6 @@
             </div>
         </div>
     </header>
-
     <!-- ==================== End Slider ==================== -->
 
     <!-- ==================== Start Quote ==================== -->
@@ -31,14 +30,12 @@
                         <div class="get-in-touch-head">
                             <h2 class="wow extra-title"> GET A HOLD OF US</h2>
                         </div>
-
                         <div class=" get-in-touch-content">
                             <p class="wow txt about-text text-center">
                                 Feel free to reach out to us with any questions. We are always open to discussing new
                                 projets, intersting ideas or opportunities to be part of an event.
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -47,9 +44,7 @@
     <!-- ==================== End Quote ==================== -->
 
     <!-- ==================== Start main-content ==================== -->
-
     <div class="main-content">
-
         <!-- ==================== Start Contact ==================== -->
         <ngx-loading [show]="loading"></ngx-loading>
         <section class="contact section-padding pt-5 pb-5">
@@ -57,9 +52,7 @@
                 <div class="row">
                     <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".25s">
                         <div class="form md-mb50">
-
                             <h4 class="extra-title mb-50">Get In Touch.</h4>
-
                             <form [formGroup]="contactForm">
                                 <div class="controls">
                                     <div class="row">
@@ -74,7 +67,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
@@ -85,7 +77,6 @@
                                                     *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
                                                     Valid Email is require.
                                                 </div>
-
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-12">
@@ -98,12 +89,9 @@
                                                     *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
                                                     Valid 10 digit Contact No is required.
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="form-group">
                                         <textarea id="form_message" name="Message" placeholder="Message" rows="4"
                                             formControlName="Message"></textarea>
@@ -112,7 +100,6 @@
                                             Message is required.
                                         </div>
                                     </div>
-
                                     <button type="submit" class="btn-curve btn-color"
                                         (click)="addContact()"><span>Submit</span></button>
                                 </div>
