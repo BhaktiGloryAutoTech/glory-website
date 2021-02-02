@@ -20,7 +20,6 @@
 
 <div class="career-main-info pt-50 pb-50">
     <div class="container">
-
         <div class="row">
             <div class="col-md-12 col-12">
                 <!--Image Slider-->
@@ -37,8 +36,6 @@
                     </ngx-slick-carousel>
                 </div>
             </div>
-
-
             <div class="col-md-12 col-12">
                 <!--Content-->
                 <div class="main-container career-info-container mobile-padding mt-10">
@@ -52,18 +49,13 @@
                         </div>
                         <div>
                             <h4 class="work-detail-dec mb-5">Stack</h4>
-                            <div class="badge-career-info">
-                                <span>{{data.Stack}}</span>
+                            <div class="badge-career-info" *ngFor="let data of slectedSlack">
+                                <span>{{data}}</span>
                             </div>
                         </div>
                     </div>
-                    <div></div>
                 </div>
-                <div></div>
             </div>
-
-
-
         </div>
-
     </div>
+</div>

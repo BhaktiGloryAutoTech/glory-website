@@ -1,4 +1,5 @@
 <div id="preloaderpo">
+    <p class="lo-txt">The Function Of Design Is Letting Design Function.</p>
 </div>
 
 <!-- ==================== Start Slider ==================== -->
@@ -76,8 +77,7 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <h2 class="extra-title wow" data-splitting>Preparing Your Digital Dreams, Taking Your
-                                Business Ahead
+                            <h2 class="extra-title wow" data-splitting>We Can Fabricate Your Dreams Alive.
                             </h2>
                         </div>
                     </div>
@@ -114,5 +114,32 @@
             </div>
         </ngx-slick-carousel>
 
+    </div>
+</div>
+
+
+<div class="career-main-info pt-50 pb-50">
+    <div class="container">
+        <div class="row">
+
+            <!--Image Slider-->
+            <div class="col-md-4 " *ngFor="let port of projectDataList">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img class="imgHover" src="{{'data:image/jpg;base64,' + port.Projectimage}}" alt="">
+                            <!-- <h1 class="text-shadow">{{port.ProjectName}}</h1> -->
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>{{port.ProjectName}}</h2>
+                            <p>Good tools make application development quicker and easier to maintain than if you
+                                did
+                                everything by hand..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
