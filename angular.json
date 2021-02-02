@@ -56,7 +56,6 @@
                             "src/app/@theme/js/plugins.js",
                             "src/app/@theme/js/scripts.js",
                             "src/app/@theme/js/map.js",
-                            "src/owl.js",
                             "src/owl-new.js",
                             "node_modules/jquery/dist/jquery.min.js",  
                             "node_modules/slick-carousel/slick/slick.min.js"
@@ -144,7 +143,6 @@
                             "src/app/@theme/js/plugins.js",
                             "src/app/@theme/js/scripts.js",
                             "src/app/@theme/js/map.js",
-                            "src/owl.js",
                             "src/owl-new.js"
 
                         ]
