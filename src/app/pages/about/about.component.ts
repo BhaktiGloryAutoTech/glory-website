@@ -8,6 +8,10 @@ import { HomeService } from "src/app/@theme/services/home.service";
 })
 export class AboutComponent implements OnInit {
   serviceData: any = [];
+  serviceLimit: any = {
+    limit: "4",
+  };
+
   constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
@@ -16,7 +20,7 @@ export class AboutComponent implements OnInit {
     this.serviceList();
   }
   serviceList() {
-    this.homeService.getServiceList().subscribe(
+    this.homeService.getServiceList(this.serviceLimit).subscribe(
       (data: any) => {
         this.serviceData = data["data"];
       },
