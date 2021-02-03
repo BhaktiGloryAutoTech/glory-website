@@ -47,7 +47,7 @@
                             "src/owl.css",
                             "src/owl-theme.css",
                             "src/owl-style.css",
-                            "node_modules/slick-carousel/slick/slick.scss",  
+                            "node_modules/slick-carousel/slick/slick.scss",
                             "node_modules/slick-carousel/slick/slick-theme.scss"
                         ],
                         "scripts": [
@@ -57,7 +57,7 @@
                             "src/app/@theme/js/scripts.js",
                             "src/app/@theme/js/map.js",
                             "src/owl-new.js",
-                            "node_modules/jquery/dist/jquery.min.js",  
+                            "node_modules/jquery/dist/jquery.min.js",
                             "node_modules/slick-carousel/slick/slick.min.js"
 
                         ]

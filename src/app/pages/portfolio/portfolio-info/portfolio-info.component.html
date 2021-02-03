@@ -1,5 +1,7 @@
 <!-- ==================== Start Slider ==================== -->
-<div id="preloaderdt"></div>
+<div id="preloaderdt">
+    <p></p>
+</div>
 <header class="pages-header bg-img valign parallaxie contact-bg" d data-overlay-dark="6">
     <div class="container">
         <div class="row">
@@ -7,8 +9,7 @@
                 <div class="cont text-center" *ngFor="let data of selectedProjectData">
                     <h1>{{data.ProjectName}}</h1>
                     <div class="path">
-                        <a routerLink="home">Home</a><span>/</span><a routerLink="Portfolio"
-                            class="active">Portfolio</a>
+                        <a routerLink="home">Home</a><span>/</span><a routerLink="Portfolio" class="active">Portfolio</a>
                     </div>
                 </div>
             </div>
