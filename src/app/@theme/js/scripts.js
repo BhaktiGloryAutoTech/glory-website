@@ -586,48 +586,48 @@ $(window).on("load", function() {
 
     /* ===============================  isotope Masonery  =============================== */
 
-    $('.gallery').isotope({
-        itemSelector: '.items'
-    });
+    // $('.gallery').isotope({
+    //     itemSelector: '.items'
+    // });
 
-    var $gallery = $('.gallery').isotope();
+    // var $gallery = $('.gallery').isotope();
 
-    $('.filtering').on('click', 'span', function() {
-        var filterValue = $(this).attr('data-filter');
-        $gallery.isotope({ filter: filterValue });
-    });
+    // $('.filtering').on('click', 'span', function() {
+    //     var filterValue = $(this).attr('data-filter');
+    //     $gallery.isotope({ filter: filterValue });
+    // });
 
-    $('.filtering').on('click', 'span', function() {
-        $(this).addClass('active').siblings().removeClass('active');
-    });
+    // $('.filtering').on('click', 'span', function() {
+    //     $(this).addClass('active').siblings().removeClass('active');
+    // });
 
 
     /* ===============================  contact validator  =============================== */
 
-    $('#contact-form').validator();
+    // $('#contact-form').validator();
 
-    $('#contact-form').on('submit', function(e) {
-        if (!e.isDefaultPrevented()) {
-            var url = "https://www.innovationplans.com/idesign/avo2/avo-light/contact.php";
+    // $('#contact-form').on('submit', function(e) {
+    //     if (!e.isDefaultPrevented()) {
+    //         var url = "https://www.innovationplans.com/idesign/avo2/avo-light/contact.php";
 
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function(data) {
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
+    //         $.ajax({
+    //             type: "POST",
+    //             url: url,
+    //             data: $(this).serialize(),
+    //             success: function(data) {
+    //                 var messageAlert = 'alert-' + data.type;
+    //                 var messageText = data.message;
 
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                        $('#contact-form')[0].reset();
-                    }
-                }
-            });
-            return false;
-        }
-    });
+    //                 var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+    //                 if (messageAlert && messageText) {
+    //                     $('#contact-form').find('.messages').html(alertBox);
+    //                     $('#contact-form')[0].reset();
+    //                 }
+    //             }
+    //         });
+    //         return false;
+    //     }
+    // });
 
 });
 
@@ -763,8 +763,10 @@ $(document).ready(function() {
 
 function mousecursor() {
     if ($("body")) {
-        const e = document.querySelector(".cursor-inner"),
+     var setCursor=setInterval(function(){ 
+            const e = document.querySelector(".cursor-inner"),
             t = document.querySelector(".cursor-outer");
+            if(e!=null && t!=null){
         let n, i = 0,
             o = !1;
         window.onmousemove = function(s) {
@@ -774,6 +776,10 @@ function mousecursor() {
         }), $("body").on("mouseleave", "a, .cursor-pointer", function() {
             $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
         }), e.style.visibility = "visible", t.style.visibility = "visible"
+        clearInterval(setCursor);
+    }
+         }, 10);
+        
     }
 };
 
