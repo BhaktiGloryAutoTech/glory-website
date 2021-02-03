@@ -23,11 +23,6 @@ import { NbIconModule } from "@nebular/theme";
 import { ModalModule } from "ngb-modal";
 import { WorkService } from "./services/work.service";
 import { NgxLoadingModule } from "ngx-loading";
-
-//import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
-//import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-
-import { IvyCarouselModule } from "angular-responsive-carousel";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { SlickCarouselModule } from "ngx-slick-carousel";
 @NgModule({
@@ -40,7 +35,6 @@ import { SlickCarouselModule } from "ngx-slick-carousel";
     NbEvaIconsModule,
     NgxLoadingModule,
     ModalModule,
-    IvyCarouselModule,
     NgbModule,
     NgSelectModule,
     NgxLoadingModule,
@@ -51,7 +45,6 @@ import { SlickCarouselModule } from "ngx-slick-carousel";
     FormsModule,
     ngFormsModule,
     ReactiveFormsModule,
-    IvyCarouselModule,
     NgbModule,
     NgSelectModule,
     ModalModule,
