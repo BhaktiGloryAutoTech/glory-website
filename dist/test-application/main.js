@@ -119,9 +119,6 @@ class WorkService {
         console.log(err.message);
         return rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"].throw(err.message);
     }
-    getProjectList() {
-        return this._http.get(this.commonService.envurl() + "getProjectList");
-    }
     getProjectImageList() {
         return this._http.get(this.commonService.envurl() + "getprojectidnameimg");
     }
@@ -739,8 +736,8 @@ class HomeService {
     getClientList() {
         return this._http.get(this.commonService.envurl() + "getClientList");
     }
-    getServiceList() {
-        return this._http.get(this.commonService.envurl() + "getServiceByLimit");
+    getServiceList(id) {
+        return this._http.post(this.commonService.envurl() + "getServiceByLimit", id);
     }
 }
 HomeService.ɵfac = function HomeService_Factory(t) { return new (t || HomeService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_common_service__WEBPACK_IMPORTED_MODULE_3__["CommonService"])); };
