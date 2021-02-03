@@ -11,6 +11,9 @@ export class HomeComponent implements OnInit {
   imagePath: any;
   serviceData: any = [];
   logo: any;
+  serviceLimit: any = {
+    limit: "4",
+  };
   ngOnInit(): void {
     window.scroll(0, 0);
     this.getClientList();
@@ -28,7 +31,7 @@ export class HomeComponent implements OnInit {
     );
   }
   serviceList() {
-    this.homeService.getServiceList().subscribe(
+    this.homeService.getServiceList(this.serviceLimit).subscribe(
       (data: any) => {
         this.serviceData = data["data"];
       },

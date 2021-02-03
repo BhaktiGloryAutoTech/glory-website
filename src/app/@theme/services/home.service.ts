@@ -20,7 +20,10 @@ export class HomeService {
     return this._http.get(this.commonService.envurl() + "getClientList");
   }
 
-  getServiceList() {
-    return this._http.get(this.commonService.envurl() + "getServiceByLimit");
+  getServiceList(id: any) {
+    return this._http.post(
+      this.commonService.envurl() + "getServiceByLimit",
+      id
+    );
   }
 }
