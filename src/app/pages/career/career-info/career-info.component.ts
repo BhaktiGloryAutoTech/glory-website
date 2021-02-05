@@ -46,7 +46,6 @@ export class CareerInfoComponent implements OnInit {
   }
   showSelectedData(value: any) {
     this.id = value;
-    console.log("value", this.id);
     this.careerService.getVacancyListById(this.id).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];
@@ -57,7 +56,6 @@ export class CareerInfoComponent implements OnInit {
   getIdFromUrl() {
     this.id = this._route.snapshot.paramMap.get("id");
     this.selectedVaccancyName = this.id;
-    console.log(this.id);
     this.careerService.getVacancyListById(this.id).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];

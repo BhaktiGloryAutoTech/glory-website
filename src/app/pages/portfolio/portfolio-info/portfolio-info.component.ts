@@ -39,12 +39,12 @@ export class PortfolioInfoComponent implements OnInit {
     this.workService.getProjectDataById(this.id).subscribe(
       (data: any) => {
         this.selectedProjectData = data["data"];
-        console.log(this.selectedProjectData);
         this.selectedProjectData.forEach((element: any) => {
           this.selectedImg = element.Projectimage;
           this.selectedVideo = element.Projectvideo;
           this.slectedSlack = element.Stack;
         });
+        console.log(this.selectedImg);
       },
       (error) => {}
     );
