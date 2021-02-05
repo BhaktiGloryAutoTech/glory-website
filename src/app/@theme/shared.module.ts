@@ -30,6 +30,9 @@ import { NgxLoadingModule } from "ngx-loading";
 import { IvyCarouselModule } from "angular-responsive-carousel";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { SlickCarouselModule } from "ngx-slick-carousel";
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpCacheService } from "./services/cache.service";
+import { CacheInterceptor } from "./services/cacheInterceptor";
 @NgModule({
   declarations: [],
   imports: [
@@ -69,6 +72,12 @@ import { SlickCarouselModule } from "ngx-slick-carousel";
     NgSelectModule,
     NeedTeamService,
     WorkService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CacheInterceptor,
+      multi: true,
+    },
+    HttpCacheService,
   ],
   entryComponents: [],
 })

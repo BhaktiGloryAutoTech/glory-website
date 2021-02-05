@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
     this.homeService.getClientList().subscribe(
       (data: any) => {
         this.clientData = data["data"];
-        this.clientData.forEach((element: any) => {
-          this.logo = element.ClientLogo;
-        });
+        // this.clientData.forEach((element: any) => {
+        //   this.logo = element.ClientLogo;
+        // });
       },
       (error) => {}
     );

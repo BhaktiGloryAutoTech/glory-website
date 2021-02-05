@@ -38,6 +38,7 @@
     "ngx-toastr": "^13.2.0",
     "ngx-wow": "^2.0.1",
     "rxjs": "~6.6.0",
+    "rxjs-compat": "^6.6.3",
     "slick-carousel": "^1.8.1",
     "tslib": "^2.0.0",
     "wowjs": "^1.1.3",
