@@ -12,10 +12,12 @@ import {
 import { ToastrModule } from "ngx-toastr";
 import { RouterModule } from "@angular/router";
 import { SharedModule } from "./@theme/shared.module";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { NbLayoutModule, NbThemeModule } from "@nebular/theme";
 import { NgxLoadingModule } from "ngx-loading";
+import { CacheInterceptor } from "./@theme/services/cacheInterceptor";
+import { HttpCacheService } from "./@theme/services/cache.service";
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -41,7 +43,14 @@ import { NgxLoadingModule } from "ngx-loading";
     HttpClientModule,
   ],
   exports: [FormsModule, ngFormsModule, ReactiveFormsModule],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CacheInterceptor,
+      multi: true,
+    },
+    HttpCacheService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
