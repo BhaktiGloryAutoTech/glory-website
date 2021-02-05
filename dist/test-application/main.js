@@ -123,7 +123,7 @@ class WorkService {
         return this._http.get(this.commonService.envurl() + "getprojectidnameimg");
     }
     getProjectDataById(id) {
-        return this._http.post(this.commonService.envurl() + "getprojectbyid", id);
+        return this._http.get(this.commonService.envurl() + "getprojectbyid/" + id);
     }
 }
 WorkService.ɵfac = function WorkService_Factory(t) { return new (t || WorkService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_common_service__WEBPACK_IMPORTED_MODULE_3__["CommonService"])); };
@@ -522,6 +522,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ng-select/ng-select */ "ZOsW");
 /* harmony import */ var _nebular_theme__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @nebular/theme */ "aceb");
 /* harmony import */ var ngx_loading__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-loading */ "UR+G");
+/* harmony import */ var _theme_services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./@theme/services/cacheInterceptor */ "e/OU");
+/* harmony import */ var _theme_services_cache_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./@theme/services/cache.service */ "dO9G");
+
+
 
 
 
@@ -543,7 +547,14 @@ __webpack_require__.r(__webpack_exports__);
 class AppModule {
 }
 AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [
+        {
+            provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HTTP_INTERCEPTORS"],
+            useClass: _theme_services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_14__["CacheInterceptor"],
+            multi: true,
+        },
+        _theme_services_cache_service__WEBPACK_IMPORTED_MODULE_15__["HttpCacheService"],
+    ], imports: [[
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             ngx_wow__WEBPACK_IMPORTED_MODULE_5__["NgwWowModule"],
@@ -603,7 +614,14 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
                 ],
                 exports: [_angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"]],
-                providers: [],
+                providers: [
+                    {
+                        provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HTTP_INTERCEPTORS"],
+                        useClass: _theme_services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_14__["CacheInterceptor"],
+                        multi: true,
+                    },
+                    _theme_services_cache_service__WEBPACK_IMPORTED_MODULE_15__["HttpCacheService"],
+                ],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
             }]
     }], null, null); })();
@@ -643,7 +661,7 @@ class CareerService {
         return this._http.get(this.commonService.envurl() + "getVacancyList");
     }
     getVacancyListById(id) {
-        return this._http.post(this.commonService.envurl() + "getVacancyById/", id);
+        return this._http.get(this.commonService.envurl() + "getVacancyById/" + id);
     }
     hireApplication(data) {
         return this._http.post(this.commonService.envurl() + "hireapplication", data);
@@ -657,6 +675,103 @@ CareerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
                 providedIn: "root",
             }]
     }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }, { type: _common_service__WEBPACK_IMPORTED_MODULE_3__["CommonService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "dO9G":
+/*!**************************************************!*\
+  !*** ./src/app/@theme/services/cache.service.ts ***!
+  \**************************************************/
+/*! exports provided: HttpCacheService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpCacheService", function() { return HttpCacheService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class HttpCacheService {
+    constructor() {
+        this.requests = {};
+    }
+    put(url, response) {
+        this.requests[url] = response;
+    }
+    get(url) {
+        return this.requests[url];
+    }
+    invalidateCache() {
+        this.requests = {};
+    }
+}
+HttpCacheService.ɵfac = function HttpCacheService_Factory(t) { return new (t || HttpCacheService)(); };
+HttpCacheService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: HttpCacheService, factory: HttpCacheService.ɵfac, providedIn: "root" });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpCacheService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: "root",
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "e/OU":
+/*!*****************************************************!*\
+  !*** ./src/app/@theme/services/cacheInterceptor.ts ***!
+  \*****************************************************/
+/*! exports provided: CacheInterceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CacheInterceptor", function() { return CacheInterceptor; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "qCKp");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _cache_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cache.service */ "dO9G");
+
+
+
+
+
+
+class CacheInterceptor {
+    constructor(cacheService) {
+        this.cacheService = cacheService;
+    }
+    intercept(req, next) {
+        // pass along non-cacheable requests and invalidate cache
+        if (req.method !== "GET") {
+            //console.log(`Invalidating cache: ${req.method} ${req.url}`);
+            this.cacheService.invalidateCache();
+            return next.handle(req);
+        }
+        // attempt to retrieve a cached response
+        const cachedResponse = this.cacheService.get(req.url);
+        // return cached response
+        if (cachedResponse) {
+            //  console.log(`Returning a cached response: ${cachedResponse.url}`);
+            //  console.log(cachedResponse);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(cachedResponse);
+        }
+        // send request to server and add response to cache
+        return next.handle(req).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])((event) => {
+            if (event instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpResponse"]) {
+                //    console.log(`Adding item to cache: ${req.url}`);
+                this.cacheService.put(req.url, event);
+            }
+        }));
+    }
+}
+CacheInterceptor.ɵfac = function CacheInterceptor_Factory(t) { return new (t || CacheInterceptor)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_cache_service__WEBPACK_IMPORTED_MODULE_4__["HttpCacheService"])); };
+CacheInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: CacheInterceptor, factory: CacheInterceptor.ɵfac });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CacheInterceptor, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: _cache_service__WEBPACK_IMPORTED_MODULE_4__["HttpCacheService"] }]; }, null); })();
 
 
 /***/ }),
@@ -737,7 +852,7 @@ class HomeService {
         return this._http.get(this.commonService.envurl() + "getClientList");
     }
     getServiceList(id) {
-        return this._http.post(this.commonService.envurl() + "getServiceByLimit", id);
+        return this._http.get(this.commonService.envurl() + "getServiceByLimit/" + id);
     }
 }
 HomeService.ɵfac = function HomeService_Factory(t) { return new (t || HomeService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_common_service__WEBPACK_IMPORTED_MODULE_3__["CommonService"])); };
@@ -819,6 +934,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular_responsive_carousel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angular-responsive-carousel */ "0L5U");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "1kSV");
 /* harmony import */ var ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-slick-carousel */ "eSVu");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _services_cache_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/cache.service */ "dO9G");
+/* harmony import */ var _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./services/cacheInterceptor */ "e/OU");
 
 
 
@@ -839,6 +957,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 class SharedModule {
 }
 SharedModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: SharedModule });
@@ -851,6 +972,12 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
         _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_7__["NgSelectModule"],
         _services_needTeam_service__WEBPACK_IMPORTED_MODULE_8__["NeedTeamService"],
         _services_work_service__WEBPACK_IMPORTED_MODULE_12__["WorkService"],
+        {
+            provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HTTP_INTERCEPTORS"],
+            useClass: _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_19__["CacheInterceptor"],
+            multi: true,
+        },
+        _services_cache_service__WEBPACK_IMPORTED_MODULE_18__["HttpCacheService"],
     ], imports: [[
             _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
@@ -937,6 +1064,12 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
                     _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_7__["NgSelectModule"],
                     _services_needTeam_service__WEBPACK_IMPORTED_MODULE_8__["NeedTeamService"],
                     _services_work_service__WEBPACK_IMPORTED_MODULE_12__["WorkService"],
+                    {
+                        provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HTTP_INTERCEPTORS"],
+                        useClass: _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_19__["CacheInterceptor"],
+                        multi: true,
+                    },
+                    _services_cache_service__WEBPACK_IMPORTED_MODULE_18__["HttpCacheService"],
                 ],
                 entryComponents: [],
             }]
