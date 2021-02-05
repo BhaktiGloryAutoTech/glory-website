@@ -27,11 +27,12 @@
             <div class="services-gallery full-width pt-4">
                 <!-- gallery item -->
                 <div class="row service-main">
-                    <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
+                    <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in"
+                        data-aos-duration="2000">
                         <div class="item-img wow fadeInUp" data-wow-delay=".4s">
                             <a>
                                 <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
-                                    <img src="{{'data:image/jpg;base64,' + service.ServiceLogo}}" alt="image">
+                                    <img src={{service.ServiceLogo}} alt="image">
                                 </div>
                             </a>
                         </div>

@@ -1,6 +1,6 @@
 <!-- ==================== Start Slider ==================== -->
 <div id="preloaderdt">
-    <p class="lo-txt">Nobody Can Play Your Role Batter Than Yourself.</p>
+    <p class="lo-txt">Innovation is The Ability To See Change As An Opportunity.</p>
 </div>
 <header class="pages-header bg-img valign parallaxie contact-bg" d data-overlay-dark="6">
     <div class="container">
@@ -9,7 +9,7 @@
                 <div class="cont text-center" *ngFor="let data of selectedProjectData">
                     <h1>{{data.ProjectName}}</h1>
                     <div class="path">
-                        <a routerLink="home">Home</a><span>/</span><a routerLink="Portfolio"
+                        <a routerLink="home">Home</a><span>/</span><a routerLink="portfolio"
                             class="active">Portfolio</a>
                     </div>
                 </div>
@@ -28,26 +28,14 @@
                 <div class="main-container career-info-container">
                     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
                         <div ngxSlickItem *ngFor="let data of selectedImg" class="slide">
-                            <img src="{{'data:image/jpg;base64,' + data}}" alt="" />
+                            <!-- <img src="{{'data:image/jpg;base64,' + data}}" alt="" /> -->
+                            <img src={{data}} alt="">
                         </div>
                         <div *ngFor="let data of selectedVideo">
                             <video autoplay controls width="100%">
-                                <source src="{{'data:video/mp4;base64,'+ data}}" type="video/mp4" />
+                                <source src={{data}} type="video/mp4" />
                             </video>
                         </div>
-                        <!-- <div>
-                            <video autoplay controls width="100%">
-                                <soruce
-                                    src="https://drive.google.com/file/d/1ko-YQfGxWSbd4M2MxJ7f99yGOH17EDrU/view?usp=sharing"
-                                    type="video/mp4"></soruce>
-                            </video>
-                            <img
-                                src="https://res.cloudinary.com/dbd8wog43/image/upload/v1612450276/ojoojikcl9pyfgtnj8i6.png">
-                        </div>
-                        <div>
-                            <img
-                                src="https://hosting.photobucket.com/images/i/bhakti11/myw3schoolsimage.jpg?width=285&height=175&fit=bounds&crop=fill">
-                        </div> -->
                     </ngx-slick-carousel>
                 </div>
             </div>
