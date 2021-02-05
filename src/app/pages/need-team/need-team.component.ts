@@ -70,13 +70,6 @@ export class NeedTeamComponent implements OnInit {
         this.value64 = reader.result;
       };
     }
-    // const file = event.target.files[0];
-    // const reader = new FileReader();
-    // reader.readAsDataURL(file);
-    // reader.onload = () => {
-    //   this.value64 = reader.result;
-    //   console.log(this.value64);
-    // };
   }
 
   onAddStep() {
