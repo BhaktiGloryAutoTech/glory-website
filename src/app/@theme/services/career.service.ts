@@ -21,7 +21,7 @@ export class CareerService {
   }
 
   getVacancyListById(id: any) {
-    return this._http.post(this.commonService.envurl() + "getVacancyById/", id);
+    return this._http.get(this.commonService.envurl() + "getVacancyById/" + id);
   }
 
   hireApplication(data: any) {
