@@ -21,9 +21,8 @@ export class HomeService {
   }
 
   getServiceList(id: any) {
-    return this._http.post(
-      this.commonService.envurl() + "getServiceByLimit",
-      id
+    return this._http.get(
+      this.commonService.envurl() + "getServiceByLimit/" + id
     );
   }
 }

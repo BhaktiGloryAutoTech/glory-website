@@ -11,9 +11,7 @@ export class HomeComponent implements OnInit {
   imagePath: any;
   serviceData: any = [];
   logo: any;
-  serviceLimit: any = {
-    limit: "4",
-  };
+  serviceLimit: any = 4;
   ngOnInit(): void {
     window.scroll(0, 0);
     this.getClientList();

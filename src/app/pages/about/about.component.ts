@@ -8,9 +8,7 @@ import { HomeService } from "src/app/@theme/services/home.service";
 })
 export class AboutComponent implements OnInit {
   serviceData: any = [];
-  serviceLimit: any = {
-    limit: "4",
-  };
+  serviceLimit: any = 4;
 
   constructor(private homeService: HomeService) {}
 

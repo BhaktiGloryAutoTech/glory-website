@@ -14,9 +14,6 @@ export class CareerInfoComponent implements OnInit {
   careerForm: FormGroup | any;
   vacancyInfo: any = [];
   id: any;
-  VacancyId: any = {
-    Vacancyid: null,
-  };
   applyNowFlag: boolean = false;
   value64: string | any;
   formSubmitted: boolean = false;
@@ -48,9 +45,9 @@ export class CareerInfoComponent implements OnInit {
     );
   }
   showSelectedData(value: any) {
-    this.VacancyId.Vacancyid = value;
-    this.selectedVaccancyName = value;
-    this.careerService.getVacancyListById(this.VacancyId).subscribe(
+    this.id = value;
+    console.log("value", this.id);
+    this.careerService.getVacancyListById(this.id).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];
       },
@@ -59,9 +56,9 @@ export class CareerInfoComponent implements OnInit {
   }
   getIdFromUrl() {
     this.id = this._route.snapshot.paramMap.get("id");
-    this.VacancyId.Vacancyid = this.id;
     this.selectedVaccancyName = this.id;
-    this.careerService.getVacancyListById(this.VacancyId).subscribe(
+    console.log(this.id);
+    this.careerService.getVacancyListById(this.id).subscribe(
       (data: any) => {
         this.vacancyInfo = data["data"];
       },

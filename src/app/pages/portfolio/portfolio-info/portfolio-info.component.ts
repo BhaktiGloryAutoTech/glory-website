@@ -10,9 +10,6 @@ import { WorkService } from "src/app/@theme/services/work.service";
 export class PortfolioInfoComponent implements OnInit {
   id: any;
   selectedProjectData: any = [];
-  projectDataId: any = {
-    Projectid: null,
-  };
   video: any = "";
   slectedSlack: string[] = [];
   selectedImg: string[] = [];
@@ -39,8 +36,7 @@ export class PortfolioInfoComponent implements OnInit {
 
   getId() {
     this.id = this._router.snapshot.paramMap.get("id");
-    this.projectDataId.Projectid = this.id;
-    this.workService.getProjectDataById(this.projectDataId).subscribe(
+    this.workService.getProjectDataById(this.id).subscribe(
       (data: any) => {
         this.selectedProjectData = data["data"];
         console.log(this.selectedProjectData);
