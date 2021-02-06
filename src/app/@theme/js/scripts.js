@@ -118,420 +118,21 @@ $(function() {
         $(".main-menu .sub-menu").removeClass("sub-open");
     });
 
-
     /* ===============================  Swiper slider  =============================== */
-
-
-    var parallaxSlider;
-    var parallaxSliderOptions = {
-        speed: 1000,
-        autoplay: true,
-        parallax: true,
-        loop: true,
-
-        on: {
-            init: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    $(swiper.slides[i])
-                        .find('.bg-img')
-                        .attr({
-                            'data-swiper-parallax': 0.75 * swiper.width
-                        });
-                }
-            },
-            resize: function() {
-                this.update();
-            }
-        },
-
-        pagination: {
-            el: '.slider-prlx .parallax-slider .swiper-pagination',
-            type: 'fraction',
-            clickable: true
-        },
-
-        navigation: {
-            nextEl: '.slider-prlx .parallax-slider .next-ctrl',
-            prevEl: '.slider-prlx .parallax-slider .prev-ctrl'
-        }
-    };
-    parallaxSlider = new Swiper('.slider-prlx .parallax-slider', parallaxSliderOptions);
-
-
-    var parallaxShowCase;
-    var parallaxShowCaseOptions = {
-        speed: 1000,
-        autoplay: true,
-        parallax: true,
-        mousewheel: true,
-        loop: true,
-
-        on: {
-            init: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    $(swiper.slides[i])
-                        .find('.bg-img')
-                        .attr({
-                            'data-swiper-parallax': 0.75 * swiper.width
-                        });
-                }
-            },
-            resize: function() {
-                this.update();
-            }
-        },
-
-        pagination: {
-            el: '.showcase-full .parallax-slider .swiper-pagination',
-            type: 'fraction',
-            clickable: true
-        },
-
-        navigation: {
-            nextEl: '.showcase-full .parallax-slider .next-ctrl',
-            prevEl: '.showcase-full .parallax-slider .prev-ctrl'
-        }
-    };
-    parallaxShowCase = new Swiper('.showcase-full .parallax-slider', parallaxShowCaseOptions);
-
-
-    var swiperWorkMetro = new Swiper('.metro .swiper-container', {
-        slidesPerView: 2,
-        spaceBetween: 0,
-        speed: 1000,
-        loop: true,
-        centeredSlides: true,
-
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 0
-            },
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 0
-            },
-            767: {
-                slidesPerView: 2,
-                spaceBetween: 0
-            }
-        },
-
-        pagination: {
-            el: '.metro .swiper-pagination',
-            type: 'progressbar',
-        },
-
-        navigation: {
-            nextEl: '.metro .swiper-button-next',
-            prevEl: '.metro .swiper-button-prev'
-        },
-    });
-
-    var swiperWorkCaroul = new Swiper('.caroul .swiper-container', {
-        spaceBetween: 0,
-        speed: 1000,
-        loop: true,
-
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 0
-            },
-            767: {
-                slidesPerView: 2,
-                spaceBetween: 0
-            },
-            991: {
-                slidesPerView: 3,
-                spaceBetween: 0
-            },
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 0
-            }
-        },
-
-        pagination: {
-            el: '.caroul .swiper-pagination',
-            type: 'progressbar',
-        },
-
-        navigation: {
-            nextEl: '.caroul .swiper-button-next',
-            prevEl: '.caroul .swiper-button-prev'
-        },
-    });
-
-
-    var swiperBusImg = new Swiper('.slider-bus .swiper-img', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        speed: 800,
-        loop: true,
-        effect: 'fade',
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false
-        },
-
-        navigation: {
-            nextEl: '.slider-bus .next-ctrl',
-            prevEl: '.slider-bus .prev-ctrl'
-        },
-    });
-
-    var swiperBusContent = new Swiper('.slider-bus .swiper-content', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        speed: 800,
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false
-        },
-
-        pagination: {
-            el: '.slider-bus .swiper-pagination',
-            type: 'fraction',
-        },
-
-        navigation: {
-            nextEl: '.slider-bus .next-ctrl',
-            prevEl: '.slider-bus .prev-ctrl'
-        },
-    });
-
 
     /* ===============================  Var Background image  =============================== */
 
-    var pageSection = $(".bg-img, section");
-    pageSection.each(function(indx) {
-
-        if ($(this).attr("data-background")) {
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
-
-
     /* ===============================  slick Carousel  =============================== */
-
-    $('.testimonials .slic-item').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: '.testimonials .prev',
-        nextArrow: '.testimonials .next',
-        dots: true,
-        autoplay: true
-    });
-    $('.testimonials .slic-item').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: '.testimonials .prev',
-        nextArrow: '.testimonials .next',
-        dots: true,
-        autoplay: true
-    });
-
-    $('.testim-box .slic-item').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: true
-    });
-
-    $('.team .team-container').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: '.team .prev',
-        nextArrow: '.team .next',
-        dots: false,
-        autoplay: true,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-    $('.carousel').slick({
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: true,
-        centerMode: true,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                // centerMode: true,
-
-            }
-
-        }, {
-            breakpoint: 800,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                dots: true,
-                infinite: true,
-
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            }
-        }]
-    });
-
-    $('.blog-curs .blg-swipe').slick({
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: '.blog-curs .prev',
-        nextArrow: '.blog-curs .next',
-        dots: false,
-        autoplay: true,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-
-
-    $('.clients-brand .brands-crs').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        autoplay: true,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-
 
     /* ===============================  YouTubePopUp  =============================== */
 
-    $("a.vid").YouTubePopUp();
-
-
     /* ===============================  parallaxie  =============================== */
-
-    $('.parallaxie').parallaxie({
-        speed: 0.2,
-        size: "cover"
-    });
-
 
     /* ===============================  justifiedGallery  =============================== */
 
-    $('.justified-gallery').justifiedGallery({
-        rowHeight: 400,
-        lastRow: 'nojustify',
-        margins: 15
-    });
-
-
     /* ===============================  skills-circle  =============================== */
 
-    var c4 = $('.skills-circle .skill');
-    var myVal = $(this).attr('data-value');
-
-    $(".skills-circle .skill").each(function() {
-
-        c4.circleProgress({
-            startAngle: -Math.PI / 2 * 1,
-            value: myVal,
-            thickness: 2,
-            size: 110,
-            fill: { color: "#75dab4" }
-        });
-
-    });
-
-    wind.on('scroll', function() {
-        $(".skill-progress .progres").each(function() {
-            var bottom_of_object =
-                $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window =
-                $(window).scrollTop() + $(window).height();
-            var myVal = $(this).attr('data-value');
-            if (bottom_of_window > bottom_of_object) {
-                $(this).css({
-                    width: myVal
-                });
-            }
-        });
-    });
-
-
     /* ===============================  countUp  =============================== */
-
-    $('.number-sec .count').countUp({
-        delay: 10,
-        time: 500
-    });
-
 
     /* ===============================  tooltip  =============================== */
 
@@ -586,52 +187,8 @@ $(window).on("load", function() {
 
     /* ===============================  isotope Masonery  =============================== */
 
-    // $('.gallery').isotope({
-    //     itemSelector: '.items'
-    // });
-
-    // var $gallery = $('.gallery').isotope();
-
-    // $('.filtering').on('click', 'span', function() {
-    //     var filterValue = $(this).attr('data-filter');
-    //     $gallery.isotope({ filter: filterValue });
-    // });
-
-    // $('.filtering').on('click', 'span', function() {
-    //     $(this).addClass('active').siblings().removeClass('active');
-    // });
-
-
     /* ===============================  contact validator  =============================== */
-
-    // $('#contact-form').validator();
-
-    // $('#contact-form').on('submit', function(e) {
-    //     if (!e.isDefaultPrevented()) {
-    //         var url = "https://www.innovationplans.com/idesign/avo2/avo-light/contact.php";
-
-    //         $.ajax({
-    //             type: "POST",
-    //             url: url,
-    //             data: $(this).serialize(),
-    //             success: function(data) {
-    //                 var messageAlert = 'alert-' + data.type;
-    //                 var messageText = data.message;
-
-    //                 var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-    //                 if (messageAlert && messageText) {
-    //                     $('#contact-form').find('.messages').html(alertBox);
-    //                     $('#contact-form')[0].reset();
-    //                 }
-    //             }
-    //         });
-    //         return false;
-    //     }
-    // });
-
 });
-
-
 
 /* ===============================  Hide / show navbar  =============================== */
 
@@ -668,8 +225,6 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-
-
 
 /* ===============================  Preloader page  =============================== */
 
@@ -716,7 +271,6 @@ Pace.on('done', function() {
     $('.loading-text').addClass("isdone");
 });
 
-
 /* ===============================  Scroll back to top  =============================== */
 
 $(document).ready(function() {
@@ -751,13 +305,7 @@ $(document).ready(function() {
         jQuery('html, body').animate({ scrollTop: 0 }, duration);
         return false;
     })
-
-
 });
-
-
-
-
 
 /* ===============================  Mouse effect  =============================== */
 
@@ -778,28 +326,15 @@ function mousecursor() {
         }), e.style.visibility = "visible", t.style.visibility = "visible"
         clearInterval(setCursor);
     }
-         }, 10);
-        
+         }, 10);        
     }
 };
 
 $(function() {
     mousecursor();
 });
-
 /* ===============================  fixed-slider  =============================== */
 
-$(function() {
-
-    "use strict";
-
-    var slidHeight = $(".fixed-slider").outerHeight();
-
-    $(".main-content").css({
-        marginTop: slidHeight
-    });
-
-});
 
 $(window).scroll(function() {
 
