@@ -14,19 +14,7 @@ export class HomeComponent implements OnInit {
   serviceLimit: any = 4;
   ngOnInit(): void {
     window.scroll(0, 0);
-    this.getClientList();
     this.serviceList();
-  }
-  getClientList() {
-    this.homeService.getClientList().subscribe(
-      (data: any) => {
-        this.clientData = data["data"];
-        // this.clientData.forEach((element: any) => {
-        //   this.logo = element.ClientLogo;
-        // });
-      },
-      (error) => {}
-    );
   }
   serviceList() {
     this.homeService.getServiceList(this.serviceLimit).subscribe(

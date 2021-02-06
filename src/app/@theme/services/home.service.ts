@@ -16,10 +16,6 @@ export class HomeService {
     return Observable.throw(err.message);
   }
 
-  getClientList() {
-    return this._http.get(this.commonService.envurl() + "getClientList");
-  }
-
   getServiceList(id: any) {
     return this._http.get(
       this.commonService.envurl() + "getServiceByLimit/" + id
