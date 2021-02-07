@@ -2540,6 +2540,7 @@ class AddDeveloperComponent {
                 for (let i = 1; i <= this.developerList.length; i++) {
                     this.positionValues.push(i);
                 }
+                this.getDeveloperList();
             }
         }
     }
