@@ -53,6 +53,7 @@ export class AddDeveloperComponent implements OnInit {
         for (let i = 1; i <= this.developerList.length; i++) {
           this.positionValues.push(i);
         }
+        this.getDeveloperList();
       }
     }
   }
