@@ -258,7 +258,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 112, vars: 28, consts: [[1, "navbar", "change", "navbar-expand-lg"], [1, "container"], ["href", "index.html", 1, "logo"], ["src", "../../../assets/img/2LOGO.png", "alt", "logo", 1, "logo-img-width"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarSupportedContent", "aria-controls", "navbarSupportedContent", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "icon-bar"], [1, "fas", "fa-bars"], ["id", "navbarSupportedContent", 1, "collapse", "navbar-collapse", "nav-slose"], [1, "navbar-nav", "ml-auto"], [1, "nav-item"], [1, "nav-link", 3, "routerLink", "click"], [1, "nav-link", "need-Team-highlight", 3, "routerLink", "click"], ["id", "preloader"], [1, "progress-wrap", "cursor-pointer"], ["width", "100%", "height", "100%", "viewBox", "-1 -1 102 102", 1, "progress-circle", "svg-content"], ["d", "M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"], [1, "mouse-cursor", "cursor-outer"], [1, "mouse-cursor", "cursor-inner"], [1, "footer-half", "sub-bg", "section-padding", "pb-0", "pt-5", "pd-r-l-0"], [1, "row"], [1, "col-lg-5", "col-md-6"], [1, "cont"], [1, "logo"], ["routerLink", "home "], ["src", "assets/img/2LOGO.png ", "alt", " ", 1, "logo-img-width"], [1, "con-info", "custom-font"], [1, "font-fa"], [1, "wd-65"], ["href", "mailto:hrgloryautotech@gmail.com "], [1, "add-disply-flex"], [1, "address-mobile-spacing"], [1, "dis-flex-align"], [1, "wd-52"], [1, "conatct-colon-spacing"], [1, "number-footer"], ["href", "tel:(+91) 8000078216 "], ["href", "tel:(+91) 8141422244 "], [1, "col-lg-5", "offset-lg-2", "offset-md-2", "col-md-3"], [1, "subscribe", "mb-50"], [1, "custom-font", "stit", "simple-btn"], [3, "routerLink"], [1, "font-fa", "need-team-bottom-size"], [1, "subscribe"], [1, "copyrights", "text-center"], [1, "col-lg-6", "col-12"], [1, "cont", "mar-bot-20"], [1, "social-icon"], [1, "social"], ["href", "#0 ", 1, "icon"], [1, "fab", "fa-facebook-f"], [1, "fab", "fa-linkedin"], [1, "col-lg-6", "col-12", "dis-flex"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 114, vars: 28, consts: [[1, "navbar", "change", "navbar-expand-lg"], [1, "container"], ["href", "index.html", 1, "logo"], ["src", "../../../assets/img/2LOGO.png", "alt", "logo", 1, "logo-img-width"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarSupportedContent", "aria-controls", "navbarSupportedContent", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "icon-bar"], [1, "fas", "fa-bars"], ["id", "navbarSupportedContent", 1, "collapse", "navbar-collapse", "nav-slose"], [1, "navbar-nav", "ml-auto"], [1, "nav-item"], [1, "nav-link", 3, "routerLink", "click"], [1, "nav-link", "need-Team-highlight", 3, "routerLink", "click"], ["id", "preloader"], [1, "progress-wrap", "cursor-pointer"], ["width", "100%", "height", "100%", "viewBox", "-1 -1 102 102", 1, "progress-circle", "svg-content"], ["d", "M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"], [1, "mouse-cursor", "cursor-outer"], [1, "mouse-cursor", "cursor-inner"], [1, "footer-half", "sub-bg", "section-padding", "pb-0", "pt-5", "pd-r-l-0"], [1, "row"], [1, "col-lg-5", "col-md-6"], [1, "cont"], [1, "logo"], ["routerLink", "home "], ["src", "assets/img/2LOGO.png ", "alt", " ", 1, "logo-img-width"], [1, "con-info", "custom-font"], [1, "font-fa"], [1, "wd-65"], ["href", "mailto:hrgloryautotech@gmail.com "], [1, "add-disply-flex"], [1, "address-mobile-spacing"], [1, "dis-flex-align"], [1, "wd-52"], [1, "conatct-colon-spacing"], [1, "number-footer"], ["href", "tel:(+91) 8000078216 "], ["href", "tel:(+91) 8141422244 "], [1, "col-lg-5", "offset-lg-2", "offset-md-2", "col-md-3"], [1, "subscribe", "mb-50"], [1, "custom-font", "stit", "simple-btn"], [3, "routerLink"], [1, "font-fa", "need-team-bottom-size"], [1, "subscribe"], [1, "copyrights", "text-center"], [1, "col-lg-6", "col-12"], [1, "cont", "mar-bot-20"], [1, "social-icon"], [1, "social"], ["href", "https://www.facebook.com/Gloryautotech", 1, "icon"], [1, "fab", "fa-facebook-f"], ["href", "https://www.linkedin.com/company/glory-autotech/", 1, "icon"], [1, "fab", "fa-linkedin"], [1, "col-lg-6", "col-12", "dis-flex"], ["href", "https://gloryautotech.com/"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 2);
@@ -441,16 +441,19 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "a", 48);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](106, "i", 49);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](107, "a", 48);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](108, "i", 50);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](107, "a", 50);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](108, "i", 51);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](109, "div", 51);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](109, "div", 52);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](111, "Copyright \u00A9 2020, GloryAutotech.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](111, "Copyright \u00A9 2021,");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](112, "a", 53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](113, " GloryAutotech.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -847,9 +850,6 @@ class HomeService {
     handleError(err) {
         console.log(err.message);
         return rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"].throw(err.message);
-    }
-    getClientList() {
-        return this._http.get(this.commonService.envurl() + "getClientList");
     }
     getServiceList(id) {
         return this._http.get(this.commonService.envurl() + "getServiceByLimit/" + id);

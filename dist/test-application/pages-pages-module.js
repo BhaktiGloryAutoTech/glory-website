@@ -128,16 +128,7 @@ class HomeComponent {
     }
     ngOnInit() {
         window.scroll(0, 0);
-        this.getClientList();
         this.serviceList();
-    }
-    getClientList() {
-        this.homeService.getClientList().subscribe((data) => {
-            this.clientData = data["data"];
-            // this.clientData.forEach((element: any) => {
-            //   this.logo = element.ClientLogo;
-            // });
-        }, (error) => { });
     }
     serviceList() {
         this.homeService.getServiceList(this.serviceLimit).subscribe((data) => {
@@ -1782,22 +1773,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function ContactComponent_div_44_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 55);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 56);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Name is require. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function ContactComponent_div_49_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 55);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 56);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Valid Email is require. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function ContactComponent_div_53_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 55);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 56);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Valid 10 digit Contact No is required. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function ContactComponent_div_56_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 56);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 57);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Message is required. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
@@ -1850,7 +1841,7 @@ class ContactComponent {
     }
 }
 ContactComponent.ɵfac = function ContactComponent_Factory(t) { return new (t || ContactComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_theme_services_contact_service__WEBPACK_IMPORTED_MODULE_4__["ContactService"])); };
-ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContactComponent, selectors: [["app-contact"]], decls: 94, vars: 8, consts: [["id", "preloaderco"], [1, "lo-txt"], ["data-overlay-dark", "5", 1, "pages-header", "bg-img", "valign", "parallaxie", "contact-bg"], [1, "container"], [1, "row"], [1, "col-lg-12"], [1, "cont", "text-center"], [1, "path"], [3, "routerLink"], [1, "active"], [1, "get-in-touch-background", "sub-bg"], [1, "col-md-12", "col-12"], ["data-wow-delay", ".25s", 1, "text-center", "pb-5", "pt-5", "wow", "fadeInDown"], [1, "get-in-touch-head"], [1, "wow", "extra-title"], [1, "get-in-touch-content"], [1, "wow", "txt", "about-text", "text-center"], [1, "main-content"], [3, "show"], [1, "contact", "section-padding", "pt-5", "pb-5"], ["data-wow-delay", ".25s", 1, "col-lg-6", "wow", "fadeInLeft"], [1, "form", "md-mb50"], [1, "extra-title", "mb-50"], [3, "formGroup"], [1, "controls"], [1, "form-group"], ["id", "form_name", "type", "text", "name", "Name", "placeholder", "Name", "formControlName", "Name", "required", "required"], ["class", "text-danger", 4, "ngIf"], [1, "col-md-6", "col-12"], ["id", "form_email", "type", "Email", "name", "Email", "placeholder", "Email", "pattern", "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}$", "formControlName", "Email", "required", "required"], ["id", "form_contactNo", "pattern", "^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$", "type", "number", "name", "ContactNo", "formControlName", "ContactNo", "placeholder", "Contact No", "required", ""], ["id", "form_message", "name", "Message", "placeholder", "Message", "rows", "4", "formControlName", "Message"], ["class", "text-danger", "required", "", 4, "ngIf"], ["type", "submit", 1, "btn-curve", "btn-color", 3, "click"], ["data-wow-delay", ".25s", 1, "col-lg-6", "wow", "fadeInRight"], [1, "cont-info"], ["data-splitting", "", 1, "custom-font", "wow"], [1, "item", "mb-40"], [1, "link-text", "dis-flex-start", "email-text"], [1, "fa", "fa-envelope", "color-i"], ["href", "mailto:hrgloryautotech@gmail.com"], [1, "link-text", "dis-flex-start"], [1, "phone-get-in"], [1, "fa", "fa-phone", "color-i"], [1, "get-in-num"], ["href", "tel:(+91) 8000078216"], [1, "link-text"], ["href", "tel:(+91) 8141422244"], [1, "item"], [1, "social", "pt-4"], ["href", "#0", 1, "icon"], [1, "fab", "fa-facebook-f"], [1, "fab", "fa-linkedin"], ["data-wow-delay", ".25s ", 1, "map", "wow", "fadeInUp"], ["src", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtrustConstantResourceUrl"]("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.1345388658488!2d72.76401256424738!3d21.147043489107144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0527879958e57%3A0x79be4eb327b92649!2sSNS%20Arista!5e0!3m2!1sen!2sin!4v1608555219387!5m2!1sen!2sin"), "width", "100%", "height", "350", "frameborder", "0", "allowfullscreen", "", "aria-hidden", "false", "tabindex", "0", 2, "border", "0"], [1, "text-danger"], ["required", "", 1, "text-danger"]], template: function ContactComponent_Template(rf, ctx) { if (rf & 1) {
+ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContactComponent, selectors: [["app-contact"]], decls: 94, vars: 8, consts: [["id", "preloaderco"], [1, "lo-txt"], ["data-overlay-dark", "5", 1, "pages-header", "bg-img", "valign", "parallaxie", "contact-bg"], [1, "container"], [1, "row"], [1, "col-lg-12"], [1, "cont", "text-center"], [1, "path"], [3, "routerLink"], [1, "active"], [1, "get-in-touch-background", "sub-bg"], [1, "col-md-12", "col-12"], ["data-wow-delay", ".25s", 1, "text-center", "pb-5", "pt-5", "wow", "fadeInDown"], [1, "get-in-touch-head"], [1, "wow", "extra-title"], [1, "get-in-touch-content"], [1, "wow", "txt", "about-text", "text-center"], [1, "main-content"], [3, "show"], [1, "contact", "section-padding", "pt-5", "pb-5"], ["data-wow-delay", ".25s", 1, "col-lg-6", "wow", "fadeInLeft"], [1, "form", "md-mb50"], [1, "extra-title", "mb-50"], [3, "formGroup"], [1, "controls"], [1, "form-group"], ["id", "form_name", "type", "text", "name", "Name", "placeholder", "Name", "formControlName", "Name", "required", "required"], ["class", "text-danger", 4, "ngIf"], [1, "col-md-6", "col-12"], ["id", "form_email", "type", "Email", "name", "Email", "placeholder", "Email", "pattern", "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}$", "formControlName", "Email", "required", "required"], ["id", "form_contactNo", "pattern", "^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$", "type", "number", "name", "ContactNo", "formControlName", "ContactNo", "placeholder", "Contact No", "required", ""], ["id", "form_message", "name", "Message", "placeholder", "Message", "rows", "4", "formControlName", "Message"], ["class", "text-danger", "required", "", 4, "ngIf"], ["type", "submit", 1, "btn-curve", "btn-color", 3, "click"], ["data-wow-delay", ".25s", 1, "col-lg-6", "wow", "fadeInRight"], [1, "cont-info"], ["data-splitting", "", 1, "custom-font", "wow"], [1, "item", "mb-40"], [1, "link-text", "dis-flex-start", "email-text"], [1, "fa", "fa-envelope", "color-i"], ["href", "mailto:hrgloryautotech@gmail.com"], [1, "link-text", "dis-flex-start"], [1, "phone-get-in"], [1, "fa", "fa-phone", "color-i"], [1, "get-in-num"], ["href", "tel:(+91) 8000078216"], [1, "link-text"], ["href", "tel:(+91) 8141422244"], [1, "item"], [1, "social", "pt-4"], ["href", "https://www.facebook.com/Gloryautotech", 1, "icon"], [1, "fab", "fa-facebook-f"], ["href", "https://www.linkedin.com/company/glory-autotech/", 1, "icon"], [1, "fab", "fa-linkedin"], ["data-wow-delay", ".25s ", 1, "map", "wow", "fadeInUp"], ["src", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtrustConstantResourceUrl"]("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.1345388658488!2d72.76401256424738!3d21.147043489107144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0527879958e57%3A0x79be4eb327b92649!2sSNS%20Arista!5e0!3m2!1sen!2sin!4v1608555219387!5m2!1sen!2sin"), "width", "100%", "height", "350", "frameborder", "0", "allowfullscreen", "", "aria-hidden", "false", "tabindex", "0", 2, "border", "0"], [1, "text-danger"], ["required", "", 1, "text-danger"]], template: function ContactComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "We Are Worthy Of Increasing Your Income.");
@@ -1994,8 +1985,8 @@ ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](88, "a", 50);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](89, "i", 51);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "a", 50);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](91, "i", 52);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "a", 52);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](91, "i", 53);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -2004,8 +1995,8 @@ ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "div", 53);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](93, "iframe", 54);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "div", 54);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](93, "iframe", 55);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
@@ -2270,7 +2261,7 @@ class AboutComponent {
     }
 }
 AboutComponent.ɵfac = function AboutComponent_Factory(t) { return new (t || AboutComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_theme_services_home_service__WEBPACK_IMPORTED_MODULE_1__["HomeService"])); };
-AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AboutComponent, selectors: [["app-about"]], decls: 93, vars: 5, consts: [["id", "preloaderab"], [1, "lo-txt"], ["data-overlay-dark", "6", 1, "pages-header", "bg-img", "valign", "parallaxie", "about-bg"], [1, "container"], [1, "row"], [1, "col-lg-12"], [1, "cont", "text-center"], [1, "path"], [3, "routerLink"], [1, "active"], [1, "intro-section", "section-padding", "sub-bg"], ["data-wow-delay", ".25s", 1, "col-lg-4", "col-md-12", "col-12", "dis-flex", "wow", "fadeInLeft"], [1, "htit", "sm-mb30"], ["src", "../../../assets/about-icon/about-us.png", "alt", "", 1, "img-responsive"], ["data-wow-delay", ".25s", 1, "col-lg-7", "col-12", "offset-lg-1", "col-md-12", "dis-flex", "wow", "fadeInRight"], [1, "text", "call-action"], [1, "about-title", "content"], ["data-splitting", "", 1, "wow", "custom-font", "about-what-we-do"], [1, "wow", "txt", "about-text"], [1, "services", "section-padding"], [1, "col-md-12"], ["data-wow-delay", ".25s ", 1, "about-title-main", "text-center", "pb-4", "wow", "fadeInDown"], ["data-splitting", "", 1, "wow", "custom-font"], ["class", "col-lg-3 col-md-6 col-12 b mb-5 wow fadeIn pb-4", "data-wow-delay", ".25s ", 4, "ngFor", "ngForOf"], ["data-wow-delay", ".25s ", 1, "col-md-12", "col-12", "wow", "fadeInUp"], [1, "services-about-btn", "text-center", "pb-4", "pt-5"], ["type", " submit ", 1, "btn-curve", "btn-color", 3, "routerLink"], [1, "min-area", "sub-bg"], ["data-wow-delay", ".25s ", 1, "col-lg-6", "wow", "fadeInRight"], ["data-wow-delay", ".25s ", 1, "img", "wow", "fadeInRight"], ["src", "../../../assets/img/op.png", "alt", " ", 1, "thumparallax-down"], ["data-wow-delay", ".25s ", 1, "col-lg-6", "valign", "wow", "fadeInLeft"], [1, "content"], [1, "feat"], ["data-wow-delay", ".2s ", 1, "wow", "fadeInUp"], ["data-wow-delay", ".4s ", 1, "wow", "fadeInUp"], ["data-wow-delay", ".6s ", 1, "wow", "fadeInUp"], ["data-wow-delay", ".25s ", 1, "col-lg-3", "col-md-6", "col-12", "b", "mb-5", "wow", "fadeIn", "pb-4"], ["data-wow-delay", ".25s ", 1, "item", "md-mb50", "btn-6", "wow", "fadeInUp", "btn-ser"], [1, "img-link-text"], [1, "img-about-services"], ["alt", " ", 1, "img-responsive", 3, "src"], [1, "services-about-title"]], template: function AboutComponent_Template(rf, ctx) { if (rf & 1) {
+AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AboutComponent, selectors: [["app-about"]], decls: 93, vars: 5, consts: [["id", "preloaderab"], [1, "lo-txt"], ["data-overlay-dark", "6", 1, "pages-header", "bg-img", "valign", "parallaxie", "about-bg"], [1, "container"], [1, "row"], [1, "col-lg-12"], [1, "cont", "text-center"], [1, "path"], [3, "routerLink"], [1, "active"], [1, "intro-section", "section-padding", "sub-bg"], ["data-wow-delay", ".25s", 1, "col-lg-4", "col-md-12", "col-12", "dis-flex", "wow", "fadeInLeft"], [1, "htit", "sm-mb30"], ["src", "../../../assets/img/about-us.png", "alt", "", 1, "img-responsive"], ["data-wow-delay", ".25s", 1, "col-lg-7", "col-12", "offset-lg-1", "col-md-12", "dis-flex", "wow", "fadeInRight"], [1, "text", "call-action"], [1, "about-title", "content"], ["data-splitting", "", 1, "wow", "custom-font", "about-what-we-do"], [1, "wow", "txt", "about-text"], [1, "services", "section-padding"], [1, "col-md-12"], ["data-wow-delay", ".25s ", 1, "about-title-main", "text-center", "pb-4", "wow", "fadeInDown"], ["data-splitting", "", 1, "wow", "custom-font"], ["class", "col-lg-3 col-md-6 col-12 b mb-5 wow fadeIn pb-4", "data-wow-delay", ".25s ", 4, "ngFor", "ngForOf"], ["data-wow-delay", ".25s ", 1, "col-md-12", "col-12", "wow", "fadeInUp"], [1, "services-about-btn", "text-center", "pb-4", "pt-5"], ["type", " submit ", 1, "btn-curve", "btn-color", 3, "routerLink"], [1, "min-area", "sub-bg"], ["data-wow-delay", ".25s ", 1, "col-lg-6", "wow", "fadeInRight"], ["data-wow-delay", ".25s ", 1, "img", "wow", "fadeInRight"], ["src", "../../../assets/img/op.png", "alt", " ", 1, "thumparallax-down"], ["data-wow-delay", ".25s ", 1, "col-lg-6", "valign", "wow", "fadeInLeft"], [1, "content"], [1, "feat"], ["data-wow-delay", ".2s ", 1, "wow", "fadeInUp"], ["data-wow-delay", ".4s ", 1, "wow", "fadeInUp"], ["data-wow-delay", ".6s ", 1, "wow", "fadeInUp"], ["data-wow-delay", ".25s ", 1, "col-lg-3", "col-md-6", "col-12", "b", "mb-5", "wow", "fadeIn", "pb-4"], ["data-wow-delay", ".25s ", 1, "item", "md-mb50", "btn-6", "wow", "fadeInUp", "btn-ser"], [1, "img-link-text"], [1, "img-about-services"], ["alt", " ", 1, "img-responsive", 3, "src"], [1, "services-about-title"]], template: function AboutComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "We Make Every Interaction Count.");
