@@ -938,12 +938,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngb_modal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngb-modal */ "FgQ4");
 /* harmony import */ var _services_work_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/work.service */ "78I2");
 /* harmony import */ var ngx_loading__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-loading */ "UR+G");
-/* harmony import */ var angular_responsive_carousel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angular-responsive-carousel */ "0L5U");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "1kSV");
-/* harmony import */ var ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-slick-carousel */ "eSVu");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _services_cache_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/cache.service */ "dO9G");
-/* harmony import */ var _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./services/cacheInterceptor */ "e/OU");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "1kSV");
+/* harmony import */ var ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-slick-carousel */ "eSVu");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _services_cache_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/cache.service */ "dO9G");
+/* harmony import */ var _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/cacheInterceptor */ "e/OU");
 
 
 
@@ -957,9 +956,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-//import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
-//import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -980,11 +976,11 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
         _services_needTeam_service__WEBPACK_IMPORTED_MODULE_8__["NeedTeamService"],
         _services_work_service__WEBPACK_IMPORTED_MODULE_12__["WorkService"],
         {
-            provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HTTP_INTERCEPTORS"],
-            useClass: _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_19__["CacheInterceptor"],
+            provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HTTP_INTERCEPTORS"],
+            useClass: _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_18__["CacheInterceptor"],
             multi: true,
         },
-        _services_cache_service__WEBPACK_IMPORTED_MODULE_18__["HttpCacheService"],
+        _services_cache_service__WEBPACK_IMPORTED_MODULE_17__["HttpCacheService"],
     ], imports: [[
             _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
@@ -993,22 +989,20 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
             _nebular_eva_icons__WEBPACK_IMPORTED_MODULE_9__["NbEvaIconsModule"],
             ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
             ngb_modal__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
-            angular_responsive_carousel__WEBPACK_IMPORTED_MODULE_14__["IvyCarouselModule"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
             _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_7__["NgSelectModule"],
             ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
-            ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_16__["SlickCarouselModule"],
+            ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_15__["SlickCarouselModule"],
         ], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ReactiveFormsModule"],
-        angular_responsive_carousel__WEBPACK_IMPORTED_MODULE_14__["IvyCarouselModule"],
-        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
         _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_7__["NgSelectModule"],
         ngb_modal__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
         _nebular_theme__WEBPACK_IMPORTED_MODULE_10__["NbIconModule"],
         _nebular_eva_icons__WEBPACK_IMPORTED_MODULE_9__["NbEvaIconsModule"],
         ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
-        ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_16__["SlickCarouselModule"]] });
+        ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_15__["SlickCarouselModule"]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](SharedModule, { imports: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ReactiveFormsModule"],
@@ -1016,21 +1010,19 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
         _nebular_eva_icons__WEBPACK_IMPORTED_MODULE_9__["NbEvaIconsModule"],
         ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
         ngb_modal__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
-        angular_responsive_carousel__WEBPACK_IMPORTED_MODULE_14__["IvyCarouselModule"],
-        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
         _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_7__["NgSelectModule"],
         ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
-        ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_16__["SlickCarouselModule"]], exports: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
+        ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_15__["SlickCarouselModule"]], exports: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ReactiveFormsModule"],
-        angular_responsive_carousel__WEBPACK_IMPORTED_MODULE_14__["IvyCarouselModule"],
-        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
         _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_7__["NgSelectModule"],
         ngb_modal__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
         _nebular_theme__WEBPACK_IMPORTED_MODULE_10__["NbIconModule"],
         _nebular_eva_icons__WEBPACK_IMPORTED_MODULE_9__["NbEvaIconsModule"],
         ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
-        ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_16__["SlickCarouselModule"]] }); })();
+        ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_15__["SlickCarouselModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SharedModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -1043,24 +1035,22 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
                     _nebular_eva_icons__WEBPACK_IMPORTED_MODULE_9__["NbEvaIconsModule"],
                     ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
                     ngb_modal__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
-                    angular_responsive_carousel__WEBPACK_IMPORTED_MODULE_14__["IvyCarouselModule"],
-                    _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
+                    _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
                     _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_7__["NgSelectModule"],
                     ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
-                    ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_16__["SlickCarouselModule"],
+                    ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_15__["SlickCarouselModule"],
                 ],
                 exports: [
                     _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
                     _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
                     _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ReactiveFormsModule"],
-                    angular_responsive_carousel__WEBPACK_IMPORTED_MODULE_14__["IvyCarouselModule"],
-                    _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"],
+                    _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_14__["NgbModule"],
                     _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_7__["NgSelectModule"],
                     ngb_modal__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
                     _nebular_theme__WEBPACK_IMPORTED_MODULE_10__["NbIconModule"],
                     _nebular_eva_icons__WEBPACK_IMPORTED_MODULE_9__["NbEvaIconsModule"],
                     ngx_loading__WEBPACK_IMPORTED_MODULE_13__["NgxLoadingModule"],
-                    ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_16__["SlickCarouselModule"],
+                    ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_15__["SlickCarouselModule"],
                 ],
                 providers: [
                     _services_contact_service__WEBPACK_IMPORTED_MODULE_2__["ContactService"],
@@ -1072,11 +1062,11 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
                     _services_needTeam_service__WEBPACK_IMPORTED_MODULE_8__["NeedTeamService"],
                     _services_work_service__WEBPACK_IMPORTED_MODULE_12__["WorkService"],
                     {
-                        provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HTTP_INTERCEPTORS"],
-                        useClass: _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_19__["CacheInterceptor"],
+                        provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HTTP_INTERCEPTORS"],
+                        useClass: _services_cacheInterceptor__WEBPACK_IMPORTED_MODULE_18__["CacheInterceptor"],
                         multi: true,
                     },
-                    _services_cache_service__WEBPACK_IMPORTED_MODULE_18__["HttpCacheService"],
+                    _services_cache_service__WEBPACK_IMPORTED_MODULE_17__["HttpCacheService"],
                 ],
                 entryComponents: [],
             }]
