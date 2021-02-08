@@ -7,6 +7,6 @@ import { Observable } from "rxjs";
 export class CommonService {
   constructor(private _http: HttpClient) {}
   envurl() {
-    return "https://glorywebsite.herokuapp.com/api/gloryweb/";
+    return "https://api.gloryautotech.com/api/gloryweb/";
   }
 }
