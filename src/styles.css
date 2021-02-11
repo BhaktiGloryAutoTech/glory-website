@@ -426,3 +426,25 @@ p.small {
     display: inline-block;
     vertical-align: middle;
 }
+
+
+/* services design changes */
+
+.ser-main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: justify;
+}
+
+.ser-foo h1 {
+    margin-bottom: 3px;
+}
+
+.img-ex-inline {
+    display: inline-block;
+}
+
+.img-ex-inline img {
+    width: 90px;
+}
