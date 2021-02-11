@@ -28,20 +28,19 @@
                 <!-- gallery item -->
                 <div class="service-main">
                     <div class="row">
-                        <!-- <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in"
-                        data-aos-duration="2000">
-                        <div class="item-img wow fadeInUp" data-wow-delay=".4s">
-                            <a>
-                                <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
-                                    <img src={{service.ServiceLogo}} alt="image">
-                                </div>
-                            </a>
+                        <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
+                            <div class="item-img wow fadeInUp" data-wow-delay=".4s">
+                                <a>
+                                    <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
+                                        <img src={{service.ServiceLogo}} alt="image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cont">
+                                <h6>{{service.ServiceName}}</h6>
+                            </div>
                         </div>
-                        <div class="cont">
-                            <h6>{{service.ServiceName}}</h6>
-                        </div>
-                    </div> -->
-                        <div class="col-lg-6 col-md-6 ser-main">
+                        <!-- <div class="col-lg-6 col-md-6 ser-main">
 
                             <div class="services-header">
                                 <div class="ser-hed">
@@ -56,7 +55,7 @@
 
                                 <div class="ser-foo">
                                     <h1>Our Experties</h1>
-                                    <!-- <p>React-Js, Laravel, Java, Angular, Node, Codeigniter</p> -->
+                                    
                                     <div class="img-ex-inline">
                                         <img src="../../../assets/course/react.png" alt="">
                                     </div>
@@ -79,32 +78,20 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="services-header">
-                                <!-- <img src={{service.ServiceLogo}} alt=""> -->
+                                
                                 <img src="../../../assets/test/gloryserviceicons_web.svg" alt="">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
-                <div class="service-main">
+                <!-- <div class="service-main">
                     <div class="row">
-                        <!-- <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in"
-                        data-aos-duration="2000">
-                        <div class="item-img wow fadeInUp" data-wow-delay=".4s">
-                            <a>
-                                <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
-                                    <img src={{service.ServiceLogo}} alt="image">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cont">
-                            <h6>{{service.ServiceName}}</h6>
-                        </div>
-                    </div> -->
+                    
 
                         <div class="col-lg-6 col-md-6">
                             <div class="services-header">
-                                <!-- <img src={{service.ServiceLogo}} alt=""> -->
+                                
                                 <img src="../../../assets/test/gloryserviceicons_web.svg" alt="">
                             </div>
                         </div>
@@ -123,7 +110,7 @@
 
                                 <div class="ser-foo">
                                     <h1>Our Experties</h1>
-                                    <!-- <p>React-Js, Laravel, Java, Angular, Node, Codeigniter</p> -->
+                                   
                                     <div class="img-ex-inline">
                                         <img src="../../../assets/course/react.png" alt="">
                                     </div>
@@ -145,8 +132,22 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 </div>
+
+<!-- <ng-template #content let-c="close" let-d="dismiss" centered>
+
+    <div class="modal-body">
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <select>
+            <option value="volvo">Rohait</option>
+            <option value="saab">Anuj</option>
+        </select>
+    </div>
+
+</ng-template> -->

@@ -500,6 +500,29 @@ $(document).ready(function() {
     });
 });
 
+
+// $('#GetCallForm').validate({
+//     rules: {
+//         contactno: {
+//             required: true,
+//             digits: true,
+//             minlength: 10
+//         }
+//     }
+// });
+// $('.btn-get-call').click(function() {
+//     if ($('#GetCallForm').valid()) {
+//         Swal.fire({
+//             type: "success",
+//             title: "Done!",
+//             text: "Your request has been sent successfully.",
+//             confirmButtonClass: "btn btn-success"
+//         }).then(function(confirm) {
+//             $('#get-contactno').val('');
+//         });
+//     }
+// });
+
 // WhatsApp Script //
 function fnOpenWhatsApp(text, number) {
     var whatsAppNumber = number;
