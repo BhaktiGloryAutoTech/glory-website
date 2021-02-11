@@ -27,8 +27,7 @@
             <div class="services-gallery full-width pt-4">
                 <!-- gallery item -->
                 <div class="row service-main">
-                    <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in"
-                        data-aos-duration="2000">
+                    <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
                         <div class="item-img wow fadeInUp" data-wow-delay=".4s">
                             <a>
                                 <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
@@ -46,20 +45,16 @@
     </section>
 </div>
 
-<ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Select user</h4>
+<!-- <ng-template #content let-c="close" let-d="dismiss" centered>
+
+    <div class="modal-body">
         <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
             <span aria-hidden="true">&times;</span>
         </button>
-    </div>
-    <div class="modal-body">
         <select>
             <option value="volvo">Rohait</option>
             <option value="saab">Anuj</option>
         </select>
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
-    </div>
-</ng-template>
+
+</ng-template> -->
