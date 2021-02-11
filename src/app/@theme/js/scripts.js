@@ -311,22 +311,22 @@ $(document).ready(function() {
 
 function mousecursor() {
     if ($("body")) {
-     var setCursor=setInterval(function(){ 
+        var setCursor = setInterval(function() {
             const e = document.querySelector(".cursor-inner"),
-            t = document.querySelector(".cursor-outer");
-            if(e!=null && t!=null){
-        let n, i = 0,
-            o = !1;
-        window.onmousemove = function(s) {
-            o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-        }, $("body").on("mouseenter", "a, .cursor-pointer", function() {
-            e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
-        }), $("body").on("mouseleave", "a, .cursor-pointer", function() {
-            $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-        }), e.style.visibility = "visible", t.style.visibility = "visible"
-        clearInterval(setCursor);
-    }
-         }, 10);        
+                t = document.querySelector(".cursor-outer");
+            if (e != null && t != null) {
+                let n, i = 0,
+                    o = !1;
+                window.onmousemove = function(s) {
+                    o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
+                }, $("body").on("mouseenter", "a, .cursor-pointer", function() {
+                    e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
+                }), $("body").on("mouseleave", "a, .cursor-pointer", function() {
+                    $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+                }), e.style.visibility = "visible", t.style.visibility = "visible"
+                clearInterval(setCursor);
+            }
+        }, 10);
     }
 };
 
@@ -491,3 +491,25 @@ $('[data-carousel="swiper"]').each(function() {
         var init = new Swiper(initID, conf);
     };
 });
+
+
+// GET A CALL
+$(document).ready(function() {
+    $('.getcall-btn').click(function() {
+        $(".Getacall-sec").toggleClass('active');
+    });
+});
+
+// WhatsApp Script //
+function fnOpenWhatsApp(text, number) {
+    var whatsAppNumber = number;
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        var whatsapp_url = 'whatsapp://send?text=' + text + '&phone=' + whatsAppNumber
+        window.location.href = whatsapp_url;
+    } else {
+        window.open(
+            'https://web.whatsapp.com/send?phone=' + whatsAppNumber + '&text=' + text,
+            '_blank'
+        );
+    }
+}
