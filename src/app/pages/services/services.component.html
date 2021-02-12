@@ -28,7 +28,8 @@
                 <!-- gallery item -->
                 <div class="service-main">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in"
+                            data-aos-duration="2000">
                             <div class="item-img wow fadeInUp" data-wow-delay=".4s">
                                 <a>
                                     <div class="img" data-tooltip-tit="Work image" data-tooltip-sub="Branding">
@@ -140,11 +141,12 @@
 
 
 <ng-template #content let-c="close" let-d="dismiss" centered>
+    <ngx-loading [show]="loading"></ngx-loading>
     <div class="modal-main-im">
         <div class="modal-header remove-border">
             <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
         <div class="modal-body">
 
@@ -162,24 +164,56 @@
                             <div class="form-head text-center">
                                 <h1>Request a Callback</h1>
                             </div>
-                            <form id="popupcontact" class="contact-popup">
+                            <form [formGroup]="contactForm" id="popupcontact" class="contact-popup">
                                 <div class="form-group">
-                                    <input type="text" class="form-control style-inp" name="name" id="name" placeholder="Your name">
+                                    <input type="text" class="form-control style-inp" id="name" placeholder="Your name"
+                                        name="Name" formControlName="Name">
+                                    <div class="text-danger" *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
+                                        Name is require.
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control style-inp" name="email" id="email" placeholder="Your email address">
+                                    <input type="Email" class="form-control style-inp" name="Email" id="email"
+                                        pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
+                                        formControlName="Email" placeholder="Your email address">
+                                    <div class="text-danger" *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
+                                        Valid Email is require.
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control style-inp" name="number" id="number" placeholder="Your number">
+                                    <input type="number" class="form-control style-inp" name="ContactNo" id="number"
+                                        pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
+                                        formControlName="ContactNo" placeholder="Your number">
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
+                                        Valid 10 digit Contact No is required.
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies btn-popup"><span>Send Request</span></button>
+                                    <button type="submit" class="btn-curve btn-color btn-home-servcies btn-popup"
+                                        (click)="addContact()"><span>Send
+                                            Request</span></button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="modal-footer"></div>
+    </div>
+</ng-template>
+
+<!--Success Modal-->
+<ng-template #success let-c="close" let-d="dismiss" centered>
+    <div class="modal-main-im">
+        <div class="modal-header remove-border">
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Success
         </div>
         <div class="modal-footer"></div>
     </div>
