@@ -6029,6 +6029,20 @@ h6 {
     .logo-img-width {
         width: 122px;
     }
+    /* services pages */
+    .ser-hed h1,
+    .ser-foo h1 {
+        font-size: 24px;
+    }
+    .service-main-dev {
+        margin-bottom: 30px;
+    }
+    .services-gallery {
+        padding-top: 0!important;
+    }
+    .title-hd-0 h1 {
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
