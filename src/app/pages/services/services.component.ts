@@ -19,10 +19,10 @@ export class ServicesComponent implements OnInit {
   ngOnInit(): void {
     window.scroll(0, 0);
     this.getServiceList();
-    // this.mod = setInterval(() => {
-    //   this.modalService.open(this.content,{centered:true});
-    //   clearInterval(this.mod);
-    // }, 5000);
+    this.mod = setInterval(() => {
+      this.modalService.open(this.content,{centered:true});
+      clearInterval(this.mod);
+    }, 7000);
   }
 
   getServiceList() {
