@@ -138,16 +138,49 @@
     </section>
 </div>
 
-<!-- <ng-template #content let-c="close" let-d="dismiss" centered>
 
-    <div class="modal-body">
-        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+<ng-template #content let-c="close" let-d="dismiss" centered>
+    <div class="modal-main-im">
+        <div class="modal-header remove-border">
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
             <span aria-hidden="true">&times;</span>
         </button>
-        <select>
-            <option value="volvo">Rohait</option>
-            <option value="saab">Anuj</option>
-        </select>
-    </div>
+        </div>
+        <div class="modal-body">
 
-</ng-template> -->
+            <div class="popup-main">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="popup-img">
+                            <img src="../../../assets/whatsapp/popup.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="popup-cont">
+                            <div class="form-head text-center">
+                                <h1>Request a Callback</h1>
+                            </div>
+                            <form id="popupcontact" class="contact-popup">
+                                <div class="form-group">
+                                    <input type="text" class="form-control style-inp" name="name" id="name" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control style-inp" name="email" id="email" placeholder="Your email address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control style-inp" name="number" id="number" placeholder="Your number">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn-curve btn-color btn-home-servcies btn-popup"><span>Send Request</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer"></div>
+    </div>
+</ng-template>

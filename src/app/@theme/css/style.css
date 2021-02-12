@@ -5758,8 +5758,9 @@ h6 {
 
 .font-fa .display-block-task,
 .font-fa a {
-    /* font-family: system-ui; */
+    font-family: system-ui;
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .carousel-caption {
@@ -6024,6 +6025,9 @@ h6 {
     }
     .mob-pb-0 {
         padding-bottom: 20px !important;
+    }
+    .logo-img-width {
+        width: 122px;
     }
 }
 
