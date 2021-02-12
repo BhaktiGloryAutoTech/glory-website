@@ -28,8 +28,7 @@
                 <!-- gallery item -->
                 <div class="service-main-dev">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in"
-                            data-aos-duration="2000">
+                        <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
                             <!-- <div class="col-lg-3 col-md-4 items pb-5" *ngFor="let service of serviceList" data-aos="zoom-in" data-aos-duration="2000">
                             <div class="item-img wow fadeInUp" data-wow-delay=".4s">
                                 <a>
@@ -56,12 +55,8 @@
                                     </div>
 
                                     <div class="ser-des">
-                                        <p>iDesire Galaxy deals primarily with mobile SIM recharge and utilities. The
-                                            main feature of this website is the online portability offer. After
-                                            understanding and analyzing the client requirements, our team effectively
-                                            designed and developed the website by adding features like online order
-                                            tracking that made it engaging and intuitive. We accomplished in making it
-                                            an online marketplace that provided customers with new and varied
+                                        <p>iDesire Galaxy deals primarily with mobile SIM recharge and utilities. The main feature of this website is the online portability offer. After understanding and analyzing the client requirements, our team effectively
+                                            designed and developed the website by adding features like online order tracking that made it engaging and intuitive. We accomplished in making it an online marketplace that provided customers with new and varied
                                             mobile-related services.</p>
                                     </div>
 
@@ -110,12 +105,8 @@
                                     </div>
 
                                     <div class="ser-des">
-                                        <p>iDesire Galaxy deals primarily with mobile SIM recharge and utilities. The
-                                            main feature of this website is the online portability offer. After
-                                            understanding and analyzing the client requirements, our team effectively
-                                            designed and developed the website by adding features like online order
-                                            tracking that made it engaging and intuitive. We accomplished in making it
-                                            an online marketplace that provided customers with new and varied
+                                        <p>iDesire Galaxy deals primarily with mobile SIM recharge and utilities. The main feature of this website is the online portability offer. After understanding and analyzing the client requirements, our team effectively
+                                            designed and developed the website by adding features like online order tracking that made it engaging and intuitive. We accomplished in making it an online marketplace that provided customers with new and varied
                                             mobile-related services.</p>
                                     </div>
 
@@ -176,35 +167,25 @@
                                     </div>
                                     <form [formGroup]="contactForm" id="popupcontact" class="contact-popup">
                                         <div class="form-group">
-                                            <input type="text" class="form-control style-inp" id="name"
-                                                placeholder="Your name" name="Name" formControlName="Name">
-                                            <div class="text-danger"
-                                                *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
+                                            <input type="text" class="form-control style-inp" id="name" placeholder="Your name" name="Name" formControlName="Name">
+                                            <div class="text-danger" *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
                                                 Name is require.
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="Email" class="form-control style-inp" name="Email" id="email"
-                                                pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
-                                                formControlName="Email" placeholder="Your email address">
-                                            <div class="text-danger"
-                                                *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
+                                            <input type="Email" class="form-control style-inp" name="Email" id="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$" formControlName="Email" placeholder="Your email address">
+                                            <div class="text-danger" *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
                                                 Valid Email is require.
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" class="form-control style-inp" name="ContactNo"
-                                                id="number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
-                                                formControlName="ContactNo" placeholder="Your number">
-                                            <div class="text-danger"
-                                                *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
+                                            <input type="number" class="form-control style-inp" name="ContactNo" id="number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" formControlName="ContactNo" placeholder="Your number">
+                                            <div class="text-danger" *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
                                                 Valid 10 digit Contact No is required.
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit"
-                                                class="btn-curve btn-color btn-home-servcies btn-popup"
-                                                (click)="addContact()"><span>Send
+                                            <button type="submit" class="btn-curve btn-color btn-home-servcies btn-popup" (click)="addContact()"><span>Send
                                                     Request</span></button>
                                         </div>
                                     </form>
@@ -221,13 +202,25 @@
         <ng-template #success let-c="close" let-d="dismiss" centered>
             <div class="modal-main-im">
                 <div class="modal-header remove-border">
-                    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
-                    Success
+                    <div class="row">
+                        <div class="modalbox success center animate">
+                            <div class="icon">
+
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                            </div>
+
+                            <h1>THANK YOU! </h1>
+                            <p>We thank you for your interest in Glory Autotech services. We will get back to you as soon as possible. <br>For any urgent inquiries, you can call us at +91 8000078216
+                            </p>
+                            <button type="button" class="redo btn" (click)="addsuccess()">Ok</button>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer"></div>
             </div>
         </ng-template>
+    </section>
+</div>

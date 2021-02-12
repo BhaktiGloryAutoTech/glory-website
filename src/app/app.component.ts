@@ -60,7 +60,7 @@ export class AppComponent {
           this.loading = false;
           document.getElementById("call")?.classList.remove("active");
           this.contactForm.reset();
-          this.modalService.open(this.success, { centered: true });
+          this.modalService.open(this.success, { centered: true, size: "sm" });
         },
         (error) => {}
       );
@@ -68,5 +68,8 @@ export class AppComponent {
       this.loading = false;
       return;
     }
+  }
+  addgetsuc(){
+    this.modalService.dismissAll();
   }
 }
