@@ -378,14 +378,14 @@ p.small {
     position: absolute;
     left: -38px;
     transform: rotate( -90deg);
-    -webkit-transform: rotate( 0deg);
+    -webkit-transform: rotate( 90deg);
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     top: 60px;
     height: 40px;
     padding: 10px;
     border-radius: 5px 5px 0 0;
-    -webkit-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 0 0 5px 5px;
     background: #08adc3;
     color: #fff;
 }
