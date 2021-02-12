@@ -44,6 +44,8 @@ export class PortfolioInfoComponent implements OnInit {
           this.selectedVideo = element.Projectvideo;
           this.slectedSlack = element.Stack;
         });
+        console.log(this.selectedProjectData);
+        console.log(this.selectedImg);
       },
       (error) => {}
     );

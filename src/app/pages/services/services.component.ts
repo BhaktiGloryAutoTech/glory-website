@@ -5,6 +5,7 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ContactService } from "src/app/@theme/services/contact.service";
 import { ToastrService } from "ngx-toastr";
+import { element } from "protractor";
 @Component({
   selector: "app-services",
   templateUrl: "./services.component.html",
@@ -19,16 +20,20 @@ export class ServicesComponent implements OnInit {
   public loading = false;
   contactForm: FormGroup | any;
   formSubmitted: boolean = false;
+  stackList: any = [];
+  serviceList: any = [];
+  stackIcon: any = [];
+  block1: boolean = false;
+  block2: boolean = false;
   constructor(
     private serviceService: ServiceService,
     private modalService: NgbModal,
     private contactService: ContactService,
     private tostrService: ToastrService
   ) {}
-  serviceList: any = [];
   ngOnInit(): void {
     window.scroll(0, 0);
-    //this.getServiceList();
+    this.getServiceList();
     this.modalService.open(this.success, { centered: true });
     this.getContactData();
     this.mod = setInterval(() => {
@@ -41,9 +46,26 @@ export class ServicesComponent implements OnInit {
     this.serviceService.getServiceList().subscribe(
       (data: any) => {
         this.serviceList = data["data"];
+        console.log(this.serviceList);
+        this.serviceList.forEach((element: any) => {
+          this.stackList.push(element.Stack);
+        });
+        // this.serviceList.map((element: any) => {
+        //   this.stackList.push(element.Stack);
+        // });
+        for (let i = 0; i < this.serviceList.length; i++) {
+          for (let j = 0; j <= this.serviceList[i].length; j++) {
+            this.stackIcon.push(this.serviceList[i][j]);
+            console.log(this.stackIcon);
+          }
+        }
+        console.log(this.stackIcon);
+        console.log(this.stackList);
       },
       (error) => {}
     );
+    this.block1 = true;
+    this.block2 = false;
   }
   getContactData() {
     this.contactForm = new FormGroup({
