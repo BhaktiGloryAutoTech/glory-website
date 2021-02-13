@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef } from "@angular/core";
 import { ServiceService } from "src/app/@theme/services/service.service";
-import {  ViewChild } from "@angular/core";
+import { ViewChild } from "@angular/core";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ContactService } from "src/app/@theme/services/contact.service";
@@ -18,15 +18,19 @@ export class ServicesComponent implements OnInit {
   public loading = false;
   contactForm: FormGroup | any;
   formSubmitted: boolean = false;
+  stackList: any = [];
+  serviceList: any = [];
+  stackIcon: any = [];
+  block1: boolean = false;
+  block2: boolean = false;
   constructor(
     private serviceService: ServiceService,
     private modalService: NgbModal,
-    private contactService: ContactService,
+    private contactService: ContactService
   ) {}
-  serviceList: any = [];
   ngOnInit(): void {
     window.scroll(0, 0);
-    //this.getServiceList();
+    this.getServiceList();
     this.getContactData();
     this.mod = setInterval(() => {
       this.modalService.open(this.content, { centered: true });
@@ -38,9 +42,26 @@ export class ServicesComponent implements OnInit {
     this.serviceService.getServiceList().subscribe(
       (data: any) => {
         this.serviceList = data["data"];
+        console.log(this.serviceList);
+        this.serviceList.forEach((element: any) => {
+          this.stackList.push(element.Stack);
+        });
+        // this.serviceList.map((element: any) => {
+        //   this.stackList.push(element.Stack);
+        // });
+        for (let i = 0; i < this.serviceList.length; i++) {
+          for (let j = 0; j <= this.serviceList[i].length; j++) {
+            this.stackIcon.push(this.serviceList[i][j]);
+            console.log(this.stackIcon);
+          }
+        }
+        console.log(this.stackIcon);
+        console.log(this.stackList);
       },
       (error) => {}
     );
+    this.block1 = true;
+    this.block2 = false;
   }
   getContactData() {
     this.contactForm = new FormGroup({
@@ -74,7 +95,7 @@ export class ServicesComponent implements OnInit {
       return;
     }
   }
-  addsuccess(){
+  addsuccess() {
     this.modalService.dismissAll();
   }
 }
