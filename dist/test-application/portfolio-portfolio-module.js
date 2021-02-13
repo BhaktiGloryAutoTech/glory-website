@@ -171,6 +171,8 @@ class PortfolioInfoComponent {
                 this.selectedVideo = element.Projectvideo;
                 this.slectedSlack = element.Stack;
             });
+            console.log(this.selectedProjectData);
+            console.log(this.selectedImg);
         }, (error) => { });
     }
 }
