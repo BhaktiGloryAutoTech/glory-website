@@ -557,4 +557,12 @@ var Tawk_API = Tawk_API || {},
     s0.parentNode.insertBefore(s1, s0);
 })();
 
-// success modal
+// read more and read less
+// $(document).ready(function() {
+//     $(".ser-des").hide();
+//     $(".show_hide").click(function() {
+//         var txt = $(".ser-des").is(':visible') ? 'Read More' : 'Read Less';
+//         $(".show_hide").text(txt);
+//         $(this).prev('.ser-des').slideToggle(200);
+//     });
+// });
