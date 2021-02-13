@@ -24,18 +24,18 @@
     <section class="services-portfolio section-padding pb-70 sub-bg">
         <div class="container">
             <!-- gallery -->
-            <div class="services-gallery full-width pt-4">
+            <div class="services-gallery full-width">
                 <!-- gallery item -->
-                <div *ngFor="let service of serviceList">
+                <div *ngFor="let service of serviceList" class="border-bt">
                     <div *ngIf="service.Serviceid%2!=0">
                         <div class="service-main-dev">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6 order-md-2">
-                                    <div class="services-header">
+                                <div class="col-lg-6 col-md-12 order-md-2">
+                                    <div class="services-header ser-img">
                                         <img src={{service.ServiceLogo}} alt="">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 ser-main">
+                                <div class="col-lg-6 col-md-12 ser-main">
 
                                     <div class="services-header">
                                         <div class="ser-hed title-hd-0">
@@ -61,13 +61,13 @@
                     <div *ngIf="service.Serviceid%2==0">
                         <div class="service-main-dev">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="services-header">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="services-header ser-img">
 
                                         <img src={{service.ServiceLogo}} alt="">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 ser-main">
+                                <div class="col-lg-6 col-md-12 ser-main">
 
                                     <div class="services-header">
                                         <div class="ser-hed title-hd-0">
@@ -126,32 +126,25 @@
                             </div>
                             <form [formGroup]="contactForm" id="popupcontact" class="contact-popup">
                                 <div class="form-group">
-                                    <input type="text" class="form-control style-inp" id="name" placeholder="Your name"
-                                        name="Name" formControlName="Name">
+                                    <input type="text" class="form-control style-inp" id="name" placeholder="Your name" name="Name" formControlName="Name">
                                     <div class="text-danger" *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
                                         Name is require.
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="Email" class="form-control style-inp" name="Email" id="email"
-                                        pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
-                                        formControlName="Email" placeholder="Your email address">
+                                    <input type="Email" class="form-control style-inp" name="Email" id="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$" formControlName="Email" placeholder="Your email address">
                                     <div class="text-danger" *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
                                         Valid Email is require.
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control style-inp" name="ContactNo" id="number"
-                                        pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
-                                        formControlName="ContactNo" placeholder="Your number">
-                                    <div class="text-danger"
-                                        *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
+                                    <input type="number" class="form-control style-inp" name="ContactNo" id="number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" formControlName="ContactNo" placeholder="Your number">
+                                    <div class="text-danger" *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
                                         Valid 10 digit Contact No is required.
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies btn-popup"
-                                        (click)="addContact()"><span>Send
+                                    <button type="submit" class="btn-curve btn-color btn-home-servcies btn-popup" (click)="addContact()"><span>Send
                                             Request</span></button>
                                 </div>
                             </form>
@@ -178,8 +171,7 @@
                     </div>
 
                     <h1>THANK YOU! </h1>
-                    <p>We thank you for your interest in Glory Autotech services. We will get back to you as soon as
-                        possible. <br>For any urgent inquiries, you can call us at +91 8000078216
+                    <p>We thank you for your interest in Glory Autotech services. We will get back to you as soon as possible. <br>For any urgent inquiries, you can call us at +91 8000078216
                     </p>
                     <button type="button" class="redo btn" (click)="addsuccess()">Ok</button>
 

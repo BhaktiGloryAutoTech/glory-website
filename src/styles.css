@@ -447,10 +447,13 @@ p.small {
 
 .img-ex-inline {
     display: inline-block;
+    padding: 22px;
+    padding-left: 0;
+    padding-top: 8px;
 }
 
 .img-ex-inline img {
-    width: 90px;
+    width: 48px;
 }
 
 
@@ -901,4 +904,20 @@ ngb-modal-window .modal-content {
 
 ngb-modal-window .modal-sm .modal-content {
     background: transparent;
+}
+
+.service-main-dev {
+    margin-bottom: 30px;
+}
+
+.ser-hed h1,
+.ser-foo h1 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 27px;
+}
+
+.ser-des {
+    margin-bottom: 12px;
 }
