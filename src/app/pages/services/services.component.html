@@ -48,14 +48,13 @@
                                                     {{trimString(service.ServiceDescription,250)}}</span>
                                                 <span *ngIf="service.showMore"> {{service.ServiceDescription}} </span>
                                             </p>
-                                            <div *ngIf="service.ServiceDescription.length> 250" (click)="service.showMore = !service.showMore" class="show-more-design">
+                                            <div *ngIf="service.ServiceDescription.length> 250"
+                                                (click)="service.showMore = !service.showMore" class="show-more-design">
                                                 Show
                                                 <span>{{service.showMore ? 'less' : 'More'}}</span>
                                             </div>
 
                                         </div>
-                                        <!-- <button class="show_hide">Read More</button> -->
-                                        <a class="show_hide" data-content="toggle-text">Read More</a>
                                         <div class="ser-foo">
                                             <h1>Our Experties</h1>
 
@@ -87,15 +86,15 @@
                                         <div class="ser-des">
                                             <p>
                                                 <span *ngIf="!service.showMore">
-                                                {{trimString(service.ServiceDescription,250)}}</span>
+                                                    {{trimString(service.ServiceDescription,250)}}</span>
                                                 <span *ngIf="service.showMore"> {{service.ServiceDescription}} </span>
                                             </p>
-                                            <div *ngIf="service.ServiceDescription.length> 250" (click)="service.showMore = !service.showMore" class="show-more-design">
+                                            <div *ngIf="service.ServiceDescription.length> 250"
+                                                (click)="service.showMore = !service.showMore" class="show-more-design">
                                                 Show
                                                 <span>{{service.showMore ? 'less' : 'More'}}</span>
                                             </div>
                                         </div>
-                                        <a href="#" class="show_hide" data-content="toggle-text">Read More</a>
                                         <div class="ser-foo">
                                             <h1>Our Experties</h1>
 
@@ -144,25 +143,32 @@
                             </div>
                             <form [formGroup]="contactForm" id="popupcontact" class="contact-popup">
                                 <div class="form-group">
-                                    <input type="text" class="form-control style-inp" id="name" placeholder="Your name" name="Name" formControlName="Name">
+                                    <input type="text" class="form-control style-inp" id="name" placeholder="Your name"
+                                        name="Name" formControlName="Name">
                                     <div class="text-danger" *ngIf="contactForm.get('Name').invalid&&(formSubmitted)">
                                         Name is require.
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="Email" class="form-control style-inp" name="Email" id="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$" formControlName="Email" placeholder="Your email address">
+                                    <input type="Email" class="form-control style-inp" name="Email" id="email"
+                                        pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
+                                        formControlName="Email" placeholder="Your email address">
                                     <div class="text-danger" *ngIf="contactForm.get('Email').invalid&&(formSubmitted)">
                                         Valid Email is require.
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control style-inp" name="ContactNo" id="number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" formControlName="ContactNo" placeholder="Your number">
-                                    <div class="text-danger" *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
+                                    <input type="number" class="form-control style-inp" name="ContactNo" id="number"
+                                        pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
+                                        formControlName="ContactNo" placeholder="Your number">
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.get('ContactNo').invalid&&(formSubmitted)">
                                         Valid 10 digit Contact No is required.
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn-curve btn-color btn-home-servcies btn-popup" (click)="addContact()"><span>Send
+                                    <button type="submit" class="btn-curve btn-color btn-home-servcies btn-popup"
+                                        (click)="addContact()"><span>Send
                                             Request</span></button>
                                 </div>
                             </form>
@@ -189,7 +195,8 @@
                     </div>
 
                     <h1>THANK YOU! </h1>
-                    <p>We thank you for your interest in Glory Autotech services. We will get back to you as soon as possible. <br>For any urgent inquiries, you can call us at +91 8000078216
+                    <p>We thank you for your interest in Glory Autotech services. We will get back to you as soon as
+                        possible. <br>For any urgent inquiries, you can call us at +91 8000078216
                     </p>
                     <button type="button" class="redo btn" (click)="addsuccess()">Ok</button>
 
