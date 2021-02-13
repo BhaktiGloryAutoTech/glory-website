@@ -1,11 +1,9 @@
 import { Component, OnInit, TemplateRef } from "@angular/core";
 import { ServiceService } from "src/app/@theme/services/service.service";
-import { ElementRef, ViewChild } from "@angular/core";
+import { ViewChild } from "@angular/core";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ContactService } from "src/app/@theme/services/contact.service";
-import { ToastrService } from "ngx-toastr";
-import { element } from "protractor";
 @Component({
   selector: "app-services",
   templateUrl: "./services.component.html",
@@ -28,13 +26,11 @@ export class ServicesComponent implements OnInit {
   constructor(
     private serviceService: ServiceService,
     private modalService: NgbModal,
-    private contactService: ContactService,
-    private tostrService: ToastrService
+    private contactService: ContactService
   ) {}
   ngOnInit(): void {
     window.scroll(0, 0);
     this.getServiceList();
-    this.modalService.open(this.success, { centered: true });
     this.getContactData();
     this.mod = setInterval(() => {
       this.modalService.open(this.content, { centered: true });
@@ -90,7 +86,7 @@ export class ServicesComponent implements OnInit {
         (data) => {
           this.loading = false;
           this.modalService.dismissAll();
-          this.tostrService.success("WE Will Get Back to you soon");
+          this.modalService.open(this.success, { centered: true, size: "sm" });
         },
         (error) => {}
       );
@@ -98,5 +94,8 @@ export class ServicesComponent implements OnInit {
       this.loading = false;
       return;
     }
+  }
+  addsuccess() {
+    this.modalService.dismissAll();
   }
 }

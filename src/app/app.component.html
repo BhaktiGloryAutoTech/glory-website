@@ -8,8 +8,7 @@
             <img src="../../../assets/img/2LOGO.png" alt="logo" class="logo-img-width">
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"><i class="fas fa-bars"></i></span>
         </button>
 
@@ -37,8 +36,7 @@
                     <a class="nav-link" [routerLink]="['/contact']" (click)="reload('/contact')">Connect</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link need-Team-highlight" [routerLink]="['/needTeam']"
-                        (click)="reload('/needTeam')">Need A
+                    <a class="nav-link need-Team-highlight" [routerLink]="['/needTeam']" (click)="reload('/needTeam')">Need A
                         Team?</a>
                 </li>
             </ul>
@@ -71,13 +69,10 @@
         <form id="GetCallForm" [formGroup]="contactForm">
             <input type="hidden" name="_token" value="rAtcn95hnEEoH8wIjf2cSiVcejqMk5kah0LhG1nP">
             <div class="form-group">
-                <input class="form-control text-center" id="get-contactno" name="ContactNo" type="number"
-                    pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" formControlName="ContactNo"
-                    placeholder="Your mobile number" />
+                <input class="form-control text-center" id="get-contactno" name="ContactNo" type="number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" formControlName="ContactNo" placeholder="Your mobile number" />
             </div>
             <div class="form-group text-center">
-                <button type="button" class="btn btn-curve btn-color btn-get-call btn-home-servcies call-btn btn-xs"
-                    (click)="addContact()"><span>Call
+                <button type="button" class="btn btn-curve btn-color btn-get-call btn-home-servcies call-btn btn-xs" (click)="addContact()"><span>Call
                         Me</span></button>
             </div>
         </form>
@@ -88,11 +83,10 @@
 
 <!-- whatsapp icon  -->
 <div class="whatsapp-fixed position-fixed rounded-circle">
-    <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100"
-        onclick="fnOpenWhatsApp('Hello i am interested for Software Development.', +918000078216)"
-        title="Glory Autotech Whatsapp Inquiry"><i class="sprite whatsapp-icon"></i></a>
+    <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100" onclick="fnOpenWhatsApp('Hello i am interested for Software Development.', +918000078216)" title="Glory Autotech Whatsapp Inquiry"><i class="sprite whatsapp-icon"></i></a>
 </div>
 <!-- whatsapp icon  -->
+
 <router-outlet></router-outlet>
 
 <!-- ==================== Start Footer ==================== -->
@@ -110,18 +104,15 @@
                     <div class="con-info custom-font ">
                         <ul>
                             <li class="font-fa">
-                                <span class="wd-65">Email </span><span>:</span><a
-                                    href="mailto:hrgloryautotech@gmail.com ">hrgloryautotech@gmail.com</a>
+                                <span class="wd-65">Email </span><span>:</span><a href="mailto:hrgloryautotech@gmail.com ">hrgloryautotech@gmail.com</a>
                             </li>
                             <li class="font-fa">
-                                <div class="add-disply-flex"><span>Address</span><span>:</span> <span
-                                        class="address-mobile-spacing">309 - 310 , SNS Arista , behind
+                                <div class="add-disply-flex"><span>Address</span><span>:</span> <span class="address-mobile-spacing">309 - 310 , SNS Arista , behind
                                         Prime Shoppers, Vesu.</span>
                                 </div>
                             </li>
                             <li class="font-fa">
-                                <div class="dis-flex-align "><span class="wd-52">Phone </span><span
-                                        class="conatct-colon-spacing">:</span>
+                                <div class="dis-flex-align "><span class="wd-52">Phone </span><span class="conatct-colon-spacing">:</span>
                                     <div class="number-footer "><a href="tel:(+91) 8000078216 ">(+91)
                                             8000078216</a>
                                         <a href="tel:(+91) 8141422244 ">(+91) 8141422244</a>
@@ -184,13 +175,23 @@
 <ng-template #success let-c="close" let-d="dismiss" centered>
     <div class="modal-main-im">
         <div class="modal-header remove-border">
-            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-                <span aria-hidden="true">&times;</span>
-            </button>
+
         </div>
         <div class="modal-body">
-            Success
+            <div class="row">
+                <div class="modalbox success center animate">
+                    <div class="icon">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+
+                    <h1>Done! </h1>
+                    <p>Your request has been sent successfully.
+                    </p>
+                    <button type="button" class="redo btn" (click)="addgetsuc()">Ok</button>
+
+                </div>
+            </div>
         </div>
-        <div class="modal-footer"></div>
+        <div class="modal-footer "></div>
     </div>
 </ng-template>
