@@ -35,28 +35,17 @@ export class ServicesComponent implements OnInit {
     this.mod = setInterval(() => {
       this.modalService.open(this.content, { centered: true });
       clearInterval(this.mod);
-    }, 7000);
+    }, 12000);
   }
 
   getServiceList() {
     this.serviceService.getServiceList().subscribe(
       (data: any) => {
         this.serviceList = data["data"];
-        console.log(this.serviceList);
-        this.serviceList.forEach((element: any) => {
-          this.stackList.push(element.Stack);
-        });
-        // this.serviceList.map((element: any) => {
-        //   this.stackList.push(element.Stack);
-        // });
-        for (let i = 0; i < this.serviceList.length; i++) {
-          for (let j = 0; j <= this.serviceList[i].length; j++) {
-            this.stackIcon.push(this.serviceList[i][j]);
-            console.log(this.stackIcon);
-          }
-        }
-        console.log(this.stackIcon);
-        console.log(this.stackList);
+        this.serviceList = this.serviceList.map((item: any) => ({
+          ...item,
+          showMore: false,
+        }));
       },
       (error) => {}
     );
@@ -97,5 +86,8 @@ export class ServicesComponent implements OnInit {
   }
   addsuccess() {
     this.modalService.dismissAll();
+  }
+  trimString(text: any, length: any) {
+    return text.length > length ? text.substring(0, length) + "..." : text;
   }
 }
