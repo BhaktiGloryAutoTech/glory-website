@@ -43,7 +43,16 @@
                                         </div>
 
                                         <div class="ser-des">
-                                            <p>{{service.ServiceDescription}}</p>
+                                            <p>
+                                                <span *ngIf="!service.showMore">
+                                                    {{trimString(service.ServiceDescription,250)}}</span>
+                                                <span *ngIf="service.showMore"> {{service.ServiceDescription}} </span>
+                                            </p>
+                                            <div *ngIf="service.ServiceDescription.length> 250" (click)="service.showMore = !service.showMore" class="show-more-design">
+                                                Show
+                                                <span>{{service.showMore ? 'less' : 'More'}}</span>
+                                            </div>
+
                                         </div>
                                         <!-- <button class="show_hide">Read More</button> -->
                                         <a class="show_hide" data-content="toggle-text">Read More</a>
@@ -76,7 +85,15 @@
                                         </div>
 
                                         <div class="ser-des">
-                                            <p>{{service.ServiceDescription}}</p>
+                                            <p>
+                                                <span *ngIf="!service.showMore">
+                                                {{trimString(service.ServiceDescription,250)}}</span>
+                                                <span *ngIf="service.showMore"> {{service.ServiceDescription}} </span>
+                                            </p>
+                                            <div *ngIf="service.ServiceDescription.length> 250" (click)="service.showMore = !service.showMore" class="show-more-design">
+                                                Show
+                                                <span>{{service.showMore ? 'less' : 'More'}}</span>
+                                            </div>
                                         </div>
                                         <a href="#" class="show_hide" data-content="toggle-text">Read More</a>
                                         <div class="ser-foo">

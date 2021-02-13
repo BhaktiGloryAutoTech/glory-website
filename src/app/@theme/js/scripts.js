@@ -494,11 +494,17 @@ $('[data-carousel="swiper"]').each(function() {
 
 
 // GET A CALL
-$(document).ready(function() {
-    $('.getcall-btn').click(function() {
-        $(".Getacall-sec").toggleClass('active');
+var callbtnInterval=setInterval(function(){
+    $(document).ready(function()  {
+        clearInterval(callbtnInterval)
+        $('.getcall-btn').click(function() {
+             $(".Getacall-sec").toggleClass('active');
+        });
     });
-});
+},1000,
+ )
+ 
+
 
 
 // $('#GetCallForm').validate({
