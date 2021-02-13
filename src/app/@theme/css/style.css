@@ -6170,3 +6170,24 @@ h6 {
         width: 380px;
     }
 }
+
+.ser-des {
+    height: 90px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.ser-des.visible {
+    height: auto;
+    overflow: visible;
+}
+
+@media (max-width: 340px) {
+    .Getacall-sec .getcall-btn {
+        left: -58px;
+    }
+    .Getacall-sec.active,
+    .Getacall-sec.active .Getacall-feild {
+        width: 273px;
+    }
+}

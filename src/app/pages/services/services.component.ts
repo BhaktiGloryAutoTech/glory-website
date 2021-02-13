@@ -98,4 +98,9 @@ export class ServicesComponent implements OnInit {
   addsuccess() {
     this.modalService.dismissAll();
   }
+  readMore(){
+    document
+        .getElementById("rbutton")
+        ?.classList.add("visible");
+  }
 }
