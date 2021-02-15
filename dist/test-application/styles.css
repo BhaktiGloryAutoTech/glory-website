@@ -15000,9 +15000,9 @@ h6 {
 
 
 .ser-des {
-    height: 90px;
+    /* height: 90px; */
     overflow: hidden;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 
@@ -15492,8 +15492,8 @@ p.small {
 .Getacall-sec .getcall-btn {
     position: absolute;
     left: -38px;
-    transform: rotate( -90deg);
-    -webkit-transform: rotate( 90deg);
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(90deg);
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     top: 60px;
@@ -15519,7 +15519,7 @@ p.small {
 .whatsapp-fixed {
     bottom: 20px;
     left: 20px;
-    background: #25D366;
+    background: #25d366;
     width: 50px;
     height: 50px;
     z-index: 99;
@@ -15578,13 +15578,13 @@ ngb-modal-window .modal-content {
 }
 @media (min-width: 768px) {
     .modal-dialog {
-        max-width: 646px!important;
+        max-width: 646px !important;
         margin: 1.75rem auto;
     }
 }
 @media (min-width: 768px) {
     .modal-sm {
-        max-width: 511px!important;
+        max-width: 511px !important;
         margin: 1.75rem auto;
     }
 }
@@ -15630,11 +15630,11 @@ ngb-modal-window .modal-content {
 }
 .modalbox.success h1,
 .modalbox.error h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 .modalbox.success p,
 .modalbox.error p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 .modalbox.success button,
 .modalbox.error button,
@@ -15750,7 +15750,7 @@ ngb-modal-window .modal-sm .modal-content {
     background: transparent;
 }
 .service-main-dev {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 .ser-hed h1,
 .ser-foo h1 {
@@ -15761,6 +15761,17 @@ ngb-modal-window .modal-sm .modal-content {
 }
 .ser-des {
     margin-bottom: 12px;
+}
+.show-more-design {
+    padding: 5px 0 11px 0;
+    font-size: 15px;
+    color: #08adc3;
+    margin: 0;
+    cursor: pointer !important;
+}
+.show-more-design:hover {
+    transition: all 0.6s ease;
+    letter-spacing: 1px;
 }
 @charset "UTF-8";
 /*
