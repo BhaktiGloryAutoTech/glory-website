@@ -927,4 +927,10 @@ ngb-modal-window .modal-sm .modal-content {
     font-size: 15px;
     color: #08adc3;
     margin: 0;
+    cursor: pointer !important;
+}
+
+.show-more-design:hover {
+    transition: all 0.6s ease;
+    letter-spacing: 1px;
 }
