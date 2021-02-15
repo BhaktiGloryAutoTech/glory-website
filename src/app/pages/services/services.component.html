@@ -42,13 +42,13 @@
                                             <h1>{{service.ServiceName}}</h1>
                                         </div>
 
-                                        <div class="ser-des">
+                                        <div>
                                             <p>
                                                 <span *ngIf="!service.showMore">
-                                                    {{trimString(service.ServiceDescription,250)}}</span>
+                                                    {{trimString(service.ServiceDescription,230)}}</span>
                                                 <span *ngIf="service.showMore"> {{service.ServiceDescription}} </span>
                                             </p>
-                                            <div *ngIf="service.ServiceDescription.length> 250"
+                                            <div *ngIf="service.ServiceDescription.length> 230"
                                                 (click)="service.showMore = !service.showMore" class="show-more-design">
                                                 Show
                                                 <span>{{service.showMore ? 'less' : 'More'}}</span>
@@ -83,13 +83,13 @@
                                             <h1>{{service.ServiceName}}</h1>
                                         </div>
 
-                                        <div class="ser-des">
+                                        <div>
                                             <p>
                                                 <span *ngIf="!service.showMore">
-                                                    {{trimString(service.ServiceDescription,250)}}</span>
+                                                    {{trimString(service.ServiceDescription,230)}}</span>
                                                 <span *ngIf="service.showMore"> {{service.ServiceDescription}} </span>
                                             </p>
-                                            <div *ngIf="service.ServiceDescription.length> 250"
+                                            <div *ngIf="service.ServiceDescription.length> 230"
                                                 (click)="service.showMore = !service.showMore" class="show-more-design">
                                                 Show
                                                 <span>{{service.showMore ? 'less' : 'More'}}</span>
