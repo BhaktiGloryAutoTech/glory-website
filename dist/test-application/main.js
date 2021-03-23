@@ -32,7 +32,7 @@ class CommonService {
         this._http = _http;
     }
     envurl() {
-        return "https://glorywebsite.herokuapp.com/api/gloryweb/";
+        return "https://training.gloryautotech.com/api/gloryweb/";
     }
 }
 CommonService.ɵfac = function CommonService_Factory(t) { return new (t || CommonService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
